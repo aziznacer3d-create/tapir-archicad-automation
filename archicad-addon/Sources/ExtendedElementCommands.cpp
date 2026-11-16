@@ -18273,7 +18273,8 @@ GS::Optional<GS::UniString> ModifySkylightsCommand::GetInputParametersSchema () 
                 "items": {
                     "type": "object",
                     "properties": {
-                        "elementId": { "$ref": "#/ElementId" },)") + SkylightDetailSchemaFields () + R"(
+                        "elementId": { "$ref": "#/ElementId" },
+                        "ownerId": { "$ref": "#/ElementId", "description": "Optional roof or shell to move the skylight onto, as CreateSkylights takes it. Give anchorPosition too when the current one is not on the new owner. The skylight is read back and the item fails when Archicad did not move it." },)") + SkylightDetailSchemaFields () + R"(
                     },
                     "additionalProperties": false,
                     "required": ["elementId"]
@@ -18324,13 +18325,37 @@ GS::ObjectState ModifySkylightsCommand::Execute (const GS::ObjectState& paramete
                 results.Push (CreateFailedExecutionResult (APIERR_BADPARS, detailsError.Get ()));
                 continue;
             }
+            // A new owner roof or shell, checked as CreateSkylights checks it.
+            const GS::ObjectState* ownerId = item.Get ("ownerId");
+            if (ownerId != nullptr) {
+                const API_Guid ownerGuid = GetGuidFromObjectState (*ownerId);
+                if (!DoesElementExist (ownerGuid, API_RoofID) && !DoesElementExist (ownerGuid, API_ShellID)) {
+                    results.Push (CreateFailedExecutionResult (APIERR_BADID, "'ownerId' is not a roof or a shell."));
+                    continue;
+                }
+                element.skylight.owner = ownerGuid;
+                ACAPI_ELEMENT_MASK_SET (mask, API_SkylightType, owner);
+                changed = true;
+            }
             if (!changed) {
                 results.Push (CreateFailedExecutionResult (APIERR_BADPARS, "No skylight fields to modify."));
                 continue;
             }
 
             err = ACAPI_Element_Change (&element, &mask, nullptr, 0, true);
-            results.Push (err == NoError ? CreateSuccessfulExecutionResult () : CreateFailedExecutionResult (err, "Failed to modify skylight."));
+            if (err != NoError) {
+                results.Push (CreateFailedExecutionResult (err, "Failed to modify skylight."));
+                continue;
+            }
+            if (ownerId != nullptr) {
+                API_Element readBack = {};
+                readBack.header.guid = element.header.guid;
+                if (ACAPI_Element_Get (&readBack) != NoError || readBack.skylight.owner != element.skylight.owner) {
+                    results.Push (CreateFailedExecutionResult (APIERR_GENERAL, "Archicad did not move the skylight onto the roof or shell given in ownerId."));
+                    continue;
+                }
+            }
+            results.Push (CreateSuccessfulExecutionResult ());
         }
     });
 }

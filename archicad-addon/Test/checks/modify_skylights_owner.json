@@ -1,0 +1,64 @@
+{
+  "title": "ModifySkylights moves a skylight onto another roof with ownerId",
+  "minTapir": "2.0.1",
+  "steps": [
+    {
+      "id": "two single-plane roofs side by side",
+      "command": "CreateRoofs",
+      "params": {
+        "roofsData": [
+          {
+            "level": 3.0,
+            "polygonCoordinates": [ { "x": 2020, "y": 1000 }, { "x": 2028, "y": 1000 }, { "x": 2028, "y": 1008 }, { "x": 2020, "y": 1008 } ],
+            "pivotLine": { "begCoordinate": { "x": 2020, "y": 1000 }, "endCoordinate": { "x": 2028, "y": 1000 } },
+            "angle": 0.5
+          },
+          {
+            "level": 3.0,
+            "polygonCoordinates": [ { "x": 2040, "y": 1000 }, { "x": 2048, "y": 1000 }, { "x": 2048, "y": 1008 }, { "x": 2040, "y": 1008 } ],
+            "pivotLine": { "begCoordinate": { "x": 2040, "y": 1000 }, "endCoordinate": { "x": 2048, "y": 1000 } },
+            "angle": 0.5
+          }
+        ]
+      },
+      "save": { "roofA": "elements[0].elementId.guid", "roofB": "elements[1].elementId.guid" }
+    },
+    {
+      "id": "skylight on roof A",
+      "command": "CreateSkylights",
+      "params": { "skylightsData": [ { "ownerId": { "guid": "${roofA}" }, "anchorPosition": { "x": 2024, "y": 1003 }, "width": 0.9, "height": 1.1 } ] },
+      "save": { "s": "elements[0].elementId.guid" },
+      "expect": [ { "path": "elements[0].elementId.guid", "exists": true, "name": "skylight created on roof A" } ]
+    },
+    {
+      "id": "move it onto roof B, at the same place on that roof",
+      "command": "ModifySkylights",
+      "creates": false,
+      "params": { "skylightsWithDetails": [ { "elementId": { "guid": "${s}" }, "ownerId": { "guid": "${roofB}" }, "anchorPosition": { "x": 2044, "y": 1003 } } ] },
+      "expect": [ { "path": "executionResults[0].success", "eq": true, "name": "skylight moved, read back by the command" } ]
+    },
+    {
+      "id": "where the skylight is now",
+      "command": "API.Get3DBoundingBoxes",
+      "creates": false,
+      "params": { "elements": [ { "elementId": { "guid": "${s}" } } ] },
+      "save": { "xMin": "boundingBoxes3D[0].boundingBox3D.xMin", "xMax": "boundingBoxes3D[0].boundingBox3D.xMax" },
+      "expect": [
+        { "expr": "(${xMin} + ${xMax}) / 2 - 2044", "approx": 0.0, "tol": 0.6, "name": "the skylight sits on roof B, around x 2044" }
+      ]
+    },
+    {
+      "id": "a wall as owner is refused",
+      "command": "CreateWalls",
+      "params": { "wallsData": [ { "begCoordinate": { "x": 2020, "y": 1020 }, "endCoordinate": { "x": 2024, "y": 1020 }, "zCoordinate": 0.0, "height": 3.0, "thickness": 0.3 } ] },
+      "save": { "w": "elements[0].elementId.guid" }
+    },
+    {
+      "id": "ModifySkylights with a wall as ownerId",
+      "command": "ModifySkylights",
+      "creates": false,
+      "params": { "skylightsWithDetails": [ { "elementId": { "guid": "${s}" }, "ownerId": { "guid": "${w}" } } ] },
+      "expect": [ { "path": "executionResults[0].success", "eq": false, "name": "a wall as owner refused" } ]
+    }
+  ]
+}

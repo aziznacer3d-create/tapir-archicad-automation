@@ -1184,7 +1184,7 @@ GSErrCode Initialize (void)
         );
         err |= RegisterCommand<ModifySkylightsCommand> (
             elementCommands, "2.0.0",
-            "Modifies Skylight elements: anchor position and anchor point, fix mode, width, height, azimuth and elevation angles, mirroring, floor plan display option, pens, line types, section fill and pens, surface and the use-the-library-part's-settings flags - the same settings CreateSkylights takes and GetDetailsOfElements returns. Only the given settings change. Not written by this command: the owner roof or shell, the anchor level and the vertical link (Archicad places the skylight on its owner), the plane of a multi-plane roof it sits on, the dimension marker (a separate element) and the library part's own parameters (use SetGDLParametersOfElements). Archicad may set the elevation angle again from the owner."
+            "Modifies Skylight elements: anchor position and anchor point, fix mode, width, height, azimuth and elevation angles, mirroring, floor plan display option, pens, line types, section fill and pens, surface and the use-the-library-part's-settings flags - the same settings CreateSkylights takes and GetDetailsOfElements returns, and the owner roof or shell (ownerId), which is read back. Only the given settings change. Not written by this command: the anchor level and the vertical link (Archicad places the skylight on its owner), the plane of a multi-plane roof it sits on, the dimension marker (a separate element) and the library part's own parameters (use SetGDLParametersOfElements). Archicad may set the elevation angle again from the owner."
         );
         err |= RegisterCommand<CreateRailingsCommand> (
             elementCommands, "1.8.0",

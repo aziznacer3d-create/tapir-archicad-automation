@@ -14837,8 +14837,20 @@ GS::Optional<GS::UniString> ApplyCurtainWallDisplay (const GS::ObjectState& item
 // writes them when it changes a curtain wall. Here the vertices on the top edge of every contour
 // are moved to the new height, and the contours are written with the height. Nothing is
 // written when a contour is not that shape; the reason is returned instead.
+// On a slanted curtain wall the contours lie in the slanted plane, so y goes up the slope: the
+// vertical heights are scaled by 1 / sin (angle) into the plane (angle in degrees, 90 vertical).
+static double CurtainWallSlantSine (const API_Element& element)
+{
+    const double angle = element.curtainWall.angle;
+    if (std::fabs (angle - 90.0) < 1e-9 || angle <= 0.0 || angle >= 180.0) {
+        return 1.0;
+    }
+    return std::sin (angle * std::acos (-1.0) / 180.0);
+}
+
 GS::Optional<GS::UniString> ChangeCurtainWallHeightWithContours (const API_Element& element, double actualHeight, double height)
 {
+    const double alongPlane = 1.0 / CurtainWallSlantSine (element);
     API_ElementMemo memo = {};
     const GS::OnExit memoGuard ([&memo] () { ACAPI_DisposeElemMemoHdls (&memo); });
     if (ACAPI_Element_GetMemo (element.header.guid, &memo, APIMemoMask_CWSegContour) != NoError || memo.cWSegContour == nullptr) {
@@ -14865,10 +14877,10 @@ GS::Optional<GS::UniString> ChangeCurtainWallHeightWithContours (const API_Eleme
             minY = std::min (minY, (*contour.coords)[i].y);
             maxY = std::max (maxY, (*contour.coords)[i].y);
         }
-        if (std::fabs ((maxY - minY) - element.curtainWall.height) > Eps && std::fabs ((maxY - minY) - actualHeight) > Eps) {
-            return GS::UniString::Printf ("the contour of segment %u is not as high as the curtain wall (%.4f m, not %.4f m)", c, maxY - minY, actualHeight);
+        if (std::fabs ((maxY - minY) - element.curtainWall.height * alongPlane) > Eps && std::fabs ((maxY - minY) - actualHeight * alongPlane) > Eps) {
+            return GS::UniString::Printf ("the contour of segment %u is not as high as the curtain wall (%.4f m, not %.4f m)", c, maxY - minY, actualHeight * alongPlane);
         }
-        const double newTop = minY + height;
+        const double newTop = minY + height * alongPlane;
         for (Int32 i = 1; i <= contour.polygon.nCoords; ++i) {
             API_Coord& vertex = (*contour.coords)[i];
             if (std::fabs (vertex.y - maxY) <= Eps) {
@@ -14880,7 +14892,7 @@ GS::Optional<GS::UniString> ChangeCurtainWallHeightWithContours (const API_Eleme
     }
 
     API_Element changed = element;
-    changed.curtainWall.height = height;
+    changed.curtainWall.height = height * alongPlane;
     API_Element mask = {};
     ACAPI_ELEMENT_MASK_CLEAR (mask);
     ACAPI_ELEMENT_MASK_SET (mask, API_CurtainWallType, height);
@@ -15106,7 +15118,9 @@ GS::ObjectState ModifyCurtainWall (const GS::ObjectState& item, const Stories& s
     // NoError and keep the old height (#1733), and the item then fails with the curtain wall
     // left as it was, instead of failing after the other fields were already applied.
     if (hasHeight) {
-        heightElement.curtainWall.height = height;
+        // height is the vertical height, as GetDetailsOfElements reads it; Archicad takes a
+        // slanted curtain wall's height along its plane (as on creation, see CreateCurtainWalls).
+        heightElement.curtainWall.height = height / CurtainWallSlantSine (heightElement);
         API_Element heightMask = {};
         ACAPI_ELEMENT_MASK_CLEAR (heightMask);
         ACAPI_ELEMENT_MASK_SET (heightMask, API_CurtainWallType, height);

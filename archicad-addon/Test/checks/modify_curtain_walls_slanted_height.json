@@ -1,0 +1,81 @@
+{
+  "title": "ModifyCurtainWalls changes the vertical height of a slanted curtain wall and keeps its slant and bottom",
+  "minTapir": "2.0.1",
+  "requiresEmpty": [ "CurtainWall" ],
+  "steps": [
+    {
+      "id": "a curtain wall slanted at 60 degrees, 3 m high",
+      "command": "CreateCurtainWalls",
+      "params": {
+        "curtainWallsData": [
+          {
+            "coordinates": [ { "x": 950.0, "y": 930.0 }, { "x": 956.0, "y": 930.0 } ],
+            "zCoordinate": 0.0,
+            "floorIndex": 0,
+            "height": 3.0,
+            "angle": 60.0,
+            "primaryPattern": { "sizes": [ 1.5 ], "logic": "FixedSizes", "origin": "StartWithPattern" },
+            "secondaryPattern": { "sizes": [ 1.5 ], "logic": "FixedSizes", "origin": "StartWithPattern" }
+          }
+        ]
+      },
+      "save": { "s": "elements[0].elementId.guid" },
+      "expect": [
+        { "path": "elements[0].elementId.guid", "exists": true, "name": "slanted curtain wall created" }
+      ]
+    },
+    {
+      "id": "bottom before the change",
+      "command": "GetCurtainWallAbsoluteBottoms",
+      "creates": false,
+      "params": { "elements": [ { "elementId": { "guid": "${s}" } } ] },
+      "save": { "bottomBefore": "absoluteBottoms[0].absoluteBottom" }
+    },
+    {
+      "id": "ModifyCurtainWalls: vertical height 4 m",
+      "command": "ModifyCurtainWalls",
+      "creates": false,
+      "params": { "curtainWallsWithDetails": [ { "elementId": { "guid": "${s}" }, "height": 4.0 } ] },
+      "expect": [
+        { "path": "executionResults[0].success", "eq": true, "name": "height change of a slanted curtain wall accepted" }
+      ]
+    },
+    {
+      "id": "height and slant after the change",
+      "command": "GetDetailsOfElements",
+      "creates": false,
+      "params": { "elements": [ { "elementId": { "guid": "${s}" } } ] },
+      "expect": [
+        { "path": "detailsOfElements[0].details.height", "approx": 4.0, "name": "vertical height 4 m" },
+        { "path": "detailsOfElements[0].details.angle", "approx": 60.0, "name": "still slanted at 60 degrees" }
+      ]
+    },
+    {
+      "id": "segment after the change",
+      "command": "GetSubelementsOfHierarchicalElements",
+      "creates": false,
+      "params": { "elements": [ { "elementId": { "guid": "${s}" } } ] },
+      "save": { "seg": "subelements[0].cWallSegments[0].elementId.guid" }
+    },
+    {
+      "id": "extrusion of the segment: 4 m up, 4 / tan 60 to the left",
+      "command": "GetDetailsOfElements",
+      "creates": false,
+      "params": { "elements": [ { "elementId": { "guid": "${seg}" } } ] },
+      "expect": [
+        { "path": "detailsOfElements[0].details.extrusionVector.z", "approx": 4.0, "name": "segment 4 m high" },
+        { "path": "detailsOfElements[0].details.extrusionVector.y", "approx": 2.3094011, "name": "segment still leans at 60 degrees" }
+      ]
+    },
+    {
+      "id": "bottom after the change",
+      "command": "GetCurtainWallAbsoluteBottoms",
+      "creates": false,
+      "params": { "elements": [ { "elementId": { "guid": "${s}" } } ] },
+      "save": { "bottomAfter": "absoluteBottoms[0].absoluteBottom" },
+      "expect": [
+        { "expr": "${bottomAfter} - ${bottomBefore}", "approx": 0.0, "name": "bottom unchanged" }
+      ]
+    }
+  ]
+}

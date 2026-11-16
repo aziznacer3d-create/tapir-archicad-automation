@@ -1,0 +1,67 @@
+{
+  "title": "ModifyZones makes an automatic zone a manual one with makeManual, which then takes a new polygon",
+  "minTapir": "2.0.1",
+  "requiresEmpty": [ "Wall", "Zone" ],
+  "steps": [
+    {
+      "id": "a room of four walls",
+      "command": "CreateWalls",
+      "params": {
+        "wallsData": [
+          { "begCoordinate": { "x": 740, "y": 700 }, "endCoordinate": { "x": 746, "y": 700 }, "floorIndex": 0, "zCoordinate": 0, "height": 3.0, "thickness": 0.2, "structureType": "Basic", "referenceLineLocation": "Center", "offset": 0.0 },
+          { "begCoordinate": { "x": 746, "y": 700 }, "endCoordinate": { "x": 746, "y": 705 }, "floorIndex": 0, "zCoordinate": 0, "height": 3.0, "thickness": 0.2, "structureType": "Basic", "referenceLineLocation": "Center", "offset": 0.0 },
+          { "begCoordinate": { "x": 746, "y": 705 }, "endCoordinate": { "x": 740, "y": 705 }, "floorIndex": 0, "zCoordinate": 0, "height": 3.0, "thickness": 0.2, "structureType": "Basic", "referenceLineLocation": "Center", "offset": 0.0 },
+          { "begCoordinate": { "x": 740, "y": 705 }, "endCoordinate": { "x": 740, "y": 700 }, "floorIndex": 0, "zCoordinate": 0, "height": 3.0, "thickness": 0.2, "structureType": "Basic", "referenceLineLocation": "Center", "offset": 0.0 }
+        ]
+      }
+    },
+    {
+      "id": "an automatic zone in the room",
+      "command": "CreateZones",
+      "params": { "zonesData": [ { "name": "Tapir check automatic zone", "numberStr": "T9", "floorIndex": 0, "height": 2.5, "geometry": { "referencePosition": { "x": 743.0, "y": 702.5 } } } ] },
+      "save": { "z": "elements[0].elementId.guid" },
+      "expect": [ { "path": "elements[0].elementId.guid", "exists": true, "name": "automatic zone created" } ]
+    },
+    {
+      "id": "it is automatic",
+      "command": "GetDetailsOfElements",
+      "creates": false,
+      "params": { "elements": [ { "elementId": { "guid": "${z}" } } ] },
+      "expect": [ { "path": "detailsOfElements[0].details.isManual", "eq": false, "name": "the zone is automatic" } ]
+    },
+    {
+      "id": "a polygon without makeManual is still refused",
+      "command": "ModifyZones",
+      "creates": false,
+      "params": { "zonesWithDetails": [ { "elementId": { "guid": "${z}" }, "geometry": { "polygonCoordinates": [ { "x": 741.0, "y": 701.0 }, { "x": 744.0, "y": 701.0 }, { "x": 744.0, "y": 704.0 }, { "x": 741.0, "y": 704.0 } ] } } ] },
+      "expect": [ { "path": "executionResults[0].success", "eq": false, "name": "an automatic zone takes no polygon" } ]
+    },
+    {
+      "id": "makeManual with a smaller polygon",
+      "command": "ModifyZones",
+      "creates": false,
+      "params": { "zonesWithDetails": [ { "elementId": { "guid": "${z}" }, "makeManual": true, "geometry": { "polygonCoordinates": [ { "x": 741.0, "y": 701.0 }, { "x": 744.0, "y": 701.0 }, { "x": 744.0, "y": 704.0 }, { "x": 741.0, "y": 704.0 } ] } } ] },
+      "expect": [ { "path": "executionResults[0].success", "eq": true, "name": "made manual with the new polygon, read back by the command" } ]
+    },
+    {
+      "id": "it is manual now, with the same GUID and name",
+      "command": "GetDetailsOfElements",
+      "creates": false,
+      "params": { "elements": [ { "elementId": { "guid": "${z}" } } ] },
+      "expect": [
+        { "path": "detailsOfElements[0].details.isManual", "eq": true, "name": "the zone is manual" },
+        { "path": "detailsOfElements[0].details.name", "eq": "Tapir check automatic zone", "name": "it keeps its name" }
+      ]
+    },
+    {
+      "id": "where the zone is now",
+      "command": "API.Get3DBoundingBoxes",
+      "creates": false,
+      "params": { "elements": [ { "elementId": { "guid": "${z}" } } ] },
+      "save": { "xMin": "boundingBoxes3D[0].boundingBox3D.xMin", "xMax": "boundingBoxes3D[0].boundingBox3D.xMax" },
+      "expect": [
+        { "expr": "${xMax} - ${xMin}", "approx": 3.0, "tol": 0.05, "name": "the zone is the new 3 m wide polygon, not the room" }
+      ]
+    }
+  ]
+}

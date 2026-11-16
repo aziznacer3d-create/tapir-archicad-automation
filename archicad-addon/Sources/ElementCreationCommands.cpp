@@ -1925,7 +1925,8 @@ GS::Optional<GS::UniString> ModifyZonesCommand::GetInputParametersSchema () cons
                         "stampPen": { "$ref": "#/ZoneStampPen", "description": "Pen of the zone stamp. Only the given fields are changed." },
                         "reducePercent": { "$ref": "#/ZoneReducePercent" },
                         "geometry": { "$ref": "#/ManualZoneGeometry", "description": "Optional new polygon of a manual zone (isManual true in GetDetailsOfElements): its outline, arcs and holes, the same geometry as a manual zone of CreateZones. The whole polygon is replaced and the zone keeps its GUID, properties and other settings; the stamp stays where it is unless stampPosition is given too. Refused for an automatic zone, whose polygon Archicad computes from its boundaries (see UpdateZones)." },
-                        "allowOverlap": { "type": "boolean", "description": "Optional, defaults to false, only used with geometry. As in CreateZones: a new polygon that would overlap another zone on the same story fails with an error naming that zone instead of risking Archicad's modal overlap warning, which blocks the API. Set it to true to change the polygon anyway." }
+                        "allowOverlap": { "type": "boolean", "description": "Optional, defaults to false, only used with geometry. As in CreateZones: a new polygon that would overlap another zone on the same story fails with an error naming that zone instead of risking Archicad's modal overlap warning, which blocks the API. Set it to true to change the polygon anyway." },
+                        "makeManual": { "type": "boolean", "description": "Optional. true makes an automatic zone a manual one (isManual in GetDetailsOfElements), as switching its construction method in Archicad does: it keeps its current polygon, which no longer follows its boundaries, and takes geometry in the same item. The zone is read back and the item fails when Archicad kept it automatic. false or a manual zone changes nothing." }
                     },
                     "additionalProperties": false,
                     "required": ["elementId"]
@@ -1998,6 +1999,14 @@ GS::ObjectState ModifyZonesCommand::Execute (const GS::ObjectState& parameters, 
             const GS::OnExit memoGuard ([&memo] () { ACAPI_DisposeElemMemoHdls (&memo); });
             UInt64 memoMask = 0;
             ZoneArea newZoneArea;
+            // makeManual: an automatic zone becomes a manual one, which then takes geometry.
+            bool makeManual = false;
+            item.Get ("makeManual", makeManual);
+            const bool switchedToManual = makeManual && !element.zone.manual;
+            if (switchedToManual) {
+                element.zone.manual = true;
+                ACAPI_ELEMENT_MASK_SET (mask, API_ZoneType, manual);
+            }
             const GS::ObjectState* geometry = item.Get ("geometry");
             if (geometry != nullptr) {
                 if (!element.zone.manual) {
@@ -2033,6 +2042,14 @@ GS::ObjectState ModifyZonesCommand::Execute (const GS::ObjectState& parameters, 
             }
             if (geometry != nullptr) {
                 UpdateZoneOverlapCacheArea (element.header.guid, newZoneArea);
+            }
+            if (switchedToManual) {
+                API_Element readBack = {};
+                readBack.header.guid = element.header.guid;
+                if (ACAPI_Element_Get (&readBack) != NoError || !readBack.zone.manual) {
+                    executionResults (CreateFailedExecutionResult (APIERR_GENERAL, "Archicad kept the zone automatic: makeManual was not applied."));
+                    continue;
+                }
             }
 
             err = ReapplyZoneTopOffset (item, element.header.guid);

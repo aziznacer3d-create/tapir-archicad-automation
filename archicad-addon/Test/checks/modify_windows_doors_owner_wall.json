@@ -1,0 +1,79 @@
+{
+  "title": "ModifyWindows and ModifyDoors move a window and a door into another wall with ownerWallId",
+  "minTapir": "2.0.1",
+  "requiresEmpty": [ "Wall", "Window", "Door" ],
+  "steps": [
+    {
+      "id": "wall A along y 940 and wall B along y 950",
+      "command": "CreateWalls",
+      "params": {
+        "wallsData": [
+          { "begCoordinate": { "x": 990.0, "y": 940.0 }, "endCoordinate": { "x": 1000.0, "y": 940.0 }, "zCoordinate": 0.0, "height": 3.0, "thickness": 0.3 },
+          { "begCoordinate": { "x": 990.0, "y": 950.0 }, "endCoordinate": { "x": 1000.0, "y": 950.0 }, "zCoordinate": 0.0, "height": 3.0, "thickness": 0.3 }
+        ]
+      },
+      "save": { "a": "elements[0].elementId.guid", "b": "elements[1].elementId.guid" }
+    },
+    {
+      "id": "window in wall A",
+      "command": "CreateWindows",
+      "params": { "windowsData": [ { "ownerWallId": { "guid": "${a}" }, "centerOffset": 2.0, "width": 1.0, "height": 1.2, "sillHeight": 0.9 } ] },
+      "save": { "w": "elements[0].elementId.guid" },
+      "expect": [ { "path": "elements[0].elementId.guid", "exists": true, "name": "window created in wall A" } ]
+    },
+    {
+      "id": "door in wall A",
+      "command": "CreateDoors",
+      "params": { "doorsData": [ { "ownerWallId": { "guid": "${a}" }, "centerOffset": 6.0, "width": 0.9, "height": 2.1 } ] },
+      "save": { "d": "elements[0].elementId.guid" },
+      "expect": [ { "path": "elements[0].elementId.guid", "exists": true, "name": "door created in wall A" } ]
+    },
+    {
+      "id": "move the window into wall B at 3 m",
+      "command": "ModifyWindows",
+      "creates": false,
+      "params": { "windowsWithDetails": [ { "elementId": { "guid": "${w}" }, "ownerWallId": { "guid": "${b}" }, "centerOffset": 3.0 } ] },
+      "expect": [ { "path": "executionResults[0].success", "eq": true, "name": "window moved, read back by the command" } ]
+    },
+    {
+      "id": "move the door into wall B, keeping its offset",
+      "command": "ModifyDoors",
+      "creates": false,
+      "params": { "doorsWithDetails": [ { "elementId": { "guid": "${d}" }, "ownerWallId": { "guid": "${b}" } } ] },
+      "expect": [ { "path": "executionResults[0].success", "eq": true, "name": "door moved, read back by the command" } ]
+    },
+    {
+      "id": "where the window and door are now",
+      "command": "API.Get3DBoundingBoxes",
+      "creates": false,
+      "params": { "elements": [ { "elementId": { "guid": "${w}" } }, { "elementId": { "guid": "${d}" } } ] },
+      "save": {
+        "wyMin": "boundingBoxes3D[0].boundingBox3D.yMin", "wyMax": "boundingBoxes3D[0].boundingBox3D.yMax",
+        "wxMin": "boundingBoxes3D[0].boundingBox3D.xMin", "wxMax": "boundingBoxes3D[0].boundingBox3D.xMax",
+        "dyMin": "boundingBoxes3D[1].boundingBox3D.yMin", "dyMax": "boundingBoxes3D[1].boundingBox3D.yMax",
+        "dxMin": "boundingBoxes3D[1].boundingBox3D.xMin", "dxMax": "boundingBoxes3D[1].boundingBox3D.xMax"
+      },
+      "expect": [
+        { "expr": "(${wyMin} + ${wyMax}) / 2 - 950", "approx": 0.0, "tol": 0.3, "name": "the window is in wall B (y 950)" },
+        { "expr": "(${wxMin} + ${wxMax}) / 2 - 993", "approx": 0.0, "tol": 0.05, "name": "the window is 3 m along wall B" },
+        { "expr": "(${dyMin} + ${dyMax}) / 2 - 950", "approx": 0.0, "tol": 0.3, "name": "the door is in wall B (y 950)" },
+        { "expr": "(${dxMin} + ${dxMax}) / 2 - 996", "approx": 0.0, "tol": 0.05, "name": "the door kept its 6 m along the wall" }
+      ]
+    },
+    {
+      "id": "bad inputs",
+      "command": "ModifyWindows",
+      "creates": false,
+      "params": {
+        "windowsWithDetails": [
+          { "elementId": { "guid": "${w}" }, "ownerWallId": { "guid": "00000000-0000-0000-0000-00000000BEEF" } },
+          { "elementId": { "guid": "${w}" }, "ownerWallId": { "guid": "${d}" } }
+        ]
+      },
+      "expect": [
+        { "path": "executionResults[0].success", "eq": false, "name": "a nonexistent wall refused" },
+        { "path": "executionResults[1].success", "eq": false, "name": "a door as owner wall refused" }
+      ]
+    }
+  ]
+}

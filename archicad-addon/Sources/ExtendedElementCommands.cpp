@@ -18108,7 +18108,8 @@ GS::Optional<GS::UniString> ModifyWindowsCommand::GetInputParametersSchema () co
                 "items": {
                     "type": "object",
                     "properties": {
-                        "elementId": { "$ref": "#/ElementId" },)") + WindowOrDoorDetailSchemaFields () + R"(
+                        "elementId": { "$ref": "#/ElementId" },
+                        "ownerWallId": { "$ref": "#/ElementId", "description": "Optional wall to move the window into, at centerOffset along it (or at its current offset when centerOffset is not given). The window is read back and the item fails when Archicad did not move it." },)") + WindowOrDoorDetailSchemaFields () + R"(
                     },
                     "additionalProperties": false,
                     "required": ["elementId"]
@@ -18123,6 +18124,45 @@ GS::Optional<GS::UniString> ModifyWindowsCommand::GetInputParametersSchema () co
 GS::Optional<GS::UniString> ModifyWindowsCommand::GetRawResponseSchema () const
 {
     return ModifyWallsCommand ().GetRawResponseSchema ();
+}
+
+// The optional "ownerWallId" of ModifyWindows and ModifyDoors: moves the window or door into
+// another wall, at the centerOffset of the item (or its current one) along that wall. The wall is
+// checked as CreateWindows checks it. Sets changed and the mask bit of owner.
+static GS::Optional<GS::UniString> ApplyWindowOrDoorOwnerWall (const GS::ObjectState& item, API_Element& element, API_Element& mask, bool& changed)
+{
+    const GS::ObjectState* ownerWallId = item.Get ("ownerWallId");
+    if (ownerWallId == nullptr) {
+        return {};
+    }
+    const API_Guid wallGuid = GetGuidFromObjectState (*ownerWallId);
+    if (!DoesWallExist (wallGuid)) {
+        return GS::UniString ("ownerWallId is not a wall of the project.");
+    }
+    if (IsPolygonalWall (wallGuid)) {
+        return GS::UniString ("The owner wall is polygonal, and Archicad cannot place a window or door in one.");
+    }
+    element.window.owner = wallGuid;
+    ACAPI_ELEMENT_MASK_SET (mask, API_WindowType, owner);
+    changed = true;
+    return {};
+}
+
+// The owner wall of a window or door read back after the change; empty when it is the requested one.
+static GS::Optional<GS::ObjectState> CheckWindowOrDoorOwnerWallApplied (const API_Element& requested, const GS::ObjectState& item, const char* noun)
+{
+    if (!item.Contains ("ownerWallId")) {
+        return {};
+    }
+    API_Element readBack = {};
+    readBack.header.guid = requested.header.guid;
+    if (ACAPI_Element_Get (&readBack) != NoError) {
+        return CreateFailedExecutionResult (APIERR_GENERAL, GS::UniString ("Failed to read back the modified ") + noun + ".");
+    }
+    if (readBack.window.owner != requested.window.owner) {
+        return CreateFailedExecutionResult (APIERR_GENERAL, GS::UniString ("Archicad did not move the ") + noun + " into the wall given in ownerWallId.");
+    }
+    return {};
 }
 
 GS::ObjectState ModifyWindowsCommand::Execute (const GS::ObjectState& parameters, GS::ProcessControl&) const
@@ -18155,6 +18195,11 @@ GS::ObjectState ModifyWindowsCommand::Execute (const GS::ObjectState& parameters
                 results.Push (CreateFailedExecutionResult (APIERR_BADPARS, detailsError.Get ()));
                 continue;
             }
+            const GS::Optional<GS::UniString> ownerError = ApplyWindowOrDoorOwnerWall (item, element, mask, changed);
+            if (ownerError.HasValue ()) {
+                results.Push (CreateFailedExecutionResult (APIERR_BADPARS, ownerError.Get ()));
+                continue;
+            }
             if (!changed) {
                 results.Push (CreateFailedExecutionResult (APIERR_BADPARS, "No window fields to modify."));
                 continue;
@@ -18163,6 +18208,11 @@ GS::ObjectState ModifyWindowsCommand::Execute (const GS::ObjectState& parameters
             err = ACAPI_Element_Change (&element, &mask, nullptr, 0, true);
             if (err != NoError) {
                 results.Push (CreateFailedExecutionResult (err, "Failed to modify window."));
+                continue;
+            }
+            const GS::Optional<GS::ObjectState> ownerNotApplied = CheckWindowOrDoorOwnerWallApplied (element, item, "window");
+            if (ownerNotApplied.HasValue ()) {
+                results.Push (ownerNotApplied.Get ());
                 continue;
             }
             results.Push (CheckWindowOrDoorDetailsApplied (element, item, "window"));
@@ -18190,7 +18240,8 @@ GS::Optional<GS::UniString> ModifyDoorsCommand::GetInputParametersSchema () cons
                 "items": {
                     "type": "object",
                     "properties": {
-                        "elementId": { "$ref": "#/ElementId" },)") + WindowOrDoorDetailSchemaFields () + R"(
+                        "elementId": { "$ref": "#/ElementId" },
+                        "ownerWallId": { "$ref": "#/ElementId", "description": "Optional wall to move the door into, at centerOffset along it (or at its current offset when centerOffset is not given). The door is read back and the item fails when Archicad did not move it." },)") + WindowOrDoorDetailSchemaFields () + R"(
                     },
                     "additionalProperties": false,
                     "required": ["elementId"]
@@ -18237,6 +18288,11 @@ GS::ObjectState ModifyDoorsCommand::Execute (const GS::ObjectState& parameters, 
                 results.Push (CreateFailedExecutionResult (APIERR_BADPARS, detailsError.Get ()));
                 continue;
             }
+            const GS::Optional<GS::UniString> ownerError = ApplyWindowOrDoorOwnerWall (item, element, mask, changed);
+            if (ownerError.HasValue ()) {
+                results.Push (CreateFailedExecutionResult (APIERR_BADPARS, ownerError.Get ()));
+                continue;
+            }
             if (!changed) {
                 results.Push (CreateFailedExecutionResult (APIERR_BADPARS, "No door fields to modify."));
                 continue;
@@ -18245,6 +18301,11 @@ GS::ObjectState ModifyDoorsCommand::Execute (const GS::ObjectState& parameters, 
             err = ACAPI_Element_Change (&element, &mask, nullptr, 0, true);
             if (err != NoError) {
                 results.Push (CreateFailedExecutionResult (err, "Failed to modify door."));
+                continue;
+            }
+            const GS::Optional<GS::ObjectState> ownerNotApplied = CheckWindowOrDoorOwnerWallApplied (element, item, "door");
+            if (ownerNotApplied.HasValue ()) {
+                results.Push (ownerNotApplied.Get ());
                 continue;
             }
             results.Push (CheckWindowOrDoorDetailsApplied (element, item, "door"));

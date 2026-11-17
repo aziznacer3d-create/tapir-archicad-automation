@@ -1,0 +1,1498 @@
+# Test global de Tapir — 17/11/2026 01:09
+
+Terminé sans plantage. Durée : 657 s.
+
+Calques : 59 calques affiches et deverrouilles
+
+Champs ignorés car ils ont fait planter Archicad : Roof:roofClass
+
+## Créations
+
+- CreateAngleDimensions : ok
+- CreateArcs : ok
+- CreateAssociativeDimensions : ok
+- CreateBeams : ok
+- CreateCameraSets : ok
+- CreateCameras : ok (1)
+- CreateChangeMarkers : ok
+- CreateCircles : ok
+- CreateColumns : ok
+- CreateCurtainWalls : ok
+- CreateDetailMarkers : ok
+- CreateDoors : ok (1)
+- CreateElevations : ok (1)
+- CreateHatches : ok
+- CreateHotspots : ok
+- CreateInteriorElevations : ok
+- CreateLabels : ok
+- CreateLamps : ok (1)
+- CreateLevelDimensions : ok
+- CreateLineElements : ok
+- CreateMeshes : ok
+- CreateMorphs : ok
+- CreateObjects : echec
+- CreateOpenings : ok (1)
+- CreatePictures : ok
+- CreatePolylines : ok
+- CreateRailings : ok
+- CreateRailingsFromPolyline : ok
+- CreateRoofs : ok
+- CreateSections : ok
+- CreateShells : ok
+- CreateSkylights : ok (1)
+- CreateSlabs : ok
+- CreateSplines : ok
+- CreateStairs : ok
+- CreateTexts : ok
+- CreateWalls : ok
+- CreateWindows : ok (1)
+- CreateWorksheetMarkers : ok
+- CreateZones : ok
+- Garde-corps avec panneaux : ok (1)
+
+## Champs par type d'élément
+
+| Type | Champs | Lus | Réécrits OK | Réécrits refusés | Modifiés gardés | Non gardés / refusés |
+|---|---|---|---|---|---|---|
+| AngleDimension | 112 | 112 | 108 | 0 | 33 | 71 |
+| Arc | 24 | 24 | 24 | 0 | 20 | 4 |
+| Beam | 61 | 61 | 57 | 0 | 40 | 17 |
+| BeamSegment | 15 | 15 | 14 | 0 | 7 | 7 |
+| CamSet | 11 | 11 | 0 | 11 | 0 | 9 |
+| Camera | 30 | 30 | 0 | 30 | 0 | 27 |
+| ChangeMarker | 12 | 12 | 9 | 0 | 5 | 3 |
+| Column | 55 | 55 | 51 | 0 | 42 | 9 |
+| ColumnSegment | 18 | 18 | 17 | 0 | 10 | 7 |
+| CurtainWall | 185 | 185 | 170 | 0 | 68 | 97 |
+| CurtainWallFrame | 43 | 43 | 42 | 0 | 1 | 40 |
+| CurtainWallPanel | 21 | 21 | 20 | 0 | 2 | 17 |
+| CurtainWallSegment | 23 | 23 | 22 | 0 | 3 | 19 |
+| CutPlane | 99 | 99 | 96 | 0 | 61 | 27 |
+| Detail | 22 | 22 | 19 | 0 | 7 | 7 |
+| Dimension | 94 | 94 | 92 | 0 | 15 | 76 |
+| Door | 46 | 46 | 44 | 1 | 34 | 10 |
+| Elevation | 99 | 99 | 96 | 0 | 62 | 26 |
+| Hatch | 69 | 69 | 66 | 0 | 10 | 56 |
+| Hotspot | 4 | 4 | 4 | 0 | 4 | 0 |
+| InteriorElevation | 102 | 102 | 90 | 4 | 2 | 86 |
+| Label | 107 | 66 | 59 | 4 | 37 | 24 |
+| Lamp | 41 | 41 | 39 | 1 | 28 | 11 |
+| LevelDimension | 87 | 87 | 69 | 18 | 30 | 55 |
+| Line | 19 | 19 | 19 | 0 | 17 | 2 |
+| Mesh | 37 | 37 | 32 | 0 | 28 | 4 |
+| Morph | 69 | 69 | 68 | 1 | 54 | 15 |
+| Picture | 20 | 20 | 0 | 20 | 0 | 20 |
+| PolyLine | 19 | 19 | 16 | 0 | 12 | 4 |
+| Railing | 228 | 228 | 193 | 1 | 109 | 64 |
+| RailingBaluster | 4 | 4 | 0 | 3 | 0 | 2 |
+| RailingBalusterSet | 18 | 18 | 0 | 15 | 0 | 14 |
+| RailingInnerPost | 8 | 8 | 0 | 7 | 0 | 6 |
+| RailingNode | 133 | 133 | 117 | 0 | 81 | 23 |
+| RailingPost | 4 | 4 | 0 | 3 | 0 | 2 |
+| RailingRail | 6 | 6 | 5 | 0 | 4 | 0 |
+| RailingSegment | 81 | 81 | 65 | 1 | 32 | 26 |
+| RailingToprail | 3 | 3 | 2 | 0 | 1 | 0 |
+| RailingToprailEnd | 16 | 16 | 14 | 0 | 9 | 3 |
+| Riser | 11 | 11 | 10 | 0 | 6 | 3 |
+| Roof | 103 | 58 | 54 | 0 | 37 | 17 |
+| Shell | 172 | 92 | 159 | 0 | 104 | 55 |
+| Skylight | 38 | 38 | 36 | 1 | 25 | 11 |
+| Slab | 45 | 45 | 42 | 0 | 29 | 13 |
+| Spline | 17 | 17 | 17 | 0 | 13 | 4 |
+| Stair | 315 | 315 | 309 | 0 | 139 | 166 |
+| StairStructure | 39 | 36 | 34 | 0 | 19 | 14 |
+| Text | 32 | 32 | 30 | 0 | 15 | 15 |
+| Tread | 13 | 13 | 12 | 0 | 6 | 5 |
+| Wall | 60 | 60 | 56 | 0 | 37 | 19 |
+| Window | 46 | 46 | 44 | 1 | 35 | 9 |
+| Worksheet | 22 | 22 | 19 | 0 | 7 | 7 |
+| Zone | 45 | 45 | 38 | 1 | 29 | 9 |
+
+## Modifications par genre de champ
+
+| Genre | Gardés | Recalculés (non gardés) | Refusés |
+|---|---|---|---|
+| nombres | 530 | 383 | 48 |
+| entiers et listes | 381 | 324 | 20 |
+| oui/non | 330 | 287 | 19 |
+| index d'attributs | 103 | 33 | 0 |
+| entiers sans signe | 23 | 85 | 14 |
+| textes Unicode | 2 | 14 | 4 |
+| textes | 0 | 5 | 1 |
+
+## Garde-corps : modèles
+
+- motif du segment 1 : poteau intermediaire double : {"code": -2130312311, "message": "Archicad did not apply every value; the railing was changed as follows: doublePostOffset of the inner post of the pattern of segment 1 is 0.0000. postCount of the inner post of the pattern of segment 1 is 1. The components of segment 1 do not follow its pattern: doublePostOffset of inner post 0 of segment 1 is 0.0000. postCount of inner post 0 of segment 1 is 1. A
+- motif du segment 0 : balustres par longueur 0,12 : ok
+- motif du segment 1 : repartition du motif : ok
+- modele de poteau du noeud 1 : jusqu a la lisse 1 : ok
+- poteau intermediaire seul (doit renvoyer vers pattern) : {"code": -2130313112, "message": "Failed to modify inner post 0 of segment 1 of the railing. Archicad generates the inner posts of a segment from its pattern and does not take a change to one of them: change segments[].pattern instead."}
+
+## Tests JSON du dépôt
+
+
+
+(non lancés)
+
+## Détail des refus
+
+- AngleDimension `base[0].base.inIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[0].base.inIndex is 0. The other given fields were changed."}
+- AngleDimension `base[0].base.line` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[0].base.line is false. The other given fields were changed."}
+- AngleDimension `base[0].base.node_id` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[0].base.node_id is 0. The other given fields were changed."}
+- AngleDimension `base[0].base.node_status` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[0].base.node_status is 0. The other given fields were changed."}
+- AngleDimension `base[0].base.node_typ` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[0].base.node_typ is 0. The other given fields were changed."}
+- AngleDimension `base[0].base.special` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[0].base.special is 0. The other given fields were changed."}
+- AngleDimension `base[0].base.type.typeID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[0].base.type.typeID is 0. The other given fields were changed."}
+- AngleDimension `base[0].base.type.variationID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[0].base.type.variationID is 0. The other given fields were changed."}
+- AngleDimension `base[0].loc.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[0].loc.x is 900. The other given fields were changed."}
+- AngleDimension `base[0].loc.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[0].loc.y is 900. The other given fields were changed."}
+- AngleDimension `base[0].loc3D.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[0].loc3D.x is 900. The other given fields were changed."}
+- AngleDimension `base[0].loc3D.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[0].loc3D.y is 900. The other given fields were changed."}
+- AngleDimension `base[0].loc3D.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[0].loc3D.z is 0. The other given fields were changed."}
+- AngleDimension `base[1].base.inIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[1].base.inIndex is 0. The other given fields were changed."}
+- AngleDimension `base[1].base.line` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[1].base.line is false. The other given fields were changed."}
+- AngleDimension `base[1].base.node_id` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[1].base.node_id is 0. The other given fields were changed."}
+- AngleDimension `base[1].base.node_status` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[1].base.node_status is 0. The other given fields were changed."}
+- AngleDimension `base[1].base.node_typ` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[1].base.node_typ is 0. The other given fields were changed."}
+- AngleDimension `base[1].base.special` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[1].base.special is 0. The other given fields were changed."}
+- AngleDimension `base[1].base.type.typeID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[1].base.type.typeID is 0. The other given fields were changed."}
+- AngleDimension `base[1].base.type.variationID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[1].base.type.variationID is 0. The other given fields were changed."}
+- AngleDimension `base[1].loc.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[1].loc.x is 904. The other given fields were changed."}
+- AngleDimension `base[1].loc.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[1].loc.y is 900. The other given fields were changed."}
+- AngleDimension `base[1].loc3D.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[1].loc3D.x is 904. The other given fields were changed."}
+- AngleDimension `base[1].loc3D.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[1].loc3D.y is 900. The other given fields were changed."}
+- AngleDimension `base[1].loc3D.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[1].loc3D.z is 0. The other given fields were changed."}
+- AngleDimension `base[2].base.inIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[2].base.inIndex is 0. The other given fields were changed."}
+- AngleDimension `base[2].base.line` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[2].base.line is false. The other given fields were changed."}
+- AngleDimension `base[2].base.node_id` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[2].base.node_id is 0. The other given fields were changed."}
+- AngleDimension `base[2].base.node_status` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[2].base.node_status is 0. The other given fields were changed."}
+- AngleDimension `base[2].base.node_typ` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[2].base.node_typ is 0. The other given fields were changed."}
+- AngleDimension `base[2].base.special` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[2].base.special is 0. The other given fields were changed."}
+- AngleDimension `base[2].base.type.typeID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[2].base.type.typeID is 0. The other given fields were changed."}
+- AngleDimension `base[2].base.type.variationID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[2].base.type.variationID is 0. The other given fields were changed."}
+- AngleDimension `base[2].loc.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[2].loc.x is 900. The other given fields were changed."}
+- AngleDimension `base[2].loc.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[2].loc.y is 900. The other given fields were changed."}
+- AngleDimension `base[2].loc3D.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[2].loc3D.x is 900. The other given fields were changed."}
+- AngleDimension `base[2].loc3D.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[2].loc3D.y is 900. The other given fields were changed."}
+- AngleDimension `base[2].loc3D.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[2].loc3D.z is 0. The other given fields were changed."}
+- AngleDimension `base[3].base.inIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[3].base.inIndex is 0. The other given fields were changed."}
+- AngleDimension `base[3].base.line` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[3].base.line is false. The other given fields were changed."}
+- AngleDimension `base[3].base.node_id` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[3].base.node_id is 0. The other given fields were changed."}
+- AngleDimension `base[3].base.node_status` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[3].base.node_status is 0. The other given fields were changed."}
+- AngleDimension `base[3].base.node_typ` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[3].base.node_typ is 0. The other given fields were changed."}
+- AngleDimension `base[3].base.special` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[3].base.special is 0. The other given fields were changed."}
+- AngleDimension `base[3].base.type.typeID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[3].base.type.typeID is 0. The other given fields were changed."}
+- AngleDimension `base[3].base.type.variationID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[3].base.type.variationID is 0. The other given fields were changed."}
+- AngleDimension `base[3].loc.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[3].loc.x is 903.464. The other given fields were changed."}
+- AngleDimension `base[3].loc.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[3].loc.y is 902. The other given fields were changed."}
+- AngleDimension `base[3].loc3D.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[3].loc3D.x is 903.464. The other given fields were changed."}
+- AngleDimension `base[3].loc3D.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[3].loc3D.y is 902. The other given fields were changed."}
+- AngleDimension `base[3].loc3D.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: base[3].loc3D.z is 0. The other given fields were changed."}
+- AngleDimension `dimVal` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: dimVal is 0.523599. The other given fields were changed."}
+- AngleDimension `note.anchorAtTextEnd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.anchorAtTextEnd is false. The other given fields were changed."}
+- AngleDimension `note.anchorPoint` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.anchorPoint is 0. The other given fields were changed."}
+- AngleDimension `note.arrowData.arrowType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.arrowData.arrowType is 4. The other given fields were changed."}
+- AngleDimension `note.arrowData.arrowVisibility` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.arrowData.arrowVisibility is true. The other given fields were changed."}
+- AngleDimension `note.begC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.begC.x is 0. The other given fields were changed."}
+- AngleDimension `note.begC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.begC.y is 0. The other given fields were changed."}
+- AngleDimension `note.content` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.content is \"30,00°\". The other given fields were changed."}
+- AngleDimension `note.effectBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.effectBits is 0. The other given fields were changed."}
+- AngleDimension `note.endC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.endC.x is 0. The other given fields were changed."}
+- AngleDimension `note.endC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.endC.y is 0. The other given fields were changed."}
+- AngleDimension `note.midC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.midC.x is 0. The other given fields were changed."}
+- AngleDimension `note.midC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.midC.y is 0. The other given fields were changed."}
+- AngleDimension `note.noteLayer` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.noteLayer is 24. The other given fields were changed."}
+- AngleDimension `origo.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: origo.x is 900. The other given fields were changed."}
+- AngleDimension `origo.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: origo.y is 900. The other given fields were changed."}
+- AngleDimension `pos.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: pos.x is 902.898. The other given fields were changed."}
+- AngleDimension `pos.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: pos.y is 900.776. The other given fields were changed."}
+- AngleDimension `radius` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: radius is 3. The other given fields were changed."}
+- Arc `endArrowData.arrowSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: endArrowData.arrowSize is 0. The other given fields were changed."}
+- Arc `linePen.colorOverridePenIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linePen.colorOverridePenIndex is -2. The other given fields were changed."}
+- Arc `penWeight` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: penWeight is 0.01. The other given fields were changed."}
+- Arc `startArrowData.arrowSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: startArrowData.arrowSize is 0. The other given fields were changed."}
+- Beam `beamShape` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: beamShape is 0. The other given fields were changed."}
+- Beam `holeContureOn` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: holeContureOn is false. The other given fields were changed."}
+- Beam `holeHeight` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: holeHeight is 0. The other given fields were changed."}
+- Beam `holeLevel` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: holeLevel is 0. The other given fields were changed."}
+- Beam `holeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: holeType is 0. The other given fields were changed."}
+- Beam `holeWidth` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: holeWidth is 0. The other given fields were changed."}
+- Beam `linkToSettings.newCreationMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkToSettings.newCreationMode is false. The other given fields were changed."}
+- Beam `showContourLines` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: showContourLines is 2. The other given fields were changed."}
+- Beam `showReferenceAxis` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: showReferenceAxis is 2. The other given fields were changed."}
+- Beam `slantAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: slantAngle is 0. The other given fields were changed."}
+- Beam `verticalCurveHeight` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: verticalCurveHeight is 0. The other given fields were changed."}
+- Beam `viewDepthLimitation` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: viewDepthLimitation is 0. The other given fields were changed."}
+- Beam `visibility.showAllAbove` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showAllAbove is false. The other given fields were changed."}
+- Beam `visibility.showAllBelow` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showAllBelow is false. The other given fields were changed."}
+- Beam `visibility.showOnHome` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showOnHome is false. The other given fields were changed."}
+- Beam `visibility.showRelAbove` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showRelAbove is 1. The other given fields were changed."}
+- Beam `visibility.showRelBelow` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showRelBelow is -1. The other given fields were changed."}
+- BeamSegment `assemblySegmentData.endHeight` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.endHeight is 0. The other given fields were changed."}
+- BeamSegment `assemblySegmentData.endWidth` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.endWidth is 0. The other given fields were changed."}
+- BeamSegment `assemblySegmentData.isEndWidthAndHeightLinked` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.isEndWidthAndHeightLinked is false. The other given fields were changed."}
+- BeamSegment `assemblySegmentData.modelElemStructureType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.modelElemStructureType is 0. The other given fields were changed."}
+- BeamSegment `assemblySegmentData.profileAttr` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.profileAttr is 0. The other given fields were changed."}
+- BeamSegment `assemblySegmentData.profileType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.profileType is 0. The other given fields were changed."}
+- BeamSegment `assemblySegmentData.relativeHomeStoryLevel` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.relativeHomeStoryLevel is 2.8. The other given fields were changed."}
+- CamSet `actCam` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `active` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `firstCam` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `name` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.bezierPath` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.inFrames` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.openedPath` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.pen` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.showFrom` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.showTo` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.smoothTarget` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `active` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `name` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.bezierPath` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.inFrames` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.openedPath` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.pen` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.showFrom` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.showTo` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- CamSet `perspPars.smoothTarget` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `camSetGuid` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.active` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.dirAng` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.lenNext` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.lenPrev` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.nextCam` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.pen` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.azimuth` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.cameraZ` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.distance` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.isTwoPointPersp` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.pos.x` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.pos.y` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.rollAngle` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.day` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.hour` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.minute` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.month` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.second` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.summerTime` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.sunAltitude` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.sunAzimuth` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.sunPosOpt` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.year` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.target.x` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.target.y` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.targetZ` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.viewCone` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.prevCam` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.waitFrames` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.active` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.dirAng` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.lenNext` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.lenPrev` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.pen` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.azimuth` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.cameraZ` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.distance` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.isTwoPointPersp` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.pos.x` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.pos.y` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.rollAngle` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.day` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.hour` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.minute` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.month` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.second` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.summerTime` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.sunAltitude` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.sunAzimuth` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.sunPosOpt` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.sunAngSets.year` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.target.x` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.target.y` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.targetZ` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.persp.viewCone` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Camera `perspCam.waitFrames` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- ChangeMarker `changeId` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: changeId is \"\". The other given fields were changed."}
+- ChangeMarker `changeName` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: changeName is \"\". The other given fields were changed."}
+- ChangeMarker `markerComponent` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: markerComponent is 0. The other given fields were changed."}
+- Column `coreSymbolType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: coreSymbolType is 1. The other given fields were changed."}
+- Column `isFlipped` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: isFlipped is false. The other given fields were changed."}
+- Column `linkToSettings.newCreationMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkToSettings.newCreationMode is false. The other given fields were changed."}
+- Column `slantAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: slantAngle is 1.5708. The other given fields were changed."}
+- Column `visibility.showAllAbove` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showAllAbove is false. The other given fields were changed."}
+- Column `visibility.showAllBelow` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showAllBelow is false. The other given fields were changed."}
+- Column `visibility.showOnHome` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showOnHome is false. The other given fields were changed."}
+- Column `visibility.showRelAbove` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showRelAbove is 1. The other given fields were changed."}
+- Column `visibility.showRelBelow` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showRelBelow is 0. The other given fields were changed."}
+- ColumnSegment `assemblySegmentData.endHeight` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.endHeight is 0. The other given fields were changed."}
+- ColumnSegment `assemblySegmentData.endWidth` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.endWidth is 0. The other given fields were changed."}
+- ColumnSegment `assemblySegmentData.isEndWidthAndHeightLinked` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.isEndWidthAndHeightLinked is false. The other given fields were changed."}
+- ColumnSegment `assemblySegmentData.modelElemStructureType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.modelElemStructureType is 0. The other given fields were changed."}
+- ColumnSegment `assemblySegmentData.profileAttr` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.profileAttr is 0. The other given fields were changed."}
+- ColumnSegment `assemblySegmentData.profileType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.profileType is 0. The other given fields were changed."}
+- ColumnSegment `assemblySegmentData.relativeHomeStoryLevel` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assemblySegmentData.relativeHomeStoryLevel is 0. The other given fields were changed."}
+- CurtainWall `accessoryData.category` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: accessoryData.category is 0. The other given fields were changed."}
+- CurtainWall `accessoryData.flipped` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: accessoryData.flipped is false. The other given fields were changed."}
+- CurtainWall `accessoryData.hasSymbol` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: accessoryData.hasSymbol is false. The other given fields were changed."}
+- CurtainWall `accessoryData.libInd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: accessoryData.libInd is 722. The other given fields were changed."}
+- CurtainWall `angle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: angle is 90. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.assocCWPanelsNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.assocCWPanelsNum is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.auxPanelDirsNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.auxPanelDirsNum is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.begC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.begC.x is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.begC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.begC.y is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.begC.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.begC.z is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.begRel.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.begRel.x is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.begRel.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.begRel.y is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.cellID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.cellID is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.classID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.classID is 3. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.className` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.className is \"Cadre\". The other given fields were changed."}
+- CurtainWall `boundaryFrameData.contourID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.contourID is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.d` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.d is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.defaultSubElem` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.defaultSubElem is false. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.deleteFlag` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.deleteFlag is false. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.endC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.endC.x is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.endC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.endC.y is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.endC.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.endC.z is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.endRel.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.endRel.x is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.endRel.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.endRel.y is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.hasSymbol` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.hasSymbol is false. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.joinedCWFramesBegCNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.joinedCWFramesBegCNum is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.joinedCWFramesEndCNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.joinedCWFramesEndCNum is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.objectType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.objectType is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.orientation.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.orientation.x is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.orientation.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.orientation.y is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.orientation.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.orientation.z is 0. The other given fields were changed."}
+- CurtainWall `boundaryFrameData.segmentID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFrameData.segmentID is 0. The other given fields were changed."}
+- CurtainWall `boundaryFramePosition` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: boundaryFramePosition is 2. The other given fields were changed."}
+- CurtainWall `cornerFrameData.assocCWPanelsNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.assocCWPanelsNum is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.auxPanelDirsNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.auxPanelDirsNum is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.begC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.begC.x is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.begC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.begC.y is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.begC.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.begC.z is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.begRel.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.begRel.x is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.begRel.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.begRel.y is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.cellID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.cellID is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.classID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.classID is 2. The other given fields were changed."}
+- CurtainWall `cornerFrameData.className` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.className is \"Cadre d'angle\". The other given fields were changed."}
+- CurtainWall `cornerFrameData.contourID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.contourID is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.d` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.d is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.defaultSubElem` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.defaultSubElem is false. The other given fields were changed."}
+- CurtainWall `cornerFrameData.deleteFlag` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.deleteFlag is false. The other given fields were changed."}
+- CurtainWall `cornerFrameData.endC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.endC.x is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.endC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.endC.y is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.endC.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.endC.z is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.endRel.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.endRel.x is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.endRel.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.endRel.y is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.hasSymbol` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.hasSymbol is false. The other given fields were changed."}
+- CurtainWall `cornerFrameData.joinedCWFramesBegCNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.joinedCWFramesBegCNum is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.joinedCWFramesEndCNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.joinedCWFramesEndCNum is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.material` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.material is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.objectType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.objectType is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.orientation.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.orientation.x is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.orientation.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.orientation.y is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.orientation.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.orientation.z is 0. The other given fields were changed."}
+- CurtainWall `cornerFrameData.segmentID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cornerFrameData.segmentID is 0. The other given fields were changed."}
+- CurtainWall `cutProjectionMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cutProjectionMode is 0. The other given fields were changed."}
+- CurtainWall `height` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: height is 3. The other given fields were changed."}
+- CurtainWall `junctionData.category` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: junctionData.category is 0. The other given fields were changed."}
+- CurtainWall `junctionData.clampFrameOrientsNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: junctionData.clampFrameOrientsNum is 0. The other given fields were changed."}
+- CurtainWall `junctionData.clampFramesNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: junctionData.clampFramesNum is 0. The other given fields were changed."}
+- CurtainWall `junctionData.clampPanelsNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: junctionData.clampPanelsNum is 0. The other given fields were changed."}
+- CurtainWall `junctionData.flipped` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: junctionData.flipped is false. The other given fields were changed."}
+- CurtainWall `junctionData.hasSymbol` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: junctionData.hasSymbol is false. The other given fields were changed."}
+- CurtainWall `linkToSettings.newCreationMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkToSettings.newCreationMode is false. The other given fields were changed."}
+- CurtainWall `placementMethod` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: placementMethod is 0. The other given fields were changed."}
+- CurtainWall `segmentData.arcOrigin.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.arcOrigin.x is 0. The other given fields were changed."}
+- CurtainWall `segmentData.arcOrigin.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.arcOrigin.y is 0. The other given fields were changed."}
+- CurtainWall `segmentData.arcOrigin.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.arcOrigin.z is 0. The other given fields were changed."}
+- CurtainWall `segmentData.begC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.begC.x is 0. The other given fields were changed."}
+- CurtainWall `segmentData.begC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.begC.y is 0. The other given fields were changed."}
+- CurtainWall `segmentData.begC.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.begC.z is 0. The other given fields were changed."}
+- CurtainWall `segmentData.category` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.category is 0. The other given fields were changed."}
+- CurtainWall `segmentData.contourNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.contourNum is 0. The other given fields were changed."}
+- CurtainWall `segmentData.endC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.endC.x is 0. The other given fields were changed."}
+- CurtainWall `segmentData.endC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.endC.y is 0. The other given fields were changed."}
+- CurtainWall `segmentData.endC.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.endC.z is 0. The other given fields were changed."}
+- CurtainWall `segmentData.extrusion.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.extrusion.x is 0. The other given fields were changed."}
+- CurtainWall `segmentData.extrusion.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.extrusion.y is 0. The other given fields were changed."}
+- CurtainWall `segmentData.extrusion.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.extrusion.z is 0. The other given fields were changed."}
+- CurtainWall `segmentData.gridOrigin.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.gridOrigin.x is 0. The other given fields were changed."}
+- CurtainWall `segmentData.gridOrigin.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.gridOrigin.y is 0. The other given fields were changed."}
+- CurtainWall `segmentData.gridOrigin.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.gridOrigin.z is 0. The other given fields were changed."}
+- CurtainWall `segmentData.negArc` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.negArc is false. The other given fields were changed."}
+- CurtainWall `segmentData.patternCellNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.patternCellNum is 2. The other given fields were changed."}
+- CurtainWall `segmentData.segmentType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentData.segmentType is 0. The other given fields were changed."}
+- CurtainWall `useFrameTypesAttributes` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: useFrameTypesAttributes is true. The other given fields were changed."}
+- CurtainWall `visibility.showAllAbove` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showAllAbove is false. The other given fields were changed."}
+- CurtainWall `visibility.showAllBelow` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showAllBelow is false. The other given fields were changed."}
+- CurtainWall `visibility.showOnHome` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showOnHome is false. The other given fields were changed."}
+- CurtainWall `visibility.showRelAbove` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showRelAbove is 1. The other given fields were changed."}
+- CurtainWall `visibility.showRelBelow` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showRelBelow is 0. The other given fields were changed."}
+- CurtainWallFrame `a1` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: a1 is 0.05. The other given fields were changed."}
+- CurtainWallFrame `a2` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: a2 is 0.05. The other given fields were changed."}
+- CurtainWallFrame `angle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: angle is 12.5. The other given fields were changed."}
+- CurtainWallFrame `assocCWPanelsNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: assocCWPanelsNum is 1. The other given fields were changed."}
+- CurtainWallFrame `auxPanelDirsNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: auxPanelDirsNum is 0. The other given fields were changed."}
+- CurtainWallFrame `b1` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: b1 is 0.05. The other given fields were changed."}
+- CurtainWallFrame `b2` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: b2 is 0.25. The other given fields were changed."}
+- CurtainWallFrame `begC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: begC.x is 950. The other given fields were changed."}
+- CurtainWallFrame `begC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: begC.y is 709.94. The other given fields were changed."}
+- CurtainWallFrame `begC.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: begC.z is 3. The other given fields were changed."}
+- CurtainWallFrame `begRel.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: begRel.x is 0. The other given fields were changed."}
+- CurtainWallFrame `begRel.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: begRel.y is 1. The other given fields were changed."}
+- CurtainWallFrame `buildingMaterial` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: buildingMaterial is 30. The other given fields were changed."}
+- CurtainWallFrame `cellID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cellID is 0. The other given fields were changed."}
+- CurtainWallFrame `className` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- CurtainWallFrame `connPriority` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: connPriority is 16. The other given fields were changed."}
+- CurtainWallFrame `contourID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: contourID is 5. The other given fields were changed."}
+- CurtainWallFrame `cutLinePen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cutLinePen is 27. The other given fields were changed."}
+- CurtainWallFrame `cutLineType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cutLineType is 1. The other given fields were changed."}
+- CurtainWallFrame `d` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: d is 0. The other given fields were changed."}
+- CurtainWallFrame `defaultSubElem` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defaultSubElem is false. The other given fields were changed."}
+- CurtainWallFrame `deleteFlag` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: deleteFlag is false. The other given fields were changed."}
+- CurtainWallFrame `endC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: endC.x is 951. The other given fields were changed."}
+- CurtainWallFrame `endC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: endC.y is 709.94. The other given fields were changed."}
+- CurtainWallFrame `endC.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: endC.z is 3. The other given fields were changed."}
+- CurtainWallFrame `endRel.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: endRel.x is 1. The other given fields were changed."}
+- CurtainWallFrame `endRel.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: endRel.y is 1. The other given fields were changed."}
+- CurtainWallFrame `hasSymbol` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hasSymbol is true. The other given fields were changed."}
+- CurtainWallFrame `joinedCWFramesBegCNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: joinedCWFramesBegCNum is 1. The other given fields were changed."}
+- CurtainWallFrame `joinedCWFramesEndCNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: joinedCWFramesEndCNum is 2. The other given fields were changed."}
+- CurtainWallFrame `libInd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: libInd is 38. The other given fields were changed."}
+- CurtainWallFrame `material` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: material is 40. The other given fields were changed."}
+- CurtainWallFrame `objectType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: objectType is 1. The other given fields were changed."}
+- CurtainWallFrame `orientation.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: orientation.x is 0. The other given fields were changed."}
+- CurtainWallFrame `orientation.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: orientation.y is -1. The other given fields were changed."}
+- CurtainWallFrame `orientation.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: orientation.z is 0. The other given fields were changed."}
+- CurtainWallFrame `pen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: pen is 2. The other given fields were changed."}
+- CurtainWallFrame `segmentID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentID is 0. The other given fields were changed."}
+- CurtainWallFrame `useOwnMaterial` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: useOwnMaterial is true. The other given fields were changed."}
+- CurtainWallFrame `w` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: w is 0.02. The other given fields were changed."}
+- CurtainWallPanel `buildingMaterial` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: buildingMaterial is 40. The other given fields were changed."}
+- CurtainWallPanel `centroid.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: centroid.x is 951.5. The other given fields were changed."}
+- CurtainWallPanel `centroid.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: centroid.y is 709.94. The other given fields were changed."}
+- CurtainWallPanel `centroid.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: centroid.z is 1.5. The other given fields were changed."}
+- CurtainWallPanel `className` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- CurtainWallPanel `cutLinePen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cutLinePen is 1. The other given fields were changed."}
+- CurtainWallPanel `cutLineType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: cutLineType is 1. The other given fields were changed."}
+- CurtainWallPanel `defaultSubElem` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defaultSubElem is false. The other given fields were changed."}
+- CurtainWallPanel `deleteFlag` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: deleteFlag is false. The other given fields were changed."}
+- CurtainWallPanel `edgesNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: edgesNum is 4. The other given fields were changed."}
+- CurtainWallPanel `gridPolyIDsNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: gridPolyIDsNum is 1. The other given fields were changed."}
+- CurtainWallPanel `hasSymbol` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hasSymbol is true. The other given fields were changed."}
+- CurtainWallPanel `libInd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: libInd is 33. The other given fields were changed."}
+- CurtainWallPanel `objectType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: objectType is 1. The other given fields were changed."}
+- CurtainWallPanel `pen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: pen is 3. The other given fields were changed."}
+- CurtainWallPanel `segmentID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentID is 0. The other given fields were changed."}
+- CurtainWallPanel `thickness` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: thickness is 0.02. The other given fields were changed."}
+- CurtainWallSegment `arcOrigin.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcOrigin.x is 0. The other given fields were changed."}
+- CurtainWallSegment `arcOrigin.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcOrigin.y is 0. The other given fields were changed."}
+- CurtainWallSegment `arcOrigin.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcOrigin.z is 0. The other given fields were changed."}
+- CurtainWallSegment `begC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: begC.x is 950. The other given fields were changed."}
+- CurtainWallSegment `begC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: begC.y is 709.94. The other given fields were changed."}
+- CurtainWallSegment `begC.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: begC.z is 0. The other given fields were changed."}
+- CurtainWallSegment `contourNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: contourNum is 1. The other given fields were changed."}
+- CurtainWallSegment `endC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: endC.x is 954. The other given fields were changed."}
+- CurtainWallSegment `endC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: endC.y is 709.94. The other given fields were changed."}
+- CurtainWallSegment `endC.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: endC.z is 0. The other given fields were changed."}
+- CurtainWallSegment `extrusion.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: extrusion.x is 0. The other given fields were changed."}
+- CurtainWallSegment `extrusion.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: extrusion.y is 0. The other given fields were changed."}
+- CurtainWallSegment `extrusion.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: extrusion.z is 3. The other given fields were changed."}
+- CurtainWallSegment `gridOrigin.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: gridOrigin.x is 0. The other given fields were changed."}
+- CurtainWallSegment `gridOrigin.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: gridOrigin.y is 0. The other given fields were changed."}
+- CurtainWallSegment `gridOrigin.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: gridOrigin.z is 0. The other given fields were changed."}
+- CurtainWallSegment `negArc` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: negArc is false. The other given fields were changed."}
+- CurtainWallSegment `patternCellNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: patternCellNum is 2. The other given fields were changed."}
+- CurtainWallSegment `segmentType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segmentType is 1. The other given fields were changed."}
+- CutPlane `linkData.referringLevel` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkData.referringLevel is 1. The other given fields were changed."}
+- CutPlane `linkData.sourceMarker` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkData.sourceMarker is true. The other given fields were changed."}
+- CutPlane `markerShow` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: markerShow is 0. The other given fields were changed."}
+- CutPlane `segment.active` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.active is true. The other given fields were changed."}
+- CutPlane `segment.byLimitLines` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.byLimitLines is false. The other given fields were changed."}
+- CutPlane `segment.currPlanConn` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.currPlanConn is 0. The other given fields were changed."}
+- CutPlane `segment.cutPlIdStr` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.cutPlIdStr is \"TC-A\". The other given fields were changed."}
+- CutPlane `segment.cutPlName` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.cutPlName is \"TapirCheck Section A\". The other given fields were changed."}
+- CutPlane `segment.distAreaShadFill` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaShadFill is 23. The other given fields were changed."}
+- CutPlane `segment.distAreaShadFillBGPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaShadFillBGPen is 0. The other given fields were changed."}
+- CutPlane `segment.distAreaShadFillPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaShadFillPen is 189. The other given fields were changed."}
+- CutPlane `segment.distAreaUncutSurfFillType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaUncutSurfFillType is 1. The other given fields were changed."}
+- CutPlane `segment.drawingModeON` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.drawingModeON is false. The other given fields were changed."}
+- CutPlane `segment.exclBlockWalls` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.exclBlockWalls is false. The other given fields were changed."}
+- CutPlane `segment.ieCreationSegmentDepth` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.ieCreationSegmentDepth is 0. The other given fields were changed."}
+- CutPlane `segment.ieCreationSegmentHorizontalOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.ieCreationSegmentHorizontalOffset is 0. The other given fields were changed."}
+- CutPlane `segment.iePolygonEdge.c1.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.iePolygonEdge.c1.x is 800. The other given fields were changed."}
+- CutPlane `segment.iePolygonEdge.c1.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.iePolygonEdge.c1.y is 806. The other given fields were changed."}
+- CutPlane `segment.iePolygonEdge.c2.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.iePolygonEdge.c2.x is 806. The other given fields were changed."}
+- CutPlane `segment.iePolygonEdge.c2.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.iePolygonEdge.c2.y is 806. The other given fields were changed."}
+- CutPlane `segment.modelUncutSurfFillType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.modelUncutSurfFillType is 1. The other given fields were changed."}
+- CutPlane `segment.shAppearance` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shAppearance is 2. The other given fields were changed."}
+- CutPlane `segment.showCutElements` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.showCutElements is false. The other given fields were changed."}
+- CutPlane `segment.solidOperationsOnZones` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.solidOperationsOnZones is false. The other given fields were changed."}
+- CutPlane `segment.sourceMarker` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.sourceMarker is true. The other given fields were changed."}
+- CutPlane `segment.verticalRangeStoryBaseNumber` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.verticalRangeStoryBaseNumber is 0. The other given fields were changed."}
+- CutPlane `segment.windOpened` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.windOpened is false. The other given fields were changed."}
+- Detail `detailIdStr` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: detailIdStr is \"TDM-1\". The other given fields were changed."}
+- Detail `detailName` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: detailName is \"TapirCheck Detail Marker\". The other given fields were changed."}
+- Detail `linkData.referringLevel` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkData.referringLevel is 1. The other given fields were changed."}
+- Detail `linkData.sourceMarker` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkData.sourceMarker is true. The other given fields were changed."}
+- Detail `ltypeInd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: ltypeInd is 1. The other given fields were changed."}
+- Detail `pen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: pen is 65. The other given fields were changed."}
+- Detail `windOpened` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: windOpened is false. The other given fields were changed."}
+- Dimension `advanced` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: advanced is false. The other given fields were changed."}
+- Dimension `arcBase.base.inIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcBase.base.inIndex is 0. The other given fields were changed."}
+- Dimension `arcBase.base.line` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcBase.base.line is false. The other given fields were changed."}
+- Dimension `arcBase.base.node_id` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcBase.base.node_id is 0. The other given fields were changed."}
+- Dimension `arcBase.base.node_status` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcBase.base.node_status is 0. The other given fields were changed."}
+- Dimension `arcBase.base.node_typ` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcBase.base.node_typ is 0. The other given fields were changed."}
+- Dimension `arcBase.base.special` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcBase.base.special is 0. The other given fields were changed."}
+- Dimension `arcBase.base.type.typeID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcBase.base.type.typeID is 0. The other given fields were changed."}
+- Dimension `arcBase.base.type.variationID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcBase.base.type.variationID is 0. The other given fields were changed."}
+- Dimension `arcBase.loc.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcBase.loc.x is 0. The other given fields were changed."}
+- Dimension `arcBase.loc.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcBase.loc.y is 0. The other given fields were changed."}
+- Dimension `arcBase.loc3D.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcBase.loc3D.x is 0. The other given fields were changed."}
+- Dimension `arcBase.loc3D.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcBase.loc3D.y is 0. The other given fields were changed."}
+- Dimension `arcBase.loc3D.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcBase.loc3D.z is 0. The other given fields were changed."}
+- Dimension `compAutoThick` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: compAutoThick is 1. The other given fields were changed."}
+- Dimension `defNote.anchorAtTextEnd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.anchorAtTextEnd is false. The other given fields were changed."}
+- Dimension `defNote.anchorPoint` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.anchorPoint is 3. The other given fields were changed."}
+- Dimension `defNote.arrowData.arrowPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.arrowData.arrowPen is 45. The other given fields were changed."}
+- Dimension `defNote.arrowData.arrowSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.arrowData.arrowSize is 2. The other given fields were changed."}
+- Dimension `defNote.arrowData.arrowType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.arrowData.arrowType is 6. The other given fields were changed."}
+- Dimension `defNote.arrowData.arrowVisibility` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.arrowData.arrowVisibility is true. The other given fields were changed."}
+- Dimension `defNote.backgroundPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.backgroundPen is 1. The other given fields were changed."}
+- Dimension `defNote.begC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.begC.x is 0. The other given fields were changed."}
+- Dimension `defNote.begC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.begC.y is 0. The other given fields were changed."}
+- Dimension `defNote.content` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.content is \"\". The other given fields were changed."}
+- Dimension `defNote.contentType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.contentType is 0. The other given fields were changed."}
+- Dimension `defNote.effectBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.effectBits is 0. The other given fields were changed."}
+- Dimension `defNote.endC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.endC.x is 0. The other given fields were changed."}
+- Dimension `defNote.endC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.endC.y is 0. The other given fields were changed."}
+- Dimension `defNote.faceBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.faceBits is 0. The other given fields were changed."}
+- Dimension `defNote.fixPos` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.fixPos is false. The other given fields were changed."}
+- Dimension `defNote.frame` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.frame is false. The other given fields were changed."}
+- Dimension `defNote.framePen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.framePen is 1. The other given fields were changed."}
+- Dimension `defNote.just` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.just is 1. The other given fields were changed."}
+- Dimension `defNote.leaderLineType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.leaderLineType is 1. The other given fields were changed."}
+- Dimension `defNote.leaderPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.leaderPen is 85. The other given fields were changed."}
+- Dimension `defNote.leaderShape` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.leaderShape is 0. The other given fields were changed."}
+- Dimension `defNote.midC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.midC.x is 0. The other given fields were changed."}
+- Dimension `defNote.midC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.midC.y is 0. The other given fields were changed."}
+- Dimension `defNote.noteAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.noteAngle is 0. The other given fields were changed."}
+- Dimension `defNote.noteFont` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.noteFont is 374. The other given fields were changed."}
+- Dimension `defNote.noteLayer` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.noteLayer is 4. The other given fields were changed."}
+- Dimension `defNote.notePen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.notePen is 66. The other given fields were changed."}
+- Dimension `defNote.noteSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.noteSize is 2.5. The other given fields were changed."}
+- Dimension `defNote.opaque` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.opaque is false. The other given fields were changed."}
+- Dimension `defNote.pos.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.pos.x is 0. The other given fields were changed."}
+- Dimension `defNote.pos.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.pos.y is 0. The other given fields were changed."}
+- Dimension `defNote.rowAnchor` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.rowAnchor is 0. The other given fields were changed."}
+- Dimension `defNote.spacingFactor` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.spacingFactor is 1. The other given fields were changed."}
+- Dimension `defNote.useLeaderLine` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.useLeaderLine is false. The other given fields were changed."}
+- Dimension `defNote.widthFactor` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNote.widthFactor is 1. The other given fields were changed."}
+- Dimension `defStaticDim` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defStaticDim is true. The other given fields were changed."}
+- Dimension `defWitnessForm` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defWitnessForm is 3. The other given fields were changed."}
+- Dimension `defWitnessVal` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defWitnessVal is 1. The other given fields were changed."}
+- Dimension `direction.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: direction.x is 1. The other given fields were changed."}
+- Dimension `direction3D.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: direction3D.x is 0. The other given fields were changed."}
+- Dimension `direction3D.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: direction3D.y is 0. The other given fields were changed."}
+- Dimension `direction3D.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: direction3D.z is 0. The other given fields were changed."}
+- Dimension `ed_arrowAng` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: ed_arrowAng is 0. The other given fields were changed."}
+- Dimension `ed_arrowFill` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: ed_arrowFill is false. The other given fields were changed."}
+- Dimension `ed_arrowUp` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: ed_arrowUp is false. The other given fields were changed."}
+- Dimension `ed_circleLevelDimensionFill` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: ed_circleLevelDimensionFill is 0. The other given fields were changed."}
+- Dimension `ed_dimForm` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: ed_dimForm is 0. The other given fields were changed."}
+- Dimension `ed_needPlus` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: ed_needPlus is false. The other given fields were changed."}
+- Dimension `ed_origin` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: ed_origin is 0. The other given fields were changed."}
+- Dimension `normVect3D.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: normVect3D.x is 0. The other given fields were changed."}
+- Dimension `normVect3D.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: normVect3D.y is 0. The other given fields were changed."}
+- Dimension `normVect3D.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: normVect3D.z is 0. The other given fields were changed."}
+- Dimension `placeUnderEnabled` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: placeUnderEnabled is false. The other given fields were changed."}
+- Dimension `pushNeighborEnabled` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: pushNeighborEnabled is false. The other given fields were changed."}
+- Dimension `refC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: refC.x is 860. The other given fields were changed."}
+- Dimension `refC3D.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: refC3D.x is 860. The other given fields were changed."}
+- Dimension `refC3D.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: refC3D.y is 859. The other given fields were changed."}
+- Dimension `refC3D.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: refC3D.z is 0. The other given fields were changed."}
+- Dimension `textWay` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: textWay is 1. The other given fields were changed."}
+- Dimension `usedIn3D` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: usedIn3D is false. The other given fields were changed."}
+- Door `openingBase.libInd` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- Door `dirVector.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: dirVector.x is 1. The other given fields were changed."}
+- Door `dirVector.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: dirVector.y is 0. The other given fields were changed."}
+- Door `directionType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: directionType is 0. The other given fields were changed."}
+- Door `openingBase.displayOption` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: openingBase.displayOption is 2. The other given fields were changed."}
+- Door `openingBase.libInd` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- Door `openingBase.lookId` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: openingBase.lookId is 0. The other given fields were changed."}
+- Door `revealDepthFromSide` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: revealDepthFromSide is 0. The other given fields were changed."}
+- Door `revealDepthOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: revealDepthOffset is 0. The other given fields were changed."}
+- Door `startPoint.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: startPoint.x is 0. The other given fields were changed."}
+- Door `startPoint.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: startPoint.y is 0. The other given fields were changed."}
+- Elevation `linkData.referringLevel` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkData.referringLevel is 1. The other given fields were changed."}
+- Elevation `linkData.sourceMarker` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkData.sourceMarker is true. The other given fields were changed."}
+- Elevation `segment.active` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.active is true. The other given fields were changed."}
+- Elevation `segment.byLimitLines` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.byLimitLines is false. The other given fields were changed."}
+- Elevation `segment.currPlanConn` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.currPlanConn is 0. The other given fields were changed."}
+- Elevation `segment.cutPlIdStr` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.cutPlIdStr is \"TG-1\". The other given fields were changed."}
+- Elevation `segment.cutPlName` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.cutPlName is \"Tapir test global\". The other given fields were changed."}
+- Elevation `segment.distAreaShadFill` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaShadFill is 23. The other given fields were changed."}
+- Elevation `segment.distAreaShadFillBGPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaShadFillBGPen is 0. The other given fields were changed."}
+- Elevation `segment.distAreaShadFillPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaShadFillPen is 18. The other given fields were changed."}
+- Elevation `segment.distAreaUncutSurfFillType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaUncutSurfFillType is 1. The other given fields were changed."}
+- Elevation `segment.drawingModeON` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.drawingModeON is false. The other given fields were changed."}
+- Elevation `segment.effectBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.effectBits is 4. The other given fields were changed."}
+- Elevation `segment.exclBlockWalls` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.exclBlockWalls is false. The other given fields were changed."}
+- Elevation `segment.ieCreationSegmentDepth` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.ieCreationSegmentDepth is 0. The other given fields were changed."}
+- Elevation `segment.ieCreationSegmentHorizontalOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.ieCreationSegmentHorizontalOffset is 0. The other given fields were changed."}
+- Elevation `segment.iePolygonEdge.c1.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.iePolygonEdge.c1.x is 1400. The other given fields were changed."}
+- Elevation `segment.iePolygonEdge.c1.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.iePolygonEdge.c1.y is 1420. The other given fields were changed."}
+- Elevation `segment.iePolygonEdge.c2.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.iePolygonEdge.c2.x is 1410. The other given fields were changed."}
+- Elevation `segment.iePolygonEdge.c2.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.iePolygonEdge.c2.y is 1420. The other given fields were changed."}
+- Elevation `segment.shAppearance` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shAppearance is 2. The other given fields were changed."}
+- Elevation `segment.showCutElements` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.showCutElements is false. The other given fields were changed."}
+- Elevation `segment.solidOperationsOnZones` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.solidOperationsOnZones is false. The other given fields were changed."}
+- Elevation `segment.sourceMarker` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.sourceMarker is true. The other given fields were changed."}
+- Elevation `segment.verticalRangeStoryBaseNumber` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.verticalRangeStoryBaseNumber is 0. The other given fields were changed."}
+- Elevation `segment.windOpened` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.windOpened is false. The other given fields were changed."}
+- Hatch `backgroundRGB.f_blue` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: backgroundRGB.f_blue is 0. The other given fields were changed."}
+- Hatch `backgroundRGB.f_green` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: backgroundRGB.f_green is 0. The other given fields were changed."}
+- Hatch `backgroundRGB.f_red` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: backgroundRGB.f_red is 0. The other given fields were changed."}
+- Hatch `buildingMaterial` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: buildingMaterial is 0. The other given fields were changed."}
+- Hatch `contPen.colorOverridePenIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: contPen.colorOverridePenIndex is -2. The other given fields were changed."}
+- Hatch `fillPen.colorOverridePenIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: fillPen.colorOverridePenIndex is -2. The other given fields were changed."}
+- Hatch `foregroundRGB.f_blue` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: foregroundRGB.f_blue is 0. The other given fields were changed."}
+- Hatch `foregroundRGB.f_green` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: foregroundRGB.f_green is 0. The other given fields were changed."}
+- Hatch `foregroundRGB.f_red` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: foregroundRGB.f_red is 0. The other given fields were changed."}
+- Hatch `hatchOrientation.flags` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.flags is 11. The other given fields were changed."}
+- Hatch `hatchOrientation.innerRadius` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.innerRadius is 0. The other given fields were changed."}
+- Hatch `hatchOrientation.matrix00` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.matrix00 is 1. The other given fields were changed."}
+- Hatch `hatchOrientation.matrix01` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.matrix01 is 0. The other given fields were changed."}
+- Hatch `hatchOrientation.matrix10` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.matrix10 is 0. The other given fields were changed."}
+- Hatch `hatchOrientation.matrix11` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.matrix11 is 1. The other given fields were changed."}
+- Hatch `hatchOrientation.origo.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.origo.x is 0. The other given fields were changed."}
+- Hatch `hatchOrientation.origo.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.origo.y is 0. The other given fields were changed."}
+- Hatch `hatchOrientation.type` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.type is 0. The other given fields were changed."}
+- Hatch `hatchOrientation.version` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.version is 0. The other given fields were changed."}
+- Hatch `note.anchorAtTextEnd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.anchorAtTextEnd is false. The other given fields were changed."}
+- Hatch `note.anchorPoint` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.anchorPoint is 3. The other given fields were changed."}
+- Hatch `note.arrowData.arrowPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.arrowData.arrowPen is 45. The other given fields were changed."}
+- Hatch `note.arrowData.arrowSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.arrowData.arrowSize is 2. The other given fields were changed."}
+- Hatch `note.arrowData.arrowType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.arrowData.arrowType is 6. The other given fields were changed."}
+- Hatch `note.arrowData.arrowVisibility` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.arrowData.arrowVisibility is true. The other given fields were changed."}
+- Hatch `note.backgroundPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.backgroundPen is 1. The other given fields were changed."}
+- Hatch `note.begC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.begC.x is 0. The other given fields were changed."}
+- Hatch `note.begC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.begC.y is 0. The other given fields were changed."}
+- Hatch `note.content` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.content is \"\". The other given fields were changed."}
+- Hatch `note.contentType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.contentType is 0. The other given fields were changed."}
+- Hatch `note.effectBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.effectBits is 0. The other given fields were changed."}
+- Hatch `note.endC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.endC.x is 0. The other given fields were changed."}
+- Hatch `note.endC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.endC.y is 0. The other given fields were changed."}
+- Hatch `note.faceBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.faceBits is 0. The other given fields were changed."}
+- Hatch `note.fixPos` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.fixPos is false. The other given fields were changed."}
+- Hatch `note.frame` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.frame is false. The other given fields were changed."}
+- Hatch `note.framePen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.framePen is 1. The other given fields were changed."}
+- Hatch `note.just` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.just is 1. The other given fields were changed."}
+- Hatch `note.leaderLineType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.leaderLineType is 1. The other given fields were changed."}
+- Hatch `note.leaderPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.leaderPen is 85. The other given fields were changed."}
+- Hatch `note.leaderShape` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.leaderShape is 0. The other given fields were changed."}
+- Hatch `note.midC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.midC.x is 0. The other given fields were changed."}
+- Hatch `note.midC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.midC.y is 0. The other given fields were changed."}
+- Hatch `note.noteAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.noteAngle is 0. The other given fields were changed."}
+- Hatch `note.noteFont` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.noteFont is 374. The other given fields were changed."}
+- Hatch `note.noteLayer` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.noteLayer is 0. The other given fields were changed."}
+- Hatch `note.notePen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.notePen is 66. The other given fields were changed."}
+- Hatch `note.noteSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.noteSize is 2.5. The other given fields were changed."}
+- Hatch `note.opaque` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.opaque is false. The other given fields were changed."}
+- Hatch `note.pos.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.pos.x is 0. The other given fields were changed."}
+- Hatch `note.pos.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.pos.y is 0. The other given fields were changed."}
+- Hatch `note.rowAnchor` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.rowAnchor is 0. The other given fields were changed."}
+- Hatch `note.spacingFactor` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.spacingFactor is 1. The other given fields were changed."}
+- Hatch `note.useLeaderLine` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.useLeaderLine is false. The other given fields were changed."}
+- Hatch `note.widthFactor` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note.widthFactor is 1. The other given fields were changed."}
+- Hatch `penWeight` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: penWeight is 0.01. The other given fields were changed."}
+- InteriorElevation `segment.begMarkerId` réécriture : refuse : {"code": -2130312311, "message": "Archicad did not keep every value: segment.begMarkerId is 00000000-0000-0000-0000-000000000000. The other given fields were changed."}
+- InteriorElevation `segment.endMarkerId` réécriture : refuse : {"code": -2130312311, "message": "Archicad did not keep every value: segment.endMarkerId is 00000000-0000-0000-0000-000000000000. The other given fields were changed."}
+- InteriorElevation `segment.midMarkerId` réécriture : refuse : {"code": -2130312311, "message": "Archicad did not keep every value: segment.midMarkerId is 00000000-0000-0000-0000-000000000000. The other given fields were changed."}
+- InteriorElevation `segment.shSymbolId` réécriture : refuse : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shSymbolId is 00000000-0000-0000-0000-000000000000. The other given fields were changed."}
+- InteriorElevation `markerFont` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: markerFont is 374. The other given fields were changed."}
+- InteriorElevation `markerPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: markerPen is 25. The other given fields were changed."}
+- InteriorElevation `markerSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: markerSize is 15. The other given fields were changed."}
+- InteriorElevation `markerTextSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: markerTextSize is 2.5. The other given fields were changed."}
+- InteriorElevation `segment.active` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.active is false. The other given fields were changed."}
+- InteriorElevation `segment.begLine` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.begLine is false. The other given fields were changed."}
+- InteriorElevation `segment.begMark` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.begMark is false. The other given fields were changed."}
+- InteriorElevation `segment.boundaryDisplay` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.boundaryDisplay is 0. The other given fields were changed."}
+- InteriorElevation `segment.boundaryLineType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.boundaryLineType is 0. The other given fields were changed."}
+- InteriorElevation `segment.boundaryPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.boundaryPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.byLimitLines` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.byLimitLines is false. The other given fields were changed."}
+- InteriorElevation `segment.continuous` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.continuous is false. The other given fields were changed."}
+- InteriorElevation `segment.currPlanConn` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.currPlanConn is 0. The other given fields were changed."}
+- InteriorElevation `segment.cutPlIdStr` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.cutPlIdStr is \"\". The other given fields were changed."}
+- InteriorElevation `segment.cutPlName` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.cutPlName is \"\". The other given fields were changed."}
+- InteriorElevation `segment.distAreaElemPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaElemPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.distAreaShadFill` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaShadFill is 0. The other given fields were changed."}
+- InteriorElevation `segment.distAreaShadFillBGPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaShadFillBGPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.distAreaShadFillPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaShadFillPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.distAreaUncutSurfBGPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaUncutSurfBGPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.distAreaUncutSurfFillType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaUncutSurfFillType is 0. The other given fields were changed."}
+- InteriorElevation `segment.distAreaUseElemPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaUseElemPen is false. The other given fields were changed."}
+- InteriorElevation `segment.distAreaUseUncutSurfFill` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.distAreaUseUncutSurfFill is false. The other given fields were changed."}
+- InteriorElevation `segment.drawingModeON` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.drawingModeON is false. The other given fields were changed."}
+- InteriorElevation `segment.effectBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.effectBits is 0. The other given fields were changed."}
+- InteriorElevation `segment.endLine` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.endLine is false. The other given fields were changed."}
+- InteriorElevation `segment.endMark` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.endMark is false. The other given fields were changed."}
+- InteriorElevation `segment.exclBlockWalls` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.exclBlockWalls is false. The other given fields were changed."}
+- InteriorElevation `segment.font` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.font is 0. The other given fields were changed."}
+- InteriorElevation `segment.horizRange` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.horizRange is 0. The other given fields were changed."}
+- InteriorElevation `segment.ieCreationSegmentDepth` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.ieCreationSegmentDepth is 0. The other given fields were changed."}
+- InteriorElevation `segment.ieCreationSegmentHorizontalOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.ieCreationSegmentHorizontalOffset is 0. The other given fields were changed."}
+- InteriorElevation `segment.iePolygonEdge.c1.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.iePolygonEdge.c1.x is 0. The other given fields were changed."}
+- InteriorElevation `segment.iePolygonEdge.c1.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.iePolygonEdge.c1.y is 0. The other given fields were changed."}
+- InteriorElevation `segment.iePolygonEdge.c2.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.iePolygonEdge.c2.x is 0. The other given fields were changed."}
+- InteriorElevation `segment.iePolygonEdge.c2.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.iePolygonEdge.c2.y is 0. The other given fields were changed."}
+- InteriorElevation `segment.intPlanConn` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.intPlanConn is 0. The other given fields were changed."}
+- InteriorElevation `segment.limitLinePen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.limitLinePen is 0. The other given fields were changed."}
+- InteriorElevation `segment.limitLtypeInd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.limitLtypeInd is 0. The other given fields were changed."}
+- InteriorElevation `segment.lineLength` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.lineLength is 0. The other given fields were changed."}
+- InteriorElevation `segment.linePen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.linePen is 0. The other given fields were changed."}
+- InteriorElevation `segment.ltypeInd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.ltypeInd is 0. The other given fields were changed."}
+- InteriorElevation `segment.markedDistArea` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.markedDistArea is false. The other given fields were changed."}
+- InteriorElevation `segment.markerSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.markerSize is 0. The other given fields were changed."}
+- InteriorElevation `segment.middleLine` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.middleLine is false. The other given fields were changed."}
+- InteriorElevation `segment.modelElemPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.modelElemPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.modelUncutSurfBGPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.modelUncutSurfBGPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.modelUncutSurfFillType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.modelUncutSurfFillType is 0. The other given fields were changed."}
+- InteriorElevation `segment.modelUseElemPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.modelUseElemPen is false. The other given fields were changed."}
+- InteriorElevation `segment.modelUseUncutSurfFill` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.modelUseUncutSurfFill is false. The other given fields were changed."}
+- InteriorElevation `segment.relativeToStory` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.relativeToStory is false. The other given fields were changed."}
+- InteriorElevation `segment.sectFillBGPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.sectFillBGPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.sectFillPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.sectFillPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.sectPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.sectPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.shAppearance` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shAppearance is 0. The other given fields were changed."}
+- InteriorElevation `segment.shLeftMarkerOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shLeftMarkerOffset is 0. The other given fields were changed."}
+- InteriorElevation `segment.shLeftMarkerOn` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shLeftMarkerOn is false. The other given fields were changed."}
+- InteriorElevation `segment.shLineOn` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shLineOn is false. The other given fields were changed."}
+- InteriorElevation `segment.shLinePen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shLinePen is 0. The other given fields were changed."}
+- InteriorElevation `segment.shLineType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shLineType is 0. The other given fields were changed."}
+- InteriorElevation `segment.shMarkerFaceBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shMarkerFaceBits is 0. The other given fields were changed."}
+- InteriorElevation `segment.shMarkerFont` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shMarkerFont is 0. The other given fields were changed."}
+- InteriorElevation `segment.shMarkerPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shMarkerPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.shMarkerSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shMarkerSize is 0. The other given fields were changed."}
+- InteriorElevation `segment.shMarkerTextSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shMarkerTextSize is 0. The other given fields were changed."}
+- InteriorElevation `segment.shRightMarkerOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shRightMarkerOffset is 0. The other given fields were changed."}
+- InteriorElevation `segment.shRightMarkerOn` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shRightMarkerOn is false. The other given fields were changed."}
+- InteriorElevation `segment.shUseSymbolPens` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shUseSymbolPens is false. The other given fields were changed."}
+- InteriorElevation `segment.shadFill` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shadFill is 0. The other given fields were changed."}
+- InteriorElevation `segment.shadFillBGPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shadFillBGPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.shadFillPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.shadFillPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.showCutElements` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.showCutElements is false. The other given fields were changed."}
+- InteriorElevation `segment.solidOperationsOnZones` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.solidOperationsOnZones is false. The other given fields were changed."}
+- InteriorElevation `segment.sourceMarker` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.sourceMarker is false. The other given fields were changed."}
+- InteriorElevation `segment.sunAngXY` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.sunAngXY is 0. The other given fields were changed."}
+- InteriorElevation `segment.sunAngZ` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.sunAngZ is 0. The other given fields were changed."}
+- InteriorElevation `segment.textPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.textPen is 0. The other given fields were changed."}
+- InteriorElevation `segment.textSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.textSize is 0. The other given fields were changed."}
+- InteriorElevation `segment.transparency` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.transparency is false. The other given fields were changed."}
+- InteriorElevation `segment.useElemPens` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.useElemPens is false. The other given fields were changed."}
+- InteriorElevation `segment.vertMax` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.vertMax is 0. The other given fields were changed."}
+- InteriorElevation `segment.vertMin` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.vertMin is 0. The other given fields were changed."}
+- InteriorElevation `segment.vertRange` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.vertRange is 0. The other given fields were changed."}
+- InteriorElevation `segment.verticalRangeStoryBaseNumber` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.verticalRangeStoryBaseNumber is 0. The other given fields were changed."}
+- InteriorElevation `segment.windOpened` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: segment.windOpened is false. The other given fields were changed."}
+- InteriorElevation `useCommonMarker` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: useCommonMarker is true. The other given fields were changed."}
+- Label `midC.x` réécriture : refuse : {"code": -2130312311, "message": "Archicad did not keep every value: midC.x is 762.37. The other given fields were changed."}
+- Label `midC.y` réécriture : refuse : {"code": -2130312311, "message": "Archicad did not keep every value: midC.y is 764.698. The other given fields were changed."}
+- Label `u.text.loc.x` réécriture : refuse : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.loc.x is 766. The other given fields were changed."}
+- Label `u.text.loc.y` réécriture : refuse : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.loc.y is 765. The other given fields were changed."}
+- Label `arrowData.arrowType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arrowData.arrowType is 4. The other given fields were changed."}
+- Label `arrowData.arrowVisibility` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arrowData.arrowVisibility is true. The other given fields were changed."}
+- Label `effectsBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: effectsBits is 0. The other given fields were changed."}
+- Label `faceBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: faceBits is 0. The other given fields were changed."}
+- Label `font` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: font is 0. The other given fields were changed."}
+- Label `hideWithBaseElem` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hideWithBaseElem is false. The other given fields were changed."}
+- Label `midC.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: midC.x is 881.201. The other given fields were changed."}
+- Label `midC.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: midC.y is 934.409. The other given fields were changed."}
+- Label `textSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: textSize is 0. The other given fields were changed."}
+- Label `textWay` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: textWay is 3. The other given fields were changed."}
+- Label `u.text.anchor` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.anchor is 3. The other given fields were changed."}
+- Label `u.text.effectsBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.effectsBits is 0. The other given fields were changed."}
+- Label `u.text.faceBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.faceBits is 0. The other given fields were changed."}
+- Label `u.text.font` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.font is 374. The other given fields were changed."}
+- Label `u.text.height` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.height is 3.92858. The other given fields were changed."}
+- Label `u.text.just` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.just is 0. The other given fields were changed."}
+- Label `u.text.loc.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.loc.x is 800.475. The other given fields were changed."}
+- Label `u.text.loc.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.loc.y is 799.457. The other given fields were changed."}
+- Label `u.text.multiStyle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.multiStyle is false. The other given fields were changed."}
+- Label `u.text.pen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.pen is 66. The other given fields were changed."}
+- Label `u.text.size` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.size is 2.5. The other given fields were changed."}
+- Label `u.text.spacing` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.spacing is -1. The other given fields were changed."}
+- Label `u.text.useEolPos` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.useEolPos is false. The other given fields were changed."}
+- Label `u.text.width` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.text.width is 16.0112. The other given fields were changed."}
+- Lamp `libInd` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- Lamp `fixedAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: fixedAngle is 0. The other given fields were changed."}
+- Lamp `libInd` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- Lamp `lightColor.f_blue` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: lightColor.f_blue is 0.0499733. The other given fields were changed."}
+- Lamp `lightColor.f_green` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: lightColor.f_green is 0.0499733. The other given fields were changed."}
+- Lamp `lightColor.f_red` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: lightColor.f_red is 0.0499733. The other given fields were changed."}
+- Lamp `linkToSettings.newCreationMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkToSettings.newCreationMode is false. The other given fields were changed."}
+- Lamp `lookId` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: lookId is 3498099437659642325. The other given fields were changed."}
+- Lamp `offset.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: offset.x is 0. The other given fields were changed."}
+- Lamp `offset.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: offset.y is 0. The other given fields were changed."}
+- Lamp `ownerType.typeID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: ownerType.typeID is 0. The other given fields were changed."}
+- Lamp `ownerType.variationID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: ownerType.variationID is 0. The other given fields were changed."}
+- LevelDimension `level` réécriture : refuse : {"code": -2130312311, "message": "Archicad did not keep every value: level is 0. The other given fields were changed."}
+- LevelDimension `note1.anchorAtTextEnd` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.begC.x` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.begC.y` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.content` réécriture : refuse : {"code": -2130312311, "message": "Archicad did not keep every value: note1.content is \"±0,00\". The other given fields were changed."}
+- LevelDimension `note1.endC.x` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.endC.y` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.midC.x` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.midC.y` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.useLeaderLine` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.anchorAtTextEnd` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.begC.x` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.begC.y` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.endC.x` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.endC.y` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.midC.x` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.midC.y` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.useLeaderLine` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `level` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: level is 0. The other given fields were changed."}
+- LevelDimension `note1.anchorAtTextEnd` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.anchorPoint` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note1.anchorPoint is 0. The other given fields were changed."}
+- LevelDimension `note1.arrowData.arrowType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note1.arrowData.arrowType is 4. The other given fields were changed."}
+- LevelDimension `note1.arrowData.arrowVisibility` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note1.arrowData.arrowVisibility is true. The other given fields were changed."}
+- LevelDimension `note1.begC.x` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.begC.y` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.content` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note1.content is \"±0,00\". The other given fields were changed."}
+- LevelDimension `note1.effectBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note1.effectBits is 0. The other given fields were changed."}
+- LevelDimension `note1.endC.x` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.endC.y` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.midC.x` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.midC.y` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note1.noteLayer` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note1.noteLayer is 43. The other given fields were changed."}
+- LevelDimension `note1.rowAnchor` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note1.rowAnchor is 0. The other given fields were changed."}
+- LevelDimension `note1.useLeaderLine` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.anchorAtTextEnd` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.anchorPoint` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.anchorPoint is 0. The other given fields were changed."}
+- LevelDimension `note2.arrowData.arrowPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.arrowData.arrowPen is 0. The other given fields were changed."}
+- LevelDimension `note2.arrowData.arrowSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.arrowData.arrowSize is 0. The other given fields were changed."}
+- LevelDimension `note2.arrowData.arrowType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.arrowData.arrowType is 0. The other given fields were changed."}
+- LevelDimension `note2.arrowData.arrowVisibility` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.arrowData.arrowVisibility is false. The other given fields were changed."}
+- LevelDimension `note2.backgroundPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.backgroundPen is 0. The other given fields were changed."}
+- LevelDimension `note2.begC.x` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.begC.y` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.content` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.content is \"\". The other given fields were changed."}
+- LevelDimension `note2.contentType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.contentType is 0. The other given fields were changed."}
+- LevelDimension `note2.effectBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.effectBits is 0. The other given fields were changed."}
+- LevelDimension `note2.endC.x` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.endC.y` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.faceBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.faceBits is 0. The other given fields were changed."}
+- LevelDimension `note2.fixPos` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.fixPos is false. The other given fields were changed."}
+- LevelDimension `note2.frame` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.frame is false. The other given fields were changed."}
+- LevelDimension `note2.framePen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.framePen is 0. The other given fields were changed."}
+- LevelDimension `note2.just` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.just is 0. The other given fields were changed."}
+- LevelDimension `note2.leaderLineType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.leaderLineType is 0. The other given fields were changed."}
+- LevelDimension `note2.leaderPen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.leaderPen is 0. The other given fields were changed."}
+- LevelDimension `note2.leaderShape` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.leaderShape is 0. The other given fields were changed."}
+- LevelDimension `note2.midC.x` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.midC.y` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.noteAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.noteAngle is 0. The other given fields were changed."}
+- LevelDimension `note2.noteFont` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.noteFont is 0. The other given fields were changed."}
+- LevelDimension `note2.noteLayer` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.noteLayer is 0. The other given fields were changed."}
+- LevelDimension `note2.notePen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.notePen is 0. The other given fields were changed."}
+- LevelDimension `note2.noteSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.noteSize is 0. The other given fields were changed."}
+- LevelDimension `note2.opaque` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.opaque is false. The other given fields were changed."}
+- LevelDimension `note2.pos.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.pos.x is 0. The other given fields were changed."}
+- LevelDimension `note2.pos.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.pos.y is 0. The other given fields were changed."}
+- LevelDimension `note2.rowAnchor` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.rowAnchor is 0. The other given fields were changed."}
+- LevelDimension `note2.spacingFactor` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.spacingFactor is 0. The other given fields were changed."}
+- LevelDimension `note2.useLeaderLine` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- LevelDimension `note2.widthFactor` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: note2.widthFactor is 0. The other given fields were changed."}
+- LevelDimension `parentType.typeID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: parentType.typeID is 0. The other given fields were changed."}
+- LevelDimension `parentType.variationID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: parentType.variationID is 0. The other given fields were changed."}
+- LevelDimension `staticLevel` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: staticLevel is false. The other given fields were changed."}
+- Line `linePen.colorOverridePenIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linePen.colorOverridePenIndex is -2. The other given fields were changed."}
+- Line `penWeight` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: penWeight is 0.01. The other given fields were changed."}
+- Mesh `fillAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: fillAngle is 0. The other given fields were changed."}
+- Mesh `linkToSettings.newCreationMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkToSettings.newCreationMode is false. The other given fields were changed."}
+- Mesh `locOrigo.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: locOrigo.x is 0. The other given fields were changed."}
+- Mesh `locOrigo.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: locOrigo.y is 0. The other given fields were changed."}
+- Morph `showContour.showOnHome` réécriture : refuse : {"code": -2130312311, "message": "Archicad did not keep every value: showContour.showOnHome is true. The other given fields were changed."}
+- Morph `bodyType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: bodyType is 1. The other given fields were changed."}
+- Morph `coverFillOrientation.flags` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: coverFillOrientation.flags is 11. The other given fields were changed."}
+- Morph `coverFillOrientation.innerRadius` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: coverFillOrientation.innerRadius is 0. The other given fields were changed."}
+- Morph `coverFillOrientation.matrix00` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: coverFillOrientation.matrix00 is 1. The other given fields were changed."}
+- Morph `coverFillOrientation.matrix01` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: coverFillOrientation.matrix01 is 0. The other given fields were changed."}
+- Morph `coverFillOrientation.matrix10` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: coverFillOrientation.matrix10 is 0. The other given fields were changed."}
+- Morph `coverFillOrientation.matrix11` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: coverFillOrientation.matrix11 is 1. The other given fields were changed."}
+- Morph `coverFillOrientation.origo.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: coverFillOrientation.origo.x is 0. The other given fields were changed."}
+- Morph `coverFillOrientation.origo.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: coverFillOrientation.origo.y is 0. The other given fields were changed."}
+- Morph `coverFillOrientation.version` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: coverFillOrientation.version is 0. The other given fields were changed."}
+- Morph `edgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: edgeType is 2. The other given fields were changed."}
+- Morph `linkToSettings.newCreationMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkToSettings.newCreationMode is false. The other given fields were changed."}
+- Morph `showFill.showOnHome` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: showFill.showOnHome is true. The other given fields were changed."}
+- Morph `textureProjectionType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: textureProjectionType is 5. The other given fields were changed."}
+- Morph `viewDepthLimitation` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: viewDepthLimitation is 0. The other given fields were changed."}
+- Picture `anchorPoint` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `colorDepth` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `destBox.xMax` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `destBox.xMin` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `destBox.yMax` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `destBox.yMin` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `directCreate` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `mime` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `mirrored` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `origBox.xMax` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `origBox.xMin` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `origBox.yMax` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `origBox.yMin` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `pictName` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `pixelSizeX` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `pixelSizeY` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `rotAngle` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `storageFormat` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `transparent` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `usePixelSize` réécriture : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `anchorPoint` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `colorDepth` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `destBox.xMax` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `destBox.xMin` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `destBox.yMax` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `destBox.yMin` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `directCreate` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `mime` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `mirrored` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `origBox.xMax` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `origBox.xMin` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `origBox.yMax` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `origBox.yMin` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `pictName` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `pixelSizeX` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `pixelSizeY` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `rotAngle` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `storageFormat` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `transparent` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- Picture `usePixelSize` modification : refuse : {"code": -2130313115, "message": "Archicad refused the change."}
+- PolyLine `endArrowData.arrowSize` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- PolyLine `linePen.colorOverridePenIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linePen.colorOverridePenIndex is -2. The other given fields were changed."}
+- PolyLine `penWeight` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: penWeight is 0.01. The other given fields were changed."}
+- PolyLine `startArrowData.arrowSize` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- Railing `defSegment.yOffset` réécriture : refuse : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.yOffset is -0.05. The other given fields were changed."}
+- Railing `defNode.defHandrailConnection[0].baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defHandrailConnection[0].baseConnection is 0. The other given fields were changed."}
+- Railing `defNode.defHandrailConnection[0].directFillet` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defHandrailConnection[0].directFillet is 0. The other given fields were changed."}
+- Railing `defNode.defHandrailConnection[0].type` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defHandrailConnection[0].type is 0. The other given fields were changed."}
+- Railing `defNode.defHandrailConnection[1].baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defHandrailConnection[1].baseConnection is 0. The other given fields were changed."}
+- Railing `defNode.defHandrailConnection[1].directFillet` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defHandrailConnection[1].directFillet is 0. The other given fields were changed."}
+- Railing `defNode.defHandrailConnection[1].type` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defHandrailConnection[1].type is 0. The other given fields were changed."}
+- Railing `defNode.defHandrailEnd[0].arcAngleMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defHandrailEnd[0].arcAngleMode is 0. The other given fields were changed."}
+- Railing `defNode.defHandrailEnd[0].baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defHandrailEnd[0].baseConnection is 0. The other given fields were changed."}
+- Railing `defNode.defHandrailEnd[1].arcAngleMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defHandrailEnd[1].arcAngleMode is 0. The other given fields were changed."}
+- Railing `defNode.defHandrailEnd[1].baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defHandrailEnd[1].baseConnection is 0. The other given fields were changed."}
+- Railing `defNode.defRailConnection.baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defRailConnection.baseConnection is 0. The other given fields were changed."}
+- Railing `defNode.defRailConnection.directFillet` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defRailConnection.directFillet is 0. The other given fields were changed."}
+- Railing `defNode.defRailConnection.type` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defRailConnection.type is 0. The other given fields were changed."}
+- Railing `defNode.defRailEnd.arcAngleMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defRailEnd.arcAngleMode is 0. The other given fields were changed."}
+- Railing `defNode.defRailEnd.baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defRailEnd.baseConnection is 0. The other given fields were changed."}
+- Railing `defNode.defRailEnd.fixtureConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defRailEnd.fixtureConnection is 0. The other given fields were changed."}
+- Railing `defNode.defToprailConnection.baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defToprailConnection.baseConnection is 0. The other given fields were changed."}
+- Railing `defNode.defToprailConnection.directFillet` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defToprailConnection.directFillet is 0. The other given fields were changed."}
+- Railing `defNode.defToprailConnection.type` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defToprailConnection.type is 0. The other given fields were changed."}
+- Railing `defNode.defToprailEnd.arcAngleMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defToprailEnd.arcAngleMode is 0. The other given fields were changed."}
+- Railing `defNode.defToprailEnd.baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defToprailEnd.baseConnection is 0. The other given fields were changed."}
+- Railing `defNode.defToprailEnd.fixtureConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.defToprailEnd.fixtureConnection is 0. The other given fields were changed."}
+- Railing `defNode.isStatic` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defNode.isStatic is true. The other given fields were changed."}
+- Railing `defSegment.defDefaultHandrail.doubleHandrail` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defDefaultHandrail.doubleHandrail is false. The other given fields were changed."}
+- Railing `defSegment.defDefaultHandrail.height` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defDefaultHandrail.height is 0.9. The other given fields were changed."}
+- Railing `defSegment.defDefaultHandrail.horizontalOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defDefaultHandrail.horizontalOffset is -0.06. The other given fields were changed."}
+- Railing `defSegment.defDefaultHandrail.visible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defDefaultHandrail.visible is false. The other given fields were changed."}
+- Railing `defSegment.defDefaultRail.visible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defDefaultRail.visible is false. The other given fields were changed."}
+- Railing `defSegment.defHandrails.doubleHandrail` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defHandrails.doubleHandrail is false. The other given fields were changed."}
+- Railing `defSegment.defHandrails.height` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defHandrails.height is 0.9. The other given fields were changed."}
+- Railing `defSegment.defHandrails.horizontalOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defHandrails.horizontalOffset is -0.06. The other given fields were changed."}
+- Railing `defSegment.defHandrails.visible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defHandrails.visible is false. The other given fields were changed."}
+- Railing `defSegment.defPattern.defBalusterSet.defBaluster.horizontalPosition.isStretchable` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defBalusterSet.defBaluster.horizontalPosition.isStretchable is false. The other given fields were changed."}
+- Railing `defSegment.defPattern.defBalusterSet.defBaluster.horizontalPosition.position` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defBalusterSet.defBaluster.horizontalPosition.position is 0. The other given fields were changed."}
+- Railing `defSegment.defPattern.defBalusterSet.distribution.type` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defBalusterSet.distribution.type is 0. The other given fields were changed."}
+- Railing `defSegment.defPattern.defBalusterSet.frame.placeIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defBalusterSet.frame.placeIndex is 0. The other given fields were changed."}
+- Railing `defSegment.defPattern.defBalusterSet.frame.verticalPosition.bottomRailIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defBalusterSet.frame.verticalPosition.bottomRailIndex is 1. The other given fields were changed."}
+- Railing `defSegment.defPattern.defBalusterSet.frame.verticalPosition.topRailIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defBalusterSet.frame.verticalPosition.topRailIndex is 2. The other given fields were changed."}
+- Railing `defSegment.defPattern.defBalusterSet.frame.zBottomOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defBalusterSet.frame.zBottomOffset is -1.25517e-8. The other given fields were changed."}
+- Railing `defSegment.defPattern.defBalusterSet.frame.zTopOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defBalusterSet.frame.zTopOffset is 0.02. The other given fields were changed."}
+- Railing `defSegment.defPattern.defInnerPost.doublePostOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defInnerPost.doublePostOffset is 0. The other given fields were changed."}
+- Railing `defSegment.defPattern.defInnerPost.horizontalPosition.isStretchable` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defInnerPost.horizontalPosition.isStretchable is true. The other given fields were changed."}
+- Railing `defSegment.defPattern.defInnerPost.horizontalPosition.position` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defInnerPost.horizontalPosition.position is 1. The other given fields were changed."}
+- Railing `defSegment.defPattern.defInnerPost.postNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defInnerPost.postNum is 1. The other given fields were changed."}
+- Railing `defSegment.defPattern.defInnerPost.verticalPosition.bottomRailIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defInnerPost.verticalPosition.bottomRailIndex is 0. The other given fields were changed."}
+- Railing `defSegment.defPattern.defInnerPost.verticalPosition.topRailIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defInnerPost.verticalPosition.topRailIndex is 2. The other given fields were changed."}
+- Railing `defSegment.defPattern.defPanel.frame.placeIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defPanel.frame.placeIndex is 0. The other given fields were changed."}
+- Railing `defSegment.defPattern.defPanel.frame.verticalPosition.bottomRailIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defPanel.frame.verticalPosition.bottomRailIndex is 1. The other given fields were changed."}
+- Railing `defSegment.defPattern.defPanel.frame.verticalPosition.topRailIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defPanel.frame.verticalPosition.topRailIndex is 2. The other given fields were changed."}
+- Railing `defSegment.defPattern.defPanel.frame.zBottomOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defPanel.frame.zBottomOffset is 0.045. The other given fields were changed."}
+- Railing `defSegment.defPattern.defPanel.frame.zTopOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defPattern.defPanel.frame.zTopOffset is 0.06. The other given fields were changed."}
+- Railing `defSegment.defRails.height` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defRails.height is 0.07. The other given fields were changed."}
+- Railing `defSegment.defRails.horizontalOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defRails.horizontalOffset is 0. The other given fields were changed."}
+- Railing `defSegment.defRails.relative` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defRails.relative is false. The other given fields were changed."}
+- Railing `defSegment.defRails.visible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.defRails.visible is false. The other given fields were changed."}
+- Railing `defSegment.refLineLocation` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.refLineLocation is 0. The other given fields were changed."}
+- Railing `defSegment.yOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defSegment.yOffset is -0.06. The other given fields were changed."}
+- Railing `isAutoOnStoryVisibility` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: isAutoOnStoryVisibility is true. The other given fields were changed."}
+- Railing `linkToSettings.newCreationMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkToSettings.newCreationMode is false. The other given fields were changed."}
+- Railing `visibility.showAllAbove` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showAllAbove is false. The other given fields were changed."}
+- Railing `visibility.showAllBelow` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showAllBelow is false. The other given fields were changed."}
+- Railing `visibility.showOnHome` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showOnHome is false. The other given fields were changed."}
+- Railing `visibility.showRelAbove` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showRelAbove is 1. The other given fields were changed."}
+- Railing `visibility.showRelBelow` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showRelBelow is 0. The other given fields were changed."}
+- RailingBaluster `horizontalPosition.isStretchable` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBaluster `horizontalPosition.position` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBaluster `symbID` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBaluster `horizontalPosition.isStretchable` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBaluster `horizontalPosition.position` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `defBaluster.horizontalPosition.isStretchable` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `defBaluster.horizontalPosition.position` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `defBaluster.symbID` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `distribution.alignment` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `distribution.length` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `distribution.patternAmount` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `distribution.type` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.placeIndex` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.verticalPosition.bottomRailIndex` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.verticalPosition.topRailIndex` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.xBeginOffset` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.xEndOffset` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.yOffset` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.zBottomOffset` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.zTopOffset` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `defBaluster.horizontalPosition.isStretchable` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `defBaluster.horizontalPosition.position` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `distribution.alignment` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `distribution.length` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `distribution.patternAmount` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `distribution.type` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.placeIndex` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.verticalPosition.bottomRailIndex` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.verticalPosition.topRailIndex` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.xBeginOffset` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.xEndOffset` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.yOffset` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.zBottomOffset` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingBalusterSet `frame.zTopOffset` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingInnerPost `doublePostOffset` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingInnerPost `horizontalPosition.isStretchable` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingInnerPost `horizontalPosition.position` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingInnerPost `postNum` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingInnerPost `symbID` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingInnerPost `verticalPosition.bottomRailIndex` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingInnerPost `verticalPosition.topRailIndex` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingInnerPost `doublePostOffset` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingInnerPost `horizontalPosition.isStretchable` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingInnerPost `horizontalPosition.position` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingInnerPost `postNum` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingInnerPost `verticalPosition.bottomRailIndex` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingInnerPost `verticalPosition.topRailIndex` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingNode `defHandrailConnection[0].baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrailConnection[0].baseConnection is 0. The other given fields were changed."}
+- RailingNode `defHandrailConnection[0].directFillet` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrailConnection[0].directFillet is 0. The other given fields were changed."}
+- RailingNode `defHandrailConnection[0].type` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrailConnection[0].type is 0. The other given fields were changed."}
+- RailingNode `defHandrailConnection[1].baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrailConnection[1].baseConnection is 0. The other given fields were changed."}
+- RailingNode `defHandrailConnection[1].directFillet` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrailConnection[1].directFillet is 0. The other given fields were changed."}
+- RailingNode `defHandrailConnection[1].type` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrailConnection[1].type is 0. The other given fields were changed."}
+- RailingNode `defHandrailEnd[0].arcAngleMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrailEnd[0].arcAngleMode is 0. The other given fields were changed."}
+- RailingNode `defHandrailEnd[0].baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrailEnd[0].baseConnection is 0. The other given fields were changed."}
+- RailingNode `defHandrailEnd[1].arcAngleMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrailEnd[1].arcAngleMode is 0. The other given fields were changed."}
+- RailingNode `defHandrailEnd[1].baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrailEnd[1].baseConnection is 0. The other given fields were changed."}
+- RailingNode `defRailConnection.baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defRailConnection.baseConnection is 0. The other given fields were changed."}
+- RailingNode `defRailConnection.directFillet` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defRailConnection.directFillet is 0. The other given fields were changed."}
+- RailingNode `defRailConnection.type` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defRailConnection.type is 0. The other given fields were changed."}
+- RailingNode `defRailEnd.arcAngleMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defRailEnd.arcAngleMode is 0. The other given fields were changed."}
+- RailingNode `defRailEnd.baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defRailEnd.baseConnection is 0. The other given fields were changed."}
+- RailingNode `defRailEnd.fixtureConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defRailEnd.fixtureConnection is 0. The other given fields were changed."}
+- RailingNode `defToprailConnection.baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defToprailConnection.baseConnection is 0. The other given fields were changed."}
+- RailingNode `defToprailConnection.directFillet` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defToprailConnection.directFillet is 0. The other given fields were changed."}
+- RailingNode `defToprailConnection.type` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defToprailConnection.type is 0. The other given fields were changed."}
+- RailingNode `defToprailEnd.arcAngleMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defToprailEnd.arcAngleMode is 0. The other given fields were changed."}
+- RailingNode `defToprailEnd.baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defToprailEnd.baseConnection is 0. The other given fields were changed."}
+- RailingNode `defToprailEnd.fixtureConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defToprailEnd.fixtureConnection is 0. The other given fields were changed."}
+- RailingNode `isStatic` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: isStatic is true. The other given fields were changed."}
+- RailingPost `symbID` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingPost `verticalPosition.bottomRailIndex` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingPost `verticalPosition.topRailIndex` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingPost `verticalPosition.bottomRailIndex` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingPost `verticalPosition.topRailIndex` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change. Archicad generates this railing component from a model and does not take a change to it: change defPost of its RailingNode or defPattern of its RailingSegment instead (or ModifyRailings with nodes[].post or segments[].pattern)."}
+- RailingSegment `yOffset` réécriture : refuse : {"code": -2130312311, "message": "Archicad did not keep every value: yOffset is 0.05. The other given fields were changed."}
+- RailingSegment `defDefaultHandrail.visible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defDefaultHandrail.visible is false. The other given fields were changed."}
+- RailingSegment `defDefaultRail.visible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defDefaultRail.visible is false. The other given fields were changed."}
+- RailingSegment `defHandrails.doubleHandrail` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrails.doubleHandrail is false. The other given fields were changed."}
+- RailingSegment `defHandrails.height` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrails.height is 0.9. The other given fields were changed."}
+- RailingSegment `defHandrails.horizontalOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrails.horizontalOffset is -0.06. The other given fields were changed."}
+- RailingSegment `defHandrails.visible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defHandrails.visible is false. The other given fields were changed."}
+- RailingSegment `defPattern.defBalusterSet.defBaluster.horizontalPosition.isStretchable` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defBalusterSet.defBaluster.horizontalPosition.isStretchable is false. The other given fields were changed."}
+- RailingSegment `defPattern.defBalusterSet.defBaluster.horizontalPosition.position` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defBalusterSet.defBaluster.horizontalPosition.position is 0. The other given fields were changed."}
+- RailingSegment `defPattern.defBalusterSet.distribution.type` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defBalusterSet.distribution.type is 0. The other given fields were changed."}
+- RailingSegment `defPattern.defBalusterSet.frame.placeIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defBalusterSet.frame.placeIndex is 0. The other given fields were changed."}
+- RailingSegment `defPattern.defBalusterSet.frame.verticalPosition.bottomRailIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defBalusterSet.frame.verticalPosition.bottomRailIndex is 1. The other given fields were changed."}
+- RailingSegment `defPattern.defBalusterSet.frame.verticalPosition.topRailIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defBalusterSet.frame.verticalPosition.topRailIndex is 2. The other given fields were changed."}
+- RailingSegment `defPattern.defBalusterSet.frame.zBottomOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defBalusterSet.frame.zBottomOffset is -1.25517e-8. The other given fields were changed."}
+- RailingSegment `defPattern.defBalusterSet.frame.zTopOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defBalusterSet.frame.zTopOffset is 0.02. The other given fields were changed."}
+- RailingSegment `defPattern.defInnerPost.verticalPosition.topRailIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defInnerPost.verticalPosition.topRailIndex is 2. The other given fields were changed."}
+- RailingSegment `defPattern.defPanel.frame.placeIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defPanel.frame.placeIndex is 0. The other given fields were changed."}
+- RailingSegment `defPattern.defPanel.frame.verticalPosition.bottomRailIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defPanel.frame.verticalPosition.bottomRailIndex is 1. The other given fields were changed."}
+- RailingSegment `defPattern.defPanel.frame.verticalPosition.topRailIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defPanel.frame.verticalPosition.topRailIndex is 2. The other given fields were changed."}
+- RailingSegment `defPattern.defPanel.frame.zBottomOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defPanel.frame.zBottomOffset is 0.045. The other given fields were changed."}
+- RailingSegment `defPattern.defPanel.frame.zTopOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defPattern.defPanel.frame.zTopOffset is 0.06. The other given fields were changed."}
+- RailingSegment `defRails.height` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defRails.height is 0.07. The other given fields were changed."}
+- RailingSegment `defRails.horizontalOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defRails.horizontalOffset is 0. The other given fields were changed."}
+- RailingSegment `defRails.relative` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defRails.relative is false. The other given fields were changed."}
+- RailingSegment `defRails.visible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defRails.visible is false. The other given fields were changed."}
+- RailingSegment `refLineLocation` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: refLineLocation is 0. The other given fields were changed."}
+- RailingSegment `yOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: yOffset is 0.04. The other given fields were changed."}
+- RailingToprailEnd `arcAngleMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: arcAngleMode is 0. The other given fields were changed."}
+- RailingToprailEnd `baseConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: baseConnection is 0. The other given fields were changed."}
+- RailingToprailEnd `fixtureConnection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: fixtureConnection is 0. The other given fields were changed."}
+- Riser `role` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: role is 0. The other given fields were changed."}
+- Riser `sequenceNumber` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: sequenceNumber is 2. The other given fields were changed."}
+- Riser `subElemId` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: subElemId is 3. The other given fields were changed."}
+- Roof `shellBase.buildingMaterial` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.buildingMaterial is 20. The other given fields were changed."}
+- Roof `shellBase.edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.edgeTrim.sideAngle is 1.5708. The other given fields were changed."}
+- Roof `shellBase.hatchOrientation.flags` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.flags is 0. The other given fields were changed."}
+- Roof `shellBase.hatchOrientation.innerRadius` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.innerRadius is 0. The other given fields were changed."}
+- Roof `shellBase.hatchOrientation.matrix00` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.matrix00 is 1. The other given fields were changed."}
+- Roof `shellBase.hatchOrientation.matrix01` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.matrix01 is 0. The other given fields were changed."}
+- Roof `shellBase.hatchOrientation.matrix10` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.matrix10 is 0. The other given fields were changed."}
+- Roof `shellBase.hatchOrientation.matrix11` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.matrix11 is 1. The other given fields were changed."}
+- Roof `shellBase.hatchOrientation.origo.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.origo.x is 1004. The other given fields were changed."}
+- Roof `shellBase.hatchOrientation.origo.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.origo.y is 1000. The other given fields were changed."}
+- Roof `shellBase.hatchOrientation.type` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.type is 1. The other given fields were changed."}
+- Roof `shellBase.hatchOrientation.version` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.version is 0. The other given fields were changed."}
+- Roof `shellBase.linkToSettings.newCreationMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.linkToSettings.newCreationMode is false. The other given fields were changed."}
+- Roof `shellBase.modelElemStructureType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.modelElemStructureType is 0. The other given fields were changed."}
+- Roof `shellBase.thickness` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.thickness is 0.3. The other given fields were changed."}
+- Roof `shellBase.viewDepthLimitation` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.viewDepthLimitation is 0. The other given fields were changed."}
+- Roof `u.planeRoof.posSign` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.planeRoof.posSign is true. The other given fields were changed."}
+- Shell `defEdgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: defEdgeType is 0. The other given fields were changed."}
+- Shell `hasContour` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hasContour is false. The other given fields were changed."}
+- Shell `isFlipped` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: isFlipped is false. The other given fields were changed."}
+- Shell `numHoles` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: numHoles is 0. The other given fields were changed."}
+- Shell `shellBase.cutBodyType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.cutBodyType is 4. The other given fields were changed."}
+- Shell `shellBase.edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.edgeTrim.sideAngle is 1.5708. The other given fields were changed."}
+- Shell `shellBase.hatchOrientation.flags` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.flags is 0. The other given fields were changed."}
+- Shell `shellBase.hatchOrientation.innerRadius` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.innerRadius is 0. The other given fields were changed."}
+- Shell `shellBase.hatchOrientation.matrix00` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.matrix00 is 1. The other given fields were changed."}
+- Shell `shellBase.hatchOrientation.matrix01` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.matrix01 is 0. The other given fields were changed."}
+- Shell `shellBase.hatchOrientation.matrix10` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.matrix10 is 0. The other given fields were changed."}
+- Shell `shellBase.hatchOrientation.matrix11` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.matrix11 is 1. The other given fields were changed."}
+- Shell `shellBase.hatchOrientation.origo.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.origo.x is 0. The other given fields were changed."}
+- Shell `shellBase.hatchOrientation.origo.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.origo.y is 0. The other given fields were changed."}
+- Shell `shellBase.hatchOrientation.version` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.hatchOrientation.version is 0. The other given fields were changed."}
+- Shell `shellBase.linkToSettings.newCreationMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.linkToSettings.newCreationMode is false. The other given fields were changed."}
+- Shell `shellBase.viewDepthLimitation` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: shellBase.viewDepthLimitation is 0. The other given fields were changed."}
+- Shell `u.extrudedShell.begShapeEdgeData.edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.begShapeEdgeData.edgeTrim.sideAngle is 1.5708. The other given fields were changed."}
+- Shell `u.extrudedShell.begShapeEdgeData.edgeTrim.sideType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.begShapeEdgeData.edgeTrim.sideType is 0. The other given fields were changed."}
+- Shell `u.extrudedShell.begShapeEdgeData.edgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.begShapeEdgeData.edgeType is 0. The other given fields were changed."}
+- Shell `u.extrudedShell.endShapeEdgeData.edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.endShapeEdgeData.edgeTrim.sideAngle is 1.2. The other given fields were changed."}
+- Shell `u.extrudedShell.endShapeEdgeData.edgeTrim.sideType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.endShapeEdgeData.edgeTrim.sideType is 3. The other given fields were changed."}
+- Shell `u.extrudedShell.endShapeEdgeData.edgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.endShapeEdgeData.edgeType is 0. The other given fields were changed."}
+- Shell `u.extrudedShell.extrudedEdgeDatas[0].edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.extrudedEdgeDatas[0].edgeTrim.sideAngle is 1.5708. The other given fields were changed."}
+- Shell `u.extrudedShell.extrudedEdgeDatas[0].edgeTrim.sideType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.extrudedEdgeDatas[0].edgeTrim.sideType is 1. The other given fields were changed."}
+- Shell `u.extrudedShell.extrudedEdgeDatas[0].edgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.extrudedEdgeDatas[0].edgeType is 0. The other given fields were changed."}
+- Shell `u.extrudedShell.extrudedEdgeDatas[1].edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.extrudedEdgeDatas[1].edgeTrim.sideAngle is 1.5708. The other given fields were changed."}
+- Shell `u.extrudedShell.extrudedEdgeDatas[1].edgeTrim.sideType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.extrudedEdgeDatas[1].edgeTrim.sideType is 1. The other given fields were changed."}
+- Shell `u.extrudedShell.extrudedEdgeDatas[1].edgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.extrudedEdgeDatas[1].edgeType is 0. The other given fields were changed."}
+- Shell `u.extrudedShell.shapeDirection.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.shapeDirection.x is 1. The other given fields were changed."}
+- Shell `u.extrudedShell.shapeDirection.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.extrudedShell.shapeDirection.y is 0. The other given fields were changed."}
+- Shell `u.revolvedShell.begShapeEdgeData.edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.revolvedShell.begShapeEdgeData.edgeTrim.sideAngle is 1.5708. The other given fields were changed."}
+- Shell `u.revolvedShell.begShapeEdgeData.edgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.revolvedShell.begShapeEdgeData.edgeType is 0. The other given fields were changed."}
+- Shell `u.revolvedShell.distortionAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.revolvedShell.distortionAngle is 1.49226. The other given fields were changed."}
+- Shell `u.revolvedShell.endShapeEdgeData.edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.revolvedShell.endShapeEdgeData.edgeTrim.sideAngle is 1.5708. The other given fields were changed."}
+- Shell `u.revolvedShell.endShapeEdgeData.edgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.revolvedShell.endShapeEdgeData.edgeType is 0. The other given fields were changed."}
+- Shell `u.revolvedShell.revolvedEdgeDatas[0].edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.revolvedShell.revolvedEdgeDatas[0].edgeTrim.sideAngle is 0. The other given fields were changed."}
+- Shell `u.revolvedShell.revolvedEdgeDatas[0].edgeTrim.sideType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.revolvedShell.revolvedEdgeDatas[0].edgeTrim.sideType is 0. The other given fields were changed."}
+- Shell `u.revolvedShell.revolvedEdgeDatas[0].edgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.revolvedShell.revolvedEdgeDatas[0].edgeType is 0. The other given fields were changed."}
+- Shell `u.revolvedShell.revolvedEdgeDatas[1].edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.revolvedShell.revolvedEdgeDatas[1].edgeTrim.sideAngle is 1.5708. The other given fields were changed."}
+- Shell `u.revolvedShell.revolvedEdgeDatas[1].edgeTrim.sideType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.revolvedShell.revolvedEdgeDatas[1].edgeTrim.sideType is 1. The other given fields were changed."}
+- Shell `u.revolvedShell.revolvedEdgeDatas[1].edgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.revolvedShell.revolvedEdgeDatas[1].edgeType is 0. The other given fields were changed."}
+- Shell `u.ruledShell.begShapeEdgeData.edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.ruledShell.begShapeEdgeData.edgeTrim.sideAngle is 1.5708. The other given fields were changed."}
+- Shell `u.ruledShell.begShapeEdgeData.edgeTrim.sideType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.ruledShell.begShapeEdgeData.edgeTrim.sideType is 1. The other given fields were changed."}
+- Shell `u.ruledShell.begShapeEdgeData.edgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.ruledShell.begShapeEdgeData.edgeType is 0. The other given fields were changed."}
+- Shell `u.ruledShell.endShapeEdgeData.edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.ruledShell.endShapeEdgeData.edgeTrim.sideAngle is 1.5708. The other given fields were changed."}
+- Shell `u.ruledShell.endShapeEdgeData.edgeTrim.sideType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.ruledShell.endShapeEdgeData.edgeTrim.sideType is 1. The other given fields were changed."}
+- Shell `u.ruledShell.endShapeEdgeData.edgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.ruledShell.endShapeEdgeData.edgeType is 0. The other given fields were changed."}
+- Shell `u.ruledShell.morphingRule` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.ruledShell.morphingRule is 0. The other given fields were changed."}
+- Shell `u.ruledShell.ruledEdgeDatas[0].edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.ruledShell.ruledEdgeDatas[0].edgeTrim.sideAngle is 1.5708. The other given fields were changed."}
+- Shell `u.ruledShell.ruledEdgeDatas[0].edgeTrim.sideType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.ruledShell.ruledEdgeDatas[0].edgeTrim.sideType is 1. The other given fields were changed."}
+- Shell `u.ruledShell.ruledEdgeDatas[0].edgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.ruledShell.ruledEdgeDatas[0].edgeType is 0. The other given fields were changed."}
+- Shell `u.ruledShell.ruledEdgeDatas[1].edgeTrim.sideAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.ruledShell.ruledEdgeDatas[1].edgeTrim.sideAngle is 1.5708. The other given fields were changed."}
+- Shell `u.ruledShell.ruledEdgeDatas[1].edgeTrim.sideType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.ruledShell.ruledEdgeDatas[1].edgeTrim.sideType is 1. The other given fields were changed."}
+- Shell `u.ruledShell.ruledEdgeDatas[1].edgeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: u.ruledShell.ruledEdgeDatas[1].edgeType is 0. The other given fields were changed."}
+- Skylight `openingBase.libInd` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- Skylight `anchorLevel` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: anchorLevel is 2.18076. The other given fields were changed."}
+- Skylight `anchorPosition.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: anchorPosition.x is 1424. The other given fields were changed."}
+- Skylight `anchorPosition.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: anchorPosition.y is 1403. The other given fields were changed."}
+- Skylight `azimuthAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: azimuthAngle is 0. The other given fields were changed."}
+- Skylight `elevationAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: elevationAngle is 0.5. The other given fields were changed."}
+- Skylight `openingBase.displayOption` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: openingBase.displayOption is 2. The other given fields were changed."}
+- Skylight `openingBase.libInd` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- Skylight `openingBase.lookId` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: openingBase.lookId is 0. The other given fields were changed."}
+- Skylight `openingBase.verticalLink.linkValue` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: openingBase.verticalLink.linkValue is 0. The other given fields were changed."}
+- Skylight `openingBase.wallCutUsing` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: openingBase.wallCutUsing is false. The other given fields were changed."}
+- Skylight `vertexID` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: vertexID is 0. The other given fields were changed."}
+- Slab `composite` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: composite is 96. The other given fields were changed."}
+- Slab `hatchOrientation.flags` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.flags is 11. The other given fields were changed."}
+- Slab `hatchOrientation.innerRadius` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.innerRadius is 0. The other given fields were changed."}
+- Slab `hatchOrientation.matrix00` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.matrix00 is 1. The other given fields were changed."}
+- Slab `hatchOrientation.matrix01` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.matrix01 is 0. The other given fields were changed."}
+- Slab `hatchOrientation.matrix10` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.matrix10 is 0. The other given fields were changed."}
+- Slab `hatchOrientation.matrix11` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.matrix11 is 1. The other given fields were changed."}
+- Slab `hatchOrientation.origo.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.origo.x is 0. The other given fields were changed."}
+- Slab `hatchOrientation.origo.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.origo.y is 0. The other given fields were changed."}
+- Slab `hatchOrientation.version` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: hatchOrientation.version is 0. The other given fields were changed."}
+- Slab `linkToSettings.newCreationMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkToSettings.newCreationMode is false. The other given fields were changed."}
+- Slab `offsetFromTop` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: offsetFromTop is 0. The other given fields were changed."}
+- Slab `referencePlaneLocation` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: referencePlaneLocation is 0. The other given fields were changed."}
+- Spline `endArrowData.arrowSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: endArrowData.arrowSize is 0. The other given fields were changed."}
+- Spline `linePen.colorOverridePenIndex` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linePen.colorOverridePenIndex is -2. The other given fields were changed."}
+- Spline `penWeight` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: penWeight is 0.01. The other given fields were changed."}
+- Spline `startArrowData.arrowSize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: startArrowData.arrowSize is 0. The other given fields were changed."}
+- Stair `basePlane.axisX.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: basePlane.axisX.x is 1. The other given fields were changed."}
+- Stair `basePlane.axisX.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: basePlane.axisX.y is 0. The other given fields were changed."}
+- Stair `basePlane.axisX.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: basePlane.axisX.z is 0. The other given fields were changed."}
+- Stair `basePlane.axisY.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: basePlane.axisY.x is 0. The other given fields were changed."}
+- Stair `basePlane.axisY.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: basePlane.axisY.y is 1. The other given fields were changed."}
+- Stair `basePlane.axisY.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: basePlane.axisY.z is 0. The other given fields were changed."}
+- Stair `basePlane.axisZ.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: basePlane.axisZ.x is 0. The other given fields were changed."}
+- Stair `basePlane.axisZ.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: basePlane.axisZ.y is 0. The other given fields were changed."}
+- Stair `basePlane.axisZ.z` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: basePlane.axisZ.z is 1. The other given fields were changed."}
+- Stair `basePlane.basePoint.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: basePlane.basePoint.x is 1530. The other given fields were changed."}
+- Stair `basePlane.basePoint.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: basePlane.basePoint.y is 1510. The other given fields were changed."}
+- Stair `baselinePosition` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: baselinePosition is 0. The other given fields were changed."}
+- Stair `finishVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: finishVisible is true. The other given fields were changed."}
+- Stair `fpdLayout.breakLineAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: fpdLayout.breakLineAngle is 0.434435. The other given fields were changed."}
+- Stair `fpdLayout.breakLineAngleType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: fpdLayout.breakLineAngleType is 0. The other given fields were changed."}
+- Stair `fpdLayout.isAutoOnStoryVisibility` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: fpdLayout.isAutoOnStoryVisibility is true. The other given fields were changed."}
+- Stair `fpdLayout.visibility.showAllAbove` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: fpdLayout.visibility.showAllAbove is false. The other given fields were changed."}
+- Stair `fpdLayout.visibility.showAllBelow` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: fpdLayout.visibility.showAllBelow is false. The other given fields were changed."}
+- Stair `fpdLayout.visibility.showOnHome` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: fpdLayout.visibility.showOnHome is false. The other given fields were changed."}
+- Stair `fpdLayout.visibility.showRelAbove` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: fpdLayout.visibility.showRelAbove is 1. The other given fields were changed."}
+- Stair `fpdLayout.visibility.showRelBelow` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: fpdLayout.visibility.showRelBelow is 0. The other given fields were changed."}
+- Stair `inputDirection` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: inputDirection is 0. The other given fields were changed."}
+- Stair `linkToSettings.newCreationMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkToSettings.newCreationMode is false. The other given fields were changed."}
+- Stair `rcpdLayout.breakLineAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rcpdLayout.breakLineAngle is 0.434435. The other given fields were changed."}
+- Stair `rcpdLayout.breakLineAngleType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rcpdLayout.breakLineAngleType is 0. The other given fields were changed."}
+- Stair `rcpdLayout.gridTypeBottom` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rcpdLayout.gridTypeBottom is 0. The other given fields were changed."}
+- Stair `rcpdLayout.gridTypeMiddle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rcpdLayout.gridTypeMiddle is 0. The other given fields were changed."}
+- Stair `rcpdLayout.isAutoOnStoryVisibility` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rcpdLayout.isAutoOnStoryVisibility is true. The other given fields were changed."}
+- Stair `rcpdLayout.showNumbering` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rcpdLayout.showNumbering is false. The other given fields were changed."}
+- Stair `rcpdLayout.showUpDownText` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rcpdLayout.showUpDownText is false. The other given fields were changed."}
+- Stair `rcpdLayout.storyVisibility` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rcpdLayout.storyVisibility is 0. The other given fields were changed."}
+- Stair `rcpdLayout.visibility.showAllAbove` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rcpdLayout.visibility.showAllAbove is false. The other given fields were changed."}
+- Stair `rcpdLayout.visibility.showAllBelow` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rcpdLayout.visibility.showAllBelow is false. The other given fields were changed."}
+- Stair `rcpdLayout.visibility.showOnHome` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rcpdLayout.visibility.showOnHome is false. The other given fields were changed."}
+- Stair `rcpdLayout.visibility.showRelAbove` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rcpdLayout.visibility.showRelAbove is 0. The other given fields were changed."}
+- Stair `rcpdLayout.visibility.showRelBelow` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rcpdLayout.visibility.showRelBelow is 1. The other given fields were changed."}
+- Stair `relativeTopStory` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: relativeTopStory is 0. The other given fields were changed."}
+- Stair `riserHeight` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: riserHeight is 0.175. The other given fields were changed."}
+- Stair `riser[0].role` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: riser[0].role is 0. The other given fields were changed."}
+- Stair `riser[0].sequenceNumber` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: riser[0].sequenceNumber is 0. The other given fields were changed."}
+- Stair `riser[0].subElemId` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: riser[0].subElemId is 0. The other given fields were changed."}
+- Stair `riser[1].role` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: riser[1].role is 1. The other given fields were changed."}
+- Stair `riser[1].sequenceNumber` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: riser[1].sequenceNumber is 0. The other given fields were changed."}
+- Stair `riser[1].subElemId` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: riser[1].subElemId is 0. The other given fields were changed."}
+- Stair `rules.treadDepthMinValue` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rules.treadDepthMinValue is 0.29. The other given fields were changed."}
+- Stair `stairDisplayType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: stairDisplayType is 1. The other given fields were changed."}
+- Stair `stairHeadroomData.headroomMethod` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: stairHeadroomData.headroomMethod is 0. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[0].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[0].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[0].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[0].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[0].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[0].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[0].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[0].structureGoingNosingVisible is false. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[0].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[0].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[1].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[1].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[1].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[1].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[1].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[1].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[1].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[1].structureGoingNosingVisible is false. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[1].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[1].monolithPartsVisibility[1].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[0].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[0].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[0].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[0].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[0].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[0].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[0].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[0].structureGoingNosingVisible is false. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[0].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[0].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[1].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[1].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[1].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[1].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[1].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[1].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[1].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[1].structureGoingNosingVisible is false. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[1].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[2].monolithPartsVisibility[1].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[0].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[0].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[0].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[0].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[0].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[0].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[0].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[0].structureGoingNosingVisible is false. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[0].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[0].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[1].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[1].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[1].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[1].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[1].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[1].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[1].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[1].structureGoingNosingVisible is false. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[1].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[3].monolithPartsVisibility[1].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[0].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[0].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[0].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[0].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[0].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[0].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[0].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[0].structureGoingNosingVisible is false. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[0].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[0].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[1].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[1].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[1].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[1].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[1].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[1].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[1].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[1].structureGoingNosingVisible is false. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[1].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[4].monolithPartsVisibility[1].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[0].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[0].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[0].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[0].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[0].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[0].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[0].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[0].structureGoingNosingVisible is false. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[0].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[0].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[1].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[1].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[1].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[1].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[1].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[1].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[1].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[1].structureGoingNosingVisible is false. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[1].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[0].structureVisibilityOnStories[5].monolithPartsVisibility[1].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[0].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[0].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[0].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[0].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[0].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[0].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[0].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[0].structureGoingNosingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[0].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[0].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[1].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[1].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[1].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[1].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[1].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[1].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[1].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[1].structureGoingNosingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[1].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[1].monolithPartsVisibility[1].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[0].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[0].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[0].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[0].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[0].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[0].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[0].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[0].structureGoingNosingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[0].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[0].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[1].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[1].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[1].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[1].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[1].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[1].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[1].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[1].structureGoingNosingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[1].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[2].monolithPartsVisibility[1].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[0].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[0].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[0].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[0].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[0].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[0].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[0].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[0].structureGoingNosingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[0].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[0].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[1].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[1].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[1].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[1].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[1].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[1].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[1].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[1].structureGoingNosingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[1].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[3].monolithPartsVisibility[1].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[0].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[0].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[0].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[0].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[0].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[0].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[0].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[0].structureGoingNosingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[0].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[0].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[1].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[1].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[1].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[1].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[1].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[1].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[1].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[1].structureGoingNosingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[1].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[4].monolithPartsVisibility[1].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[0].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[0].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[0].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[0].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[0].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[0].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[0].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[0].structureGoingNosingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[0].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[0].structureGoingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[1].connectionVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[1].connectionVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[1].drainingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[1].drainingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[1].landingLineVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[1].landingLineVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[1].structureGoingNosingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[1].structureGoingNosingVisible is true. The other given fields were changed."}
+- Stair `structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[1].structureGoingVisible` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: structureVisibilityOnStories[1].structureVisibilityOnStories[5].monolithPartsVisibility[1].structureGoingVisible is true. The other given fields were changed."}
+- Stair `treadDepth` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: treadDepth is 0. The other given fields were changed."}
+- Stair `treadNum` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: treadNum is 16. The other given fields were changed."}
+- Stair `tread[0].isCustom` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: tread[0].isCustom is false. The other given fields were changed."}
+- Stair `tread[0].role` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: tread[0].role is 0. The other given fields were changed."}
+- Stair `tread[0].sequenceNumber` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: tread[0].sequenceNumber is 0. The other given fields were changed."}
+- Stair `tread[0].subElemId` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: tread[0].subElemId is 0. The other given fields were changed."}
+- Stair `tread[0].zOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: tread[0].zOffset is 0. The other given fields were changed."}
+- Stair `tread[1].isCustom` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: tread[1].isCustom is false. The other given fields were changed."}
+- Stair `tread[1].role` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: tread[1].role is 1. The other given fields were changed."}
+- Stair `tread[1].sequenceNumber` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: tread[1].sequenceNumber is 0. The other given fields were changed."}
+- Stair `tread[1].subElemId` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: tread[1].subElemId is 0. The other given fields were changed."}
+- Stair `tread[1].zOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: tread[1].zOffset is 0. The other given fields were changed."}
+- Stair `uniformDrainings` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: uniformDrainings is true. The other given fields were changed."}
+- Stair `uniformFinish` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: uniformFinish is true. The other given fields were changed."}
+- Stair `uniformLeftRightSideSupports[0]` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: uniformLeftRightSideSupports[0] is true. The other given fields were changed."}
+- Stair `uniformLeftRightSideSupports[1]` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: uniformLeftRightSideSupports[1] is true. The other given fields were changed."}
+- Stair `uniformMonolithAttributes` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: uniformMonolithAttributes is true. The other given fields were changed."}
+- Stair `walkingLineOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: walkingLineOffset is 0.625. The other given fields were changed."}
+- Stair `walkingLinePosition` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: walkingLinePosition is 2. The other given fields were changed."}
+- StairStructure `bottomType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: bottomType is 0. The other given fields were changed."}
+- StairStructure `data.monolith.bottomOversize` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: data.monolith.bottomOversize is 0. The other given fields were changed."}
+- StairStructure `data.monolith.draining[0].surfaceType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: data.monolith.draining[0].surfaceType is 0. The other given fields were changed."}
+- StairStructure `data.monolith.draining[1].surfaceType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: data.monolith.draining[1].surfaceType is 0. The other given fields were changed."}
+- StairStructure `data.monolith.monolithThickness` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: data.monolith.monolithThickness is 0. The other given fields were changed."}
+- StairStructure `data.monolith.sideFill` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: data.monolith.sideFill is 5. The other given fields were changed."}
+- StairStructure `data.monolith.surfaceMaterial` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: data.monolith.surfaceMaterial is 0. The other given fields were changed."}
+- StairStructure `data.monolith.uniformDrainings` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: data.monolith.uniformDrainings is false. The other given fields were changed."}
+- StairStructure `horizontalThickness` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: horizontalThickness is 0. The other given fields were changed."}
+- StairStructure `isLanding` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: isLanding is false. The other given fields were changed."}
+- StairStructure `role` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: role is 0. The other given fields were changed."}
+- StairStructure `sequenceNumber` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: sequenceNumber is 0. The other given fields were changed."}
+- StairStructure `side` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: side is 0. The other given fields were changed."}
+- StairStructure `subElemId` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: subElemId is 35. The other given fields were changed."}
+- Text `effectsBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: effectsBits is 0. The other given fields were changed."}
+- Text `faceBits` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: faceBits is 0. The other given fields were changed."}
+- Text `font` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: font is 374. The other given fields were changed."}
+- Text `height` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: height is 3.92858. The other given fields were changed."}
+- Text `just` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: just is 0. The other given fields were changed."}
+- Text `multiStyle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: multiStyle is false. The other given fields were changed."}
+- Text `pen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: pen is 66. The other given fields were changed."}
+- Text `size` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: size is 2.5. The other given fields were changed."}
+- Text `spacing` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: spacing is -1. The other given fields were changed."}
+- Text `textFrame.fixedHeight` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: textFrame.fixedHeight is 4. The other given fields were changed."}
+- Text `textFrame.fixedWidth` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: textFrame.fixedWidth is 20. The other given fields were changed."}
+- Text `textFrame.isSizeFixed` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: textFrame.isSizeFixed is false. The other given fields were changed."}
+- Text `textFrame.shapeType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: textFrame.shapeType is 0. The other given fields were changed."}
+- Text `useEolPos` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: useEolPos is false. The other given fields were changed."}
+- Text `width` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: width is 15.0586. The other given fields were changed."}
+- Tread `isCustom` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: isCustom is false. The other given fields were changed."}
+- Tread `role` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: role is 0. The other given fields were changed."}
+- Tread `sequenceNumber` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: sequenceNumber is 2. The other given fields were changed."}
+- Tread `subElemId` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: subElemId is 4. The other given fields were changed."}
+- Tread `zOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: zOffset is 0. The other given fields were changed."}
+- Wall `composite` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: composite is 94. The other given fields were changed."}
+- Wall `linkToSettings.newCreationMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkToSettings.newCreationMode is false. The other given fields were changed."}
+- Wall `offsetFromOutside` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: offsetFromOutside is 0. The other given fields were changed."}
+- Wall `oppEndInd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: oppEndInd is 3. The other given fields were changed."}
+- Wall `oppInd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: oppInd is 3. The other given fields were changed."}
+- Wall `polyCanChange` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: polyCanChange is false. The other given fields were changed."}
+- Wall `profileAttr` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: profileAttr is 0. The other given fields were changed."}
+- Wall `rLinEndInd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rLinEndInd is -1. The other given fields were changed."}
+- Wall `rLinInd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: rLinInd is -1. The other given fields were changed."}
+- Wall `refEndInd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: refEndInd is 1. The other given fields were changed."}
+- Wall `refInd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: refInd is 1. The other given fields were changed."}
+- Wall `referenceLineLocation` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: referenceLineLocation is 0. The other given fields were changed."}
+- Wall `slantAlpha` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: slantAlpha is 1.5708. The other given fields were changed."}
+- Wall `slantBeta` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: slantBeta is 1.5708. The other given fields were changed."}
+- Wall `thickness1` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: thickness1 is 0.2. The other given fields were changed."}
+- Wall `topOffset` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: topOffset is 0. The other given fields were changed."}
+- Wall `useCompositePriority` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: useCompositePriority is false. The other given fields were changed."}
+- Wall `visibility.showOnHome` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: visibility.showOnHome is true. The other given fields were changed."}
+- Wall `wallConnPriority` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: wallConnPriority is 0. The other given fields were changed."}
+- Window `openingBase.libInd` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- Window `dirVector.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: dirVector.x is 1. The other given fields were changed."}
+- Window `dirVector.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: dirVector.y is 0. The other given fields were changed."}
+- Window `directionType` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: directionType is 0. The other given fields were changed."}
+- Window `openingBase.displayOption` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: openingBase.displayOption is 2. The other given fields were changed."}
+- Window `openingBase.libInd` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- Window `openingBase.lookId` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: openingBase.lookId is 0. The other given fields were changed."}
+- Window `revealDepthFromSide` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: revealDepthFromSide is 0. The other given fields were changed."}
+- Window `startPoint.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: startPoint.x is 0. The other given fields were changed."}
+- Window `startPoint.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: startPoint.y is 0. The other given fields were changed."}
+- Worksheet `detailIdStr` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: detailIdStr is \"\". The other given fields were changed."}
+- Worksheet `detailName` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: detailName is \"TapirCheck Worksheet Marker\". The other given fields were changed."}
+- Worksheet `linkData.referringLevel` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkData.referringLevel is 1. The other given fields were changed."}
+- Worksheet `linkData.sourceMarker` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkData.sourceMarker is true. The other given fields were changed."}
+- Worksheet `ltypeInd` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: ltypeInd is 1. The other given fields were changed."}
+- Worksheet `pen` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: pen is 25. The other given fields were changed."}
+- Worksheet `windOpened` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: windOpened is false. The other given fields were changed."}
+- Zone `libInd` réécriture : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- Zone `fillAngle` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: fillAngle is 0. The other given fields were changed."}
+- Zone `libInd` modification : refuse : {"code": -2130313112, "message": "Archicad refused the change."}
+- Zone `linkToSettings.newCreationMode` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: linkToSettings.newCreationMode is false. The other given fields were changed."}
+- Zone `locOrigo.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: locOrigo.x is 0. The other given fields were changed."}
+- Zone `locOrigo.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: locOrigo.y is 0. The other given fields were changed."}
+- Zone `manual` modification : refuse : {"code": -2130313215, "message": "Archicad refused the change."}
+- Zone `refLineFlag` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: refLineFlag is false. The other given fields were changed."}
+- Zone `refPos.x` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: refPos.x is 0. The other given fields were changed."}
+- Zone `refPos.y` modification : non garde : {"code": -2130312311, "message": "Archicad did not keep every value: refPos.y is 0. The other given fields were changed."}

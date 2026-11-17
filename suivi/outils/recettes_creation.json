@@ -1,0 +1,4406 @@
+{
+ "CreateWalls": [
+  {
+   "fichier": "3d_geometry_and_cut_polygons.json",
+   "params": {
+    "wallsData": [
+     {
+      "begCoordinate": {
+       "x": 700,
+       "y": 700
+      },
+      "endCoordinate": {
+       "x": 706,
+       "y": 700
+      },
+      "floorIndex": 0,
+      "zCoordinate": 0,
+      "height": 3.0,
+      "thickness": 0.2,
+      "structureType": "Basic",
+      "referenceLineLocation": "Center",
+      "offset": 0.0
+     }
+    ]
+   },
+   "save": {
+    "w1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "3d_model_counts.json",
+   "params": {
+    "wallsData": [
+     {
+      "begCoordinate": {
+       "x": 700,
+       "y": 700
+      },
+      "endCoordinate": {
+       "x": 706,
+       "y": 700
+      },
+      "floorIndex": 0,
+      "zCoordinate": 0,
+      "height": 3.0,
+      "thickness": 0.2,
+      "structureType": "Basic",
+      "referenceLineLocation": "Center",
+      "offset": 0.0
+     }
+    ]
+   },
+   "save": {
+    "w1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "active_graphical_override_combination.json",
+   "params": {
+    "wallsData": [
+     {
+      "begCoordinate": {
+       "x": 0,
+       "y": 0
+      },
+      "endCoordinate": {
+       "x": 4,
+       "y": 0
+      },
+      "zCoordinate": 0,
+      "height": 2.5,
+      "thickness": 0.2
+     }
+    ]
+   },
+   "save": {
+    "wall": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateSlabs": [
+  {
+   "fichier": "3d_geometry_and_cut_polygons.json",
+   "params": {
+    "slabsData": [
+     {
+      "level": 0,
+      "floorIndex": 0,
+      "thickness": 0.3,
+      "structureType": "Basic",
+      "polygonCoordinates": [
+       {
+        "x": 710,
+        "y": 700
+       },
+       {
+        "x": 714,
+        "y": 700
+       },
+       {
+        "x": 714,
+        "y": 704
+       },
+       {
+        "x": 710,
+        "y": 704
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "s1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "bounding_boxes_and_model_extent.json",
+   "params": {
+    "slabsData": [
+     {
+      "level": 0,
+      "floorIndex": 0,
+      "thickness": 0.3,
+      "structureType": "Basic",
+      "polygonCoordinates": [
+       {
+        "x": 710,
+        "y": 700
+       },
+       {
+        "x": 714,
+        "y": 700
+       },
+       {
+        "x": 714,
+        "y": 704
+       },
+       {
+        "x": 710,
+        "y": 704
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "s1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "collisions.json",
+   "params": {
+    "slabsData": [
+     {
+      "level": 1.5,
+      "floorIndex": 0,
+      "thickness": 0.3,
+      "structureType": "Basic",
+      "polygonCoordinates": [
+       {
+        "x": 702,
+        "y": 699
+       },
+       {
+        "x": 704,
+        "y": 699
+       },
+       {
+        "x": 704,
+        "y": 701
+       },
+       {
+        "x": 702,
+        "y": 701
+       }
+      ]
+     },
+     {
+      "level": 1.5,
+      "floorIndex": 0,
+      "thickness": 0.3,
+      "structureType": "Basic",
+      "polygonCoordinates": [
+       {
+        "x": 720,
+        "y": 699
+       },
+       {
+        "x": 722,
+        "y": 699
+       },
+       {
+        "x": 722,
+        "y": 701
+       },
+       {
+        "x": 720,
+        "y": 701
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "s1": "elements[0].elementId.guid",
+    "s2": "elements[1].elementId.guid"
+   }
+  }
+ ],
+ "CreateBeams": [
+  {
+   "fichier": "analytical_curve_member_stretch.json",
+   "params": {
+    "beamsData": [
+     {
+      "begCoordinate": {
+       "x": 620.0,
+       "y": 600.0
+      },
+      "endCoordinate": {
+       "x": 626.0,
+       "y": 600.0
+      },
+      "zCoordinate": 3.0,
+      "floorIndex": 0,
+      "anchorPoint": "Center",
+      "circleBased": false,
+      "isWidthAndHeightLinked": false,
+      "width": 0.2,
+      "height": 0.4
+     }
+    ]
+   },
+   "save": {
+    "b1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "analytical_loads_on_a_beam.json",
+   "params": {
+    "beamsData": [
+     {
+      "begCoordinate": {
+       "x": 700.0,
+       "y": 700.0
+      },
+      "endCoordinate": {
+       "x": 706.0,
+       "y": 700.0
+      },
+      "zCoordinate": 3.0,
+      "width": 0.3,
+      "height": 0.5,
+      "isWidthAndHeightLinked": false,
+      "anchorPoint": "TopCenter"
+     }
+    ]
+   },
+   "save": {
+    "beam": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "analytical_members_and_releases.json",
+   "params": {
+    "beamsData": [
+     {
+      "begCoordinate": {
+       "x": 600.0,
+       "y": 600.0
+      },
+      "endCoordinate": {
+       "x": 606.0,
+       "y": 600.0
+      },
+      "zCoordinate": 3.0,
+      "floorIndex": 0,
+      "anchorPoint": "Center",
+      "circleBased": false,
+      "isWidthAndHeightLinked": false,
+      "width": 0.2,
+      "height": 0.4
+     },
+     {
+      "begCoordinate": {
+       "x": 600.0,
+       "y": 604.0
+      },
+      "endCoordinate": {
+       "x": 606.0,
+       "y": 604.0
+      },
+      "zCoordinate": 3.0,
+      "floorIndex": 0,
+      "anchorPoint": "Center",
+      "circleBased": false,
+      "isWidthAndHeightLinked": false,
+      "width": 0.2,
+      "height": 0.4
+     }
+    ]
+   },
+   "save": {
+    "b1": "elements[0].elementId.guid",
+    "b2": "elements[1].elementId.guid"
+   }
+  }
+ ],
+ "CreateColumns": [
+  {
+   "fichier": "analytical_members_and_releases.json",
+   "params": {
+    "columnsData": [
+     {
+      "coordinates": {
+       "x": 610.0,
+       "y": 600.0,
+       "z": 0.0
+      },
+      "floorIndex": 0,
+      "height": 3.0,
+      "coreAnchor": "Center",
+      "circleBased": false,
+      "isWidthAndHeightLinked": false,
+      "width": 0.3,
+      "depth": 0.3,
+      "axisRotationAngle": 0.0
+     }
+    ]
+   },
+   "save": {
+    "c1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "apply_favorites_to_elements.json",
+   "params": {
+    "columnsData": [
+     {
+      "coordinates": {
+       "x": 1500.0,
+       "y": 1500.0,
+       "z": 0.0
+      },
+      "floorIndex": 0,
+      "height": 2.8,
+      "circleBased": false,
+      "isWidthAndHeightLinked": false,
+      "width": 0.24,
+      "depth": 0.32
+     },
+     {
+      "coordinates": {
+       "x": 1503.0,
+       "y": 1500.0,
+       "z": 0.0
+      },
+      "floorIndex": 0,
+      "height": 2.8,
+      "circleBased": false,
+      "isWidthAndHeightLinked": false,
+      "width": 0.35,
+      "depth": 0.42
+     },
+     {
+      "coordinates": {
+       "x": 1506.0,
+       "y": 1500.0,
+       "z": 0.0
+      },
+      "floorIndex": 0,
+      "height": 2.8,
+      "circleBased": false,
+      "isWidthAndHeightLinked": false,
+      "width": 0.35,
+      "depth": 0.42
+     }
+    ]
+   },
+   "save": {
+    "sourceColumn": "elements[0].elementId.guid",
+    "keptColumn": "elements[1].elementId.guid",
+    "changedColumn": "elements[2].elementId.guid"
+   }
+  },
+  {
+   "fichier": "apply_favorites_to_elements.json",
+   "params": {
+    "columnsData": [
+     {
+      "coordinates": {
+       "x": 1550.0,
+       "y": 1500.0,
+       "z": 0.0
+      },
+      "floorIndex": 0,
+      "height": 2.8,
+      "circleBased": false,
+      "isWidthAndHeightLinked": false,
+      "width": 0.24,
+      "depth": 0.32
+     },
+     {
+      "coordinates": {
+       "x": 1553.0,
+       "y": 1500.0,
+       "z": 0.0
+      },
+      "floorIndex": 0,
+      "height": 2.8,
+      "circleBased": false,
+      "isWidthAndHeightLinked": false,
+      "width": 0.35,
+      "depth": 0.42
+     }
+    ]
+   },
+   "save": {
+    "penSourceColumn": "elements[0].elementId.guid",
+    "penTargetColumn": "elements[1].elementId.guid"
+   }
+  }
+ ],
+ "CreateElementsFromAnalyticalMembers": [
+  {
+   "fichier": "analytical_members_create_and_types.json",
+   "params": {
+    "members": [
+     {
+      "curveMember": {
+       "analyticalMemberType": "Beam",
+       "crossSection": {
+        "crossSectionType": "Rectangle",
+        "width": 0.3,
+        "height": 0.5
+       },
+       "curve": {
+        "type": "Line",
+        "begNode": {
+         "nodeId": 1,
+         "coord": {
+          "x": 710.0,
+          "y": 700.0,
+          "z": 3.0
+         }
+        },
+        "endNode": {
+         "nodeId": 2,
+         "coord": {
+          "x": 716.0,
+          "y": 700.0,
+          "z": 3.0
+         }
+        },
+        "midCoords": []
+       }
+      }
+     },
+     {
+      "curveMember": {
+       "analyticalMemberType": "Column",
+       "crossSection": {
+        "crossSectionType": "Rectangle",
+        "width": 0.4,
+        "height": 0.4
+       },
+       "curve": {
+        "type": "Line",
+        "begNode": {
+         "nodeId": 3,
+         "coord": {
+          "x": 720.0,
+          "y": 700.0,
+          "z": 0.0
+         }
+        },
+        "endNode": {
+         "nodeId": 4,
+         "coord": {
+          "x": 720.0,
+          "y": 700.0,
+          "z": 3.0
+         }
+        },
+        "midCoords": []
+       }
+      }
+     },
+     {
+      "curveMember": {
+       "analyticalMemberType": "Beam",
+       "crossSection": {
+        "crossSectionType": "Rectangle",
+        "width": 0.3,
+        "height": 0.5
+       }
+      }
+     },
+     {
+      "surfaceMember": {
+       "analyticalMemberType": "Slab",
+       "contour": []
+      }
+     }
+    ]
+   },
+   "save": {
+    "beam": "elements[0].elementId.guid",
+    "column": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "analytical_model_variation_and_update.json",
+   "params": {
+    "members": [
+     {
+      "curveMember": {
+       "analyticalMemberType": "Beam",
+       "crossSection": {
+        "crossSectionType": "Rectangle",
+        "width": 0.3,
+        "height": 0.5
+       },
+       "curve": {
+        "type": "Line",
+        "begNode": {
+         "nodeId": 1,
+         "coord": {
+          "x": 710.0,
+          "y": 700.0,
+          "z": 3.0
+         }
+        },
+        "endNode": {
+         "nodeId": 2,
+         "coord": {
+          "x": 716.0,
+          "y": 700.0,
+          "z": 3.0
+         }
+        },
+        "midCoords": []
+       }
+      }
+     }
+    ]
+   },
+   "save": {
+    "beam": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateStairs": [
+  {
+   "fichier": "apply_favorites_to_elements.json",
+   "params": {
+    "stairsData": [
+     {
+      "baseLinePoints": [
+       {
+        "x": 1530.0,
+        "y": 1500.0
+       },
+       {
+        "x": 1534.64,
+        "y": 1500.0
+       }
+      ],
+      "baselinePosition": "Center",
+      "zCoordinate": 0.0,
+      "floorIndex": 0,
+      "totalHeight": 2.8,
+      "flightWidth": 1.1,
+      "stepNum": 16,
+      "riserHeight": 0.175,
+      "treadDepth": 0.29
+     },
+     {
+      "baseLinePoints": [
+       {
+        "x": 1530.0,
+        "y": 1510.0
+       },
+       {
+        "x": 1534.64,
+        "y": 1510.0
+       }
+      ],
+      "baselinePosition": "Center",
+      "zCoordinate": 0.0,
+      "floorIndex": 0,
+      "totalHeight": 2.8,
+      "flightWidth": 1.25,
+      "stepNum": 16,
+      "riserHeight": 0.175,
+      "treadDepth": 0.29
+     }
+    ]
+   },
+   "save": {
+    "stairA": "elements[0].elementId.guid",
+    "stairB": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "modify_railings.json",
+   "params": {
+    "stairsData": [
+     {
+      "baseLinePoints": [
+       {
+        "x": 780.0,
+        "y": 760.0
+       },
+       {
+        "x": 786.0,
+        "y": 760.0
+       }
+      ],
+      "baselinePosition": "Center",
+      "zCoordinate": 0.0,
+      "floorIndex": 0,
+      "totalHeight": 2.8,
+      "flightWidth": 1.2,
+      "stepNum": 16,
+      "riserHeight": 0.175,
+      "treadDepth": 0.28
+     }
+    ]
+   },
+   "save": {
+    "s": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "modify_stairs.json",
+   "params": {
+    "stairsData": [
+     {
+      "baseLinePoints": [
+       {
+        "x": 760.0,
+        "y": 700.0
+       },
+       {
+        "x": 766.0,
+        "y": 700.0
+       }
+      ],
+      "zCoordinate": 0.0,
+      "floorIndex": 0,
+      "totalHeight": 2.8,
+      "flightWidth": 1.2
+     }
+    ]
+   },
+   "save": {
+    "s": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreatePolylines": [
+  {
+   "fichier": "copy_elements_to_database.json",
+   "params": {
+    "polylinesData": [
+     {
+      "coordinates": [
+       {
+        "x": 800.0,
+        "y": 800.0
+       },
+       {
+        "x": 803.0,
+        "y": 803.0
+       },
+       {
+        "x": 806.0,
+        "y": 800.0
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "polyline": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_polylines_splines_hotspots.json",
+   "params": {
+    "polylinesData": [
+     {
+      "coordinates": [
+       {
+        "x": 700.0,
+        "y": 740.0
+       },
+       {
+        "x": 704.0,
+        "y": 740.0
+       }
+      ],
+      "favoriteName": "Tapir check: no such favorite"
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "create_polylines_splines_hotspots.json",
+   "params": {
+    "polylinesData": [
+     {
+      "coordinates": [
+       {
+        "x": 700.0,
+        "y": 750.0
+       },
+       {
+        "x": 700.0,
+        "y": 750.0
+       }
+      ],
+      "floorInd": 0
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateCircles": [
+  {
+   "fichier": "copy_library_parts_and_set_picture_images.json",
+   "params": {
+    "circlesData": [
+     {
+      "origin": {
+       "x": 0.5,
+       "y": 0.5
+      },
+      "radius": 0.3
+     }
+    ]
+   },
+   "save": {
+    "circle": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_lines_arcs_circles.json",
+   "params": {
+    "circlesData": [
+     {
+      "origin": {
+       "x": 640.0,
+       "y": 600.0
+      },
+      "radius": 1.5,
+      "floorInd": 0,
+      "layerIndex": 1,
+      "linePenIndex": 3,
+      "roomSeparator": false
+     },
+     {
+      "origin": {
+       "x": 650.0,
+       "y": 600.0
+      },
+      "radius": 0.75,
+      "floorInd": 1,
+      "layerIndex": 1,
+      "linePenIndex": 6,
+      "roomSeparator": true
+     }
+    ]
+   },
+   "save": {
+    "c1": "elements[0].elementId.guid",
+    "c2": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_lines_arcs_circles.json",
+   "params": {
+    "circlesData": [
+     {
+      "origin": {
+       "x": 640.0,
+       "y": 620.0
+      },
+      "radius": 1.0,
+      "favoriteName": "Tapir check: no such favorite"
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateAngleDimensions": [
+  {
+   "fichier": "create_angle_dimensions.json",
+   "params": {
+    "angleDimensionsData": [
+     {
+      "firstLine": {
+       "begCoordinate": {
+        "x": 900.0,
+        "y": 900.0
+       },
+       "endCoordinate": {
+        "x": 904.0,
+        "y": 900.0
+       }
+      },
+      "secondLine": {
+       "begCoordinate": {
+        "x": 900.0,
+        "y": 900.0
+       },
+       "endCoordinate": {
+        "x": 903.4641016,
+        "y": 902.0
+       }
+      },
+      "arcPosition": {
+       "x": 902.8977775,
+       "y": 900.7764571
+      },
+      "smallArc": true,
+      "floorIndex": 0,
+      "pen": 2,
+      "textHeight": 2.5,
+      "textPen": 3
+     }
+    ]
+   },
+   "save": {
+    "a": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_angle_dimensions.json",
+   "params": {
+    "angleDimensionsData": [
+     {
+      "firstLine": {
+       "begCoordinate": {
+        "x": 910.0,
+        "y": 900.0
+       },
+       "endCoordinate": {
+        "x": 914.0,
+        "y": 900.0
+       }
+      },
+      "secondLine": {
+       "begCoordinate": {
+        "x": 912.0,
+        "y": 901.0
+       },
+       "endCoordinate": {
+        "x": 912.0,
+        "y": 905.0
+       }
+      },
+      "arcPosition": {
+       "x": 913.0,
+       "y": 901.0
+      },
+      "floorIndex": 0
+     }
+    ]
+   },
+   "save": {
+    "b": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateCameraSets": [
+  {
+   "fichier": "create_cameras.json",
+   "params": {
+    "cameraSets": [
+     {
+      "name": "Tapir check cameras"
+     }
+    ]
+   },
+   "save": {
+    "set": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_modify_camera_sets.json",
+   "params": {
+    "cameraSets": [
+     {
+      "name": "Tapir check set A",
+      "isActive": true
+     },
+     {
+      "name": "Tapir check set B"
+     }
+    ]
+   },
+   "save": {
+    "setA": "elements[0].elementId.guid",
+    "setB": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "modify_cameras.json",
+   "params": {
+    "cameraSets": [
+     {
+      "name": "Tapir check modify cameras"
+     }
+    ]
+   },
+   "save": {
+    "set": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateChangeMarkers": [
+  {
+   "fichier": "create_change_markers.json",
+   "params": {
+    "changeMarkersData": [
+     {
+      "polygon": [
+       {
+        "x": 700,
+        "y": 700
+       },
+       {
+        "x": 704,
+        "y": 700
+       },
+       {
+        "x": 704,
+        "y": 703
+       },
+       {
+        "x": 700,
+        "y": 703
+       }
+      ],
+      "markerPosition": {
+       "x": 705,
+       "y": 704
+      },
+      "changeId": "TAPIR-CHECK-2658",
+      "createChange": true,
+      "changeDescription": "Tapir check change"
+     }
+    ]
+   },
+   "save": {
+    "m1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_change_markers.json",
+   "params": {
+    "changeMarkersData": [
+     {
+      "polygon": [
+       {
+        "x": 710,
+        "y": 700
+       },
+       {
+        "x": 712,
+        "y": 700
+       },
+       {
+        "x": 711,
+        "y": 702
+       },
+       {
+        "x": 710,
+        "y": 700
+       }
+      ],
+      "markerComponent": "CloudOnly",
+      "changeId": "TAPIR-CHECK-2658"
+     },
+     {
+      "polygon": [
+       {
+        "x": 720,
+        "y": 700
+       },
+       {
+        "x": 722,
+        "y": 700
+       },
+       {
+        "x": 721,
+        "y": 702
+       }
+      ],
+      "changeId": "TAPIR-CHECK-2658",
+      "createChange": true,
+      "changeDescription": "duplicate"
+     },
+     {
+      "polygon": [
+       {
+        "x": 730,
+        "y": 700
+       },
+       {
+        "x": 732,
+        "y": 700
+       },
+       {
+        "x": 731,
+        "y": 702
+       }
+      ],
+      "changeId": "TAPIR-CHECK-NO-SUCH-CHANGE"
+     },
+     {
+      "polygon": [
+       {
+        "x": 740,
+        "y": 700
+       },
+       {
+        "x": 742,
+        "y": 700
+       },
+       {
+        "x": 742,
+        "y": 700
+       },
+       {
+        "x": 740,
+        "y": 700
+       }
+      ],
+      "changeId": "TAPIR-CHECK-2658"
+     }
+    ]
+   },
+   "save": {
+    "m2": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateHatches": [
+  {
+   "fichier": "create_hatches_closed_outline.json",
+   "params": {
+    "hatchesData": [
+     {
+      "floorInd": 0,
+      "coordinates": [
+       {
+        "x": 1514.0,
+        "y": 220.0
+       },
+       {
+        "x": 1515.0,
+        "y": 220.0
+       },
+       {
+        "x": 1515.0,
+        "y": 221.0
+       },
+       {
+        "x": 1514.0,
+        "y": 221.0
+       },
+       {
+        "x": 1514.0,
+        "y": 220.0
+       }
+      ]
+     },
+     {
+      "floorInd": 0,
+      "coordinates": [
+       {
+        "x": 1520.0,
+        "y": 220.0
+       },
+       {
+        "x": 1524.0,
+        "y": 220.0
+       },
+       {
+        "x": 1524.0,
+        "y": 223.0
+       },
+       {
+        "x": 1520.0,
+        "y": 223.0
+       }
+      ],
+      "arcs": [
+       {
+        "begIndex": 1,
+        "endIndex": 2,
+        "arcAngle": 0.5
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "h1": "elements[0].elementId.guid",
+    "h2": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_hatches_closed_outline.json",
+   "params": {
+    "hatchesData": [
+     {
+      "floorInd": 0,
+      "coordinates": [
+       {
+        "x": 1530.0,
+        "y": 220.0
+       },
+       {
+        "x": 1531.0,
+        "y": 220.0
+       },
+       {
+        "x": 1530.0,
+        "y": 220.0
+       }
+      ]
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "create_hatches_regularize_polygons.json",
+   "params": {
+    "hatchesData": [
+     {
+      "coordinates": [
+       {
+        "x": 800.0,
+        "y": 740.0
+       },
+       {
+        "x": 804.0,
+        "y": 740.0
+       },
+       {
+        "x": 804.0,
+        "y": 743.0
+       }
+      ],
+      "favoriteName": "Tapir check: no such favorite"
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateLabels": [
+  {
+   "fichier": "create_labels_library_part_name.json",
+   "params": {
+    "labelsData": [
+     {
+      "labelClass": "Text",
+      "text": "Tapir 2666",
+      "begCoordinate": {
+       "x": 760,
+       "y": 760
+      },
+      "midCoordinate": {
+       "x": 761,
+       "y": 761
+      },
+      "endCoordinate": {
+       "x": 762,
+       "y": 761
+      }
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "create_labels_library_part_name.json",
+   "params": {
+    "labelsData": [
+     {
+      "labelClass": "Text",
+      "text": "Tapir 2666",
+      "libraryPartName": "Tapir no such label part 2666",
+      "begCoordinate": {
+       "x": 770,
+       "y": 760
+      }
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "create_labels_library_part_name.json",
+   "params": {
+    "labelsData": [
+     {
+      "libraryPartName": "Tapir no such label part 2666",
+      "begCoordinate": {
+       "x": 780,
+       "y": 760
+      }
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateLineElements": [
+  {
+   "fichier": "create_lines_arcs_circles.json",
+   "params": {
+    "linesData": [
+     {
+      "begCoordinate": {
+       "x": 600.0,
+       "y": 600.0
+      },
+      "endCoordinate": {
+       "x": 604.0,
+       "y": 603.0
+      },
+      "floorInd": 0,
+      "layerIndex": 1,
+      "linePenIndex": 5,
+      "roomSeparator": false
+     },
+     {
+      "begCoordinate": {
+       "x": 600.0,
+       "y": 610.0
+      },
+      "endCoordinate": {
+       "x": 600.0,
+       "y": 615.0
+      },
+      "floorInd": 1,
+      "layerIndex": 1,
+      "linePenIndex": 7,
+      "roomSeparator": true
+     }
+    ]
+   },
+   "save": {
+    "l1": "elements[0].elementId.guid",
+    "l2": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_lines_arcs_circles.json",
+   "params": {
+    "linesData": [
+     {
+      "begCoordinate": {
+       "x": 600.0,
+       "y": 620.0
+      },
+      "endCoordinate": {
+       "x": 604.0,
+       "y": 620.0
+      },
+      "favoriteName": "Tapir check: no such favorite"
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "create_lines_arcs_circles.json",
+   "params": {
+    "linesData": [
+     {
+      "begCoordinate": {
+       "x": 600.0,
+       "y": 630.0
+      },
+      "endCoordinate": {
+       "x": 600.0,
+       "y": 630.0
+      },
+      "floorInd": 0
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateArcs": [
+  {
+   "fichier": "create_lines_arcs_circles.json",
+   "params": {
+    "arcsData": [
+     {
+      "origin": {
+       "x": 620.0,
+       "y": 600.0
+      },
+      "radius": 2.5,
+      "begAngle": 0.0,
+      "endAngle": 1.5707963267948966,
+      "floorInd": 0,
+      "layerIndex": 1,
+      "linePenIndex": 4,
+      "roomSeparator": false
+     }
+    ]
+   },
+   "save": {
+    "a1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_lines_arcs_circles.json",
+   "params": {
+    "arcsData": [
+     {
+      "origin": {
+       "x": 620.0,
+       "y": 620.0
+      },
+      "radius": 1.0,
+      "begAngle": 0.0,
+      "endAngle": 1.0,
+      "favoriteName": "Tapir check: no such favorite"
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "create_lines_arcs_circles.json",
+   "params": {
+    "arcsData": [
+     {
+      "origin": {
+       "x": 620.0,
+       "y": 630.0
+      },
+      "radius": 0.0,
+      "begAngle": 0.0,
+      "endAngle": 1.0,
+      "floorInd": 0
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateMeshes": [
+  {
+   "fichier": "create_meshes_morphs.json",
+   "params": {
+    "meshesData": [
+     {
+      "floorIndex": 0,
+      "level": 0.0,
+      "skirtType": "WithSkirt",
+      "skirtLevel": 1.5,
+      "ridges": "AllSharp",
+      "showLines": true,
+      "contourPen": 5,
+      "levelPen": 6,
+      "lineTypeIndex": 1,
+      "id": "CHK-MESH-1",
+      "polygonCoordinates": [
+       {
+        "x": 800.0,
+        "y": 700.0,
+        "z": 0.0
+       },
+       {
+        "x": 806.0,
+        "y": 700.0,
+        "z": 0.5
+       },
+       {
+        "x": 806.0,
+        "y": 706.0,
+        "z": 1.0
+       },
+       {
+        "x": 800.0,
+        "y": 706.0,
+        "z": 0.2
+       }
+      ],
+      "holes": [
+       {
+        "polygonCoordinates": [
+         {
+          "x": 802.0,
+          "y": 702.0,
+          "z": 0.3
+         },
+         {
+          "x": 803.0,
+          "y": 702.0,
+          "z": 0.3
+         },
+         {
+          "x": 803.0,
+          "y": 703.0,
+          "z": 0.3
+         },
+         {
+          "x": 802.0,
+          "y": 703.0,
+          "z": 0.3
+         }
+        ]
+       }
+      ],
+      "sublines": [
+       {
+        "coordinates": [
+         {
+          "x": 801.0,
+          "y": 704.5,
+          "z": 0.4
+         },
+         {
+          "x": 805.0,
+          "y": 704.5,
+          "z": 0.6
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "floorIndex": 1,
+      "level": 0.25,
+      "skirtType": "SurfaceOnlyWithoutSkirt",
+      "skirtLevel": 0.5,
+      "ridges": "AllSmooth",
+      "showLines": false,
+      "contourPen": 3,
+      "levelPen": 4,
+      "polygonCoordinates": [
+       {
+        "x": 810.0,
+        "y": 700.0,
+        "z": 0.0
+       },
+       {
+        "x": 814.0,
+        "y": 700.0,
+        "z": 0.0
+       },
+       {
+        "x": 812.0,
+        "y": 703.0,
+        "z": 0.0
+       },
+       {
+        "x": 810.0,
+        "y": 700.0,
+        "z": 0.0
+       }
+      ],
+      "polygonArcs": [
+       {
+        "begIndex": 0,
+        "endIndex": 1,
+        "arcAngle": 0.5
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "m1": "elements[0].elementId.guid",
+    "m2": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_meshes_morphs.json",
+   "params": {
+    "meshesData": [
+     {
+      "favoriteName": "Tapir check: no such favorite",
+      "floorIndex": 0,
+      "polygonCoordinates": [
+       {
+        "x": 800.0,
+        "y": 720.0,
+        "z": 0.0
+       },
+       {
+        "x": 804.0,
+        "y": 720.0,
+        "z": 0.0
+       },
+       {
+        "x": 804.0,
+        "y": 724.0,
+        "z": 0.0
+       }
+      ]
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "create_meshes_morphs.json",
+   "params": {
+    "meshesData": [
+     {
+      "floorIndex": 0,
+      "polygonCoordinates": [
+       {
+        "x": 810.0,
+        "y": 720.0,
+        "z": 0.0
+       },
+       {
+        "x": 814.0,
+        "y": 720.0,
+        "z": 0.0
+       },
+       {
+        "x": 814.0,
+        "y": 724.0,
+        "z": 0.0
+       },
+       {
+        "x": 810.0,
+        "y": 724.0,
+        "z": 0.0
+       }
+      ],
+      "holes": [
+       {
+        "polygonCoordinates": [
+         {
+          "x": 811.0,
+          "y": 721.0,
+          "z": 0.0
+         },
+         {
+          "x": 812.0,
+          "y": 721.0,
+          "z": 0.0
+         },
+         {
+          "x": 811.0,
+          "y": 721.0,
+          "z": 0.0
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateMorphs": [
+  {
+   "fichier": "create_meshes_morphs.json",
+   "params": {
+    "morphsData": [
+     {
+      "floorIndex": 0,
+      "layerIndex": 1,
+      "id": "CHK-MORPH-1",
+      "basePoint": {
+       "x": 850.0,
+       "y": 700.0,
+       "z": 0.0
+      },
+      "size": {
+       "x": 2.0,
+       "y": 3.0,
+       "z": 1.0
+      },
+      "castShadow": false,
+      "receiveShadow": true,
+      "cutLinePen": 5,
+      "uncutLinePen": 6,
+      "overheadLinePen": 7,
+      "coverFillPen": 8,
+      "coverFillBGPen": 9
+     },
+     {
+      "floorIndex": 0,
+      "layerIndex": 1,
+      "basePoint": {
+       "x": 860.0,
+       "y": 700.0,
+       "z": 0.0
+      },
+      "size": {
+       "x": 2.0,
+       "y": 2.0,
+       "z": 1.0
+      },
+      "topExpansion": 0.25,
+      "castShadow": true,
+      "receiveShadow": false
+     },
+     {
+      "floorIndex": 1,
+      "layerIndex": 1,
+      "id": "CHK-MORPH-3",
+      "basePoint": {
+       "x": 870.0,
+       "y": 700.0,
+       "z": 0.5
+      },
+      "body": {
+       "bodyType": "Solid",
+       "vertices": [
+        {
+         "x": 0.0,
+         "y": 0.0,
+         "z": 0.0
+        },
+        {
+         "x": 1.0,
+         "y": 0.0,
+         "z": 0.0
+        },
+        {
+         "x": 0.0,
+         "y": 1.0,
+         "z": 0.0
+        },
+        {
+         "x": 0.0,
+         "y": 0.0,
+         "z": 1.5
+        }
+       ],
+       "polygons": [
+        {
+         "vertexIds": [
+          0,
+          2,
+          1
+         ]
+        },
+        {
+         "vertexIds": [
+          0,
+          1,
+          3
+         ]
+        },
+        {
+         "vertexIds": [
+          1,
+          2,
+          3
+         ]
+        },
+        {
+         "vertexIds": [
+          2,
+          0,
+          3
+         ]
+        }
+       ]
+      },
+      "cutLinePen": 3
+     }
+    ]
+   },
+   "save": {
+    "p1": "elements[0].elementId.guid",
+    "p2": "elements[1].elementId.guid",
+    "p3": "elements[2].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_meshes_morphs.json",
+   "params": {
+    "morphsData": [
+     {
+      "favoriteName": "Tapir check: no such favorite",
+      "floorIndex": 0,
+      "basePoint": {
+       "x": 850.0,
+       "y": 720.0,
+       "z": 0.0
+      },
+      "size": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      }
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "create_meshes_morphs.json",
+   "params": {
+    "morphsData": [
+     {
+      "floorIndex": 0,
+      "basePoint": {
+       "x": 855.0,
+       "y": 720.0,
+       "z": 0.0
+      },
+      "size": {
+       "x": 1.0,
+       "y": 0.0,
+       "z": 1.0
+      }
+     },
+     {
+      "floorIndex": 0,
+      "basePoint": {
+       "x": 860.0,
+       "y": 720.0,
+       "z": 0.0
+      },
+      "size": {
+       "x": 1.0,
+       "y": 1.0,
+       "z": 1.0
+      },
+      "body": {
+       "vertices": [
+        {
+         "x": 0.0,
+         "y": 0.0,
+         "z": 0.0
+        },
+        {
+         "x": 1.0,
+         "y": 0.0,
+         "z": 0.0
+        }
+       ]
+      }
+     },
+     {
+      "floorIndex": 0,
+      "basePoint": {
+       "x": 865.0,
+       "y": 720.0,
+       "z": 0.0
+      },
+      "body": {
+       "bodyType": "Solid",
+       "vertices": [
+        {
+         "x": 0.0,
+         "y": 0.0,
+         "z": 0.0
+        },
+        {
+         "x": 1.0,
+         "y": 0.0,
+         "z": 0.0
+        },
+        {
+         "x": 0.0,
+         "y": 1.0,
+         "z": 0.0
+        },
+        {
+         "x": 0.0,
+         "y": 0.0,
+         "z": 1.0
+        }
+       ],
+       "polygons": [
+        {
+         "vertexIds": [
+          0,
+          2,
+          1
+         ]
+        },
+        {
+         "vertexIds": [
+          0,
+          1,
+          3
+         ]
+        },
+        {
+         "vertexIds": [
+          1,
+          2,
+          9
+         ]
+        },
+        {
+         "vertexIds": [
+          2,
+          0,
+          3
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreatePictures": [
+  {
+   "fichier": "create_pictures.json",
+   "params": {
+    "picturesData": [
+     {
+      "imageData": "Qk1OAAAAAAAAADYAAAAoAAAABAAAAAIAAAABABgAAAAAABgAAAATCwAAEwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "name": "CHK-PICTURE-BMP",
+      "position": {
+       "x": 700.0,
+       "y": 700.0
+      },
+      "anchorPoint": "BottomLeft",
+      "width": 4.0,
+      "floorInd": 0
+     },
+     {
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==",
+      "name": "CHK-PICTURE-PNG",
+      "position": {
+       "x": 720.0,
+       "y": 700.0
+      },
+      "anchorPoint": "Center",
+      "width": 2.0,
+      "height": 3.0,
+      "mirrored": true,
+      "transparent": true,
+      "floorInd": 0
+     },
+     {
+      "imageData": "Qk1OAAAAAAAAADYAAAAoAAAABAAAAAIAAAABABgAAAAAABgAAAATCwAAEwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "position": {
+       "x": 740.0,
+       "y": 700.0
+      },
+      "anchorPoint": "TopRight",
+      "height": 1.0,
+      "floorInd": 0
+     },
+     {
+      "imageData": "Qk1OAAAAAAAAADYAAAAoAAAABAAAAAIAAAABABgAAAAAABgAAAATCwAAEwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "position": {
+       "x": 760.0,
+       "y": 700.0
+      },
+      "width": 2.0,
+      "angle": 0.5,
+      "floorInd": 0
+     },
+     {
+      "position": {
+       "x": 780.0,
+       "y": 700.0
+      },
+      "width": 2.0
+     },
+     {
+      "imageData": "aGVsbG8gd29ybGQ=",
+      "position": {
+       "x": 780.0,
+       "y": 700.0
+      },
+      "width": 2.0
+     },
+     {
+      "imageData": "Qk1OAAAAAAAAADYAAAAoAAAABAAAAAIAAAABABgAAAAAABgAAAATCwAAEwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "position": {
+       "x": 780.0,
+       "y": 700.0
+      }
+     }
+    ]
+   },
+   "save": {
+    "p1": "elements[0].elementId.guid",
+    "p2": "elements[1].elementId.guid",
+    "p3": "elements[2].elementId.guid",
+    "p4": "elements[3].elementId.guid"
+   }
+  },
+  {
+   "fichier": "modify_pictures.json",
+   "params": {
+    "picturesData": [
+     {
+      "imageData": "Qk1OAAAAAAAAADYAAAAoAAAABAAAAAIAAAABABgAAAAAABgAAAATCwAAEwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "name": "CHK-PICTURE-A",
+      "position": {
+       "x": 800.0,
+       "y": 700.0
+      },
+      "anchorPoint": "BottomLeft",
+      "width": 4.0,
+      "floorInd": 0
+     },
+     {
+      "imageData": "Qk1OAAAAAAAAADYAAAAoAAAABAAAAAIAAAABABgAAAAAABgAAAATCwAAEwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "name": "CHK-PICTURE-B",
+      "position": {
+       "x": 820.0,
+       "y": 700.0
+      },
+      "anchorPoint": "BottomLeft",
+      "width": 4.0,
+      "floorInd": 0
+     },
+     {
+      "imageData": "Qk1OAAAAAAAAADYAAAAoAAAABAAAAAIAAAABABgAAAAAABgAAAATCwAAEwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "name": "CHK-PICTURE-C",
+      "position": {
+       "x": 840.0,
+       "y": 700.0
+      },
+      "anchorPoint": "BottomLeft",
+      "width": 4.0,
+      "floorInd": 0
+     },
+     {
+      "imageData": "Qk1OAAAAAAAAADYAAAAoAAAABAAAAAIAAAABABgAAAAAABgAAAATCwAAEwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "name": "CHK-PICTURE-D",
+      "position": {
+       "x": 860.0,
+       "y": 700.0
+      },
+      "anchorPoint": "Center",
+      "width": 4.0,
+      "floorInd": 0
+     },
+     {
+      "imageData": "Qk1OAAAAAAAAADYAAAAoAAAABAAAAAIAAAABABgAAAAAABgAAAATCwAAEwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "name": "CHK-PICTURE-E",
+      "position": {
+       "x": 900.0,
+       "y": 700.0
+      },
+      "anchorPoint": "BottomLeft",
+      "width": 4.0,
+      "floorInd": 0
+     }
+    ]
+   },
+   "save": {
+    "p1": "elements[0].elementId.guid",
+    "p2": "elements[1].elementId.guid",
+    "p3": "elements[2].elementId.guid",
+    "p4": "elements[3].elementId.guid",
+    "p5": "elements[4].elementId.guid"
+   }
+  }
+ ],
+ "CreateSplines": [
+  {
+   "fichier": "create_polylines_splines_hotspots.json",
+   "params": {
+    "splinesData": [
+     {
+      "coordinates": [
+       {
+        "x": 720.0,
+        "y": 700.0
+       },
+       {
+        "x": 723.0,
+        "y": 702.0
+       },
+       {
+        "x": 726.0,
+        "y": 700.0
+       },
+       {
+        "x": 729.0,
+        "y": 703.0
+       }
+      ],
+      "closed": false,
+      "floorInd": 0,
+      "layerIndex": 1,
+      "linePenIndex": 4,
+      "roomSeparator": false
+     },
+     {
+      "coordinates": [
+       {
+        "x": 720.0,
+        "y": 710.0
+       },
+       {
+        "x": 724.0,
+        "y": 710.0
+       },
+       {
+        "x": 722.0,
+        "y": 713.0
+       }
+      ],
+      "closed": true,
+      "floorInd": 1,
+      "layerIndex": 1,
+      "linePenIndex": 6,
+      "roomSeparator": true
+     }
+    ]
+   },
+   "save": {
+    "s1": "elements[0].elementId.guid",
+    "s2": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_polylines_splines_hotspots.json",
+   "params": {
+    "splinesData": [
+     {
+      "coordinates": [
+       {
+        "x": 720.0,
+        "y": 740.0
+       },
+       {
+        "x": 723.0,
+        "y": 742.0
+       },
+       {
+        "x": 726.0,
+        "y": 740.0
+       }
+      ],
+      "favoriteName": "Tapir check: no such favorite"
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "element_id_on_2d_drafting_elements.json",
+   "params": {
+    "splinesData": [
+     {
+      "coordinates": [
+       {
+        "x": 840.0,
+        "y": 800.0
+       },
+       {
+        "x": 843.0,
+        "y": 802.0
+       },
+       {
+        "x": 846.0,
+        "y": 800.0
+       }
+      ],
+      "closed": false,
+      "floorInd": 0,
+      "id": "CHK-ID-SPLINE"
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateHotspots": [
+  {
+   "fichier": "create_polylines_splines_hotspots.json",
+   "params": {
+    "hotspotsData": [
+     {
+      "position": {
+       "x": 740.0,
+       "y": 700.0
+      },
+      "height": 1.25,
+      "penIndex": 5,
+      "floorInd": 0,
+      "layerIndex": 1
+     },
+     {
+      "position": {
+       "x": 742.0,
+       "y": 701.0
+      },
+      "height": 0.0,
+      "penIndex": 8,
+      "floorInd": 1,
+      "layerIndex": 1
+     }
+    ]
+   },
+   "save": {
+    "h1": "elements[0].elementId.guid",
+    "h2": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_polylines_splines_hotspots.json",
+   "params": {
+    "hotspotsData": [
+     {
+      "position": {
+       "x": 740.0,
+       "y": 740.0
+      },
+      "favoriteName": "Tapir check: no such favorite"
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "element_id_on_2d_drafting_elements.json",
+   "params": {
+    "hotspotsData": [
+     {
+      "position": {
+       "x": 850.0,
+       "y": 800.0
+      },
+      "floorInd": 0,
+      "id": "CHK-ID-HOTSPOT"
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateRailings": [
+  {
+   "fichier": "create_railings_curtain_walls.json",
+   "params": {
+    "railingsData": [
+     {
+      "floorIndex": 0,
+      "bottomOffset": 0.3,
+      "height": 1.1,
+      "id": "CHK-RAIL-1",
+      "coordinates": [
+       {
+        "x": 900.0,
+        "y": 700.0
+       },
+       {
+        "x": 904.0,
+        "y": 700.0
+       },
+       {
+        "x": 904.0,
+        "y": 703.0
+       }
+      ]
+     },
+     {
+      "floorIndex": 1,
+      "bottomOffset": 0.0,
+      "height": 0.9,
+      "id": "CHK-RAIL-2",
+      "coordinates": [
+       {
+        "x": 900.0,
+        "y": 710.0
+       },
+       {
+        "x": 905.0,
+        "y": 710.0
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "r1": "elements[0].elementId.guid",
+    "r2": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_railings_curtain_walls.json",
+   "params": {
+    "railingsData": [
+     {
+      "favoriteName": "Tapir check: no such favorite",
+      "floorIndex": 0,
+      "coordinates": [
+       {
+        "x": 900.0,
+        "y": 720.0
+       },
+       {
+        "x": 904.0,
+        "y": 720.0
+       }
+      ]
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "create_railings_curtain_walls.json",
+   "params": {
+    "railingsData": [
+     {
+      "floorIndex": 0,
+      "coordinates": [
+       {
+        "x": 900.0,
+        "y": 730.0
+       },
+       {
+        "x": 904.0,
+        "y": 730.0
+       },
+       {
+        "x": 904.0,
+        "y": 730.0
+       }
+      ]
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateCurtainWalls": [
+  {
+   "fichier": "create_railings_curtain_walls.json",
+   "params": {
+    "curtainWallsData": [
+     {
+      "floorIndex": 0,
+      "zCoordinate": 0.5,
+      "height": 2.0,
+      "id": "CHK-CW-1",
+      "coordinates": [
+       {
+        "x": 950.0,
+        "y": 700.0
+       },
+       {
+        "x": 953.0,
+        "y": 700.0
+       },
+       {
+        "x": 953.0,
+        "y": 702.0
+       }
+      ],
+      "primaryPattern": {
+       "sizes": [
+        1.0
+       ],
+       "logic": "FixedSizes",
+       "origin": "StartWithPattern"
+      },
+      "secondaryPattern": {
+       "sizes": [
+        1.0
+       ],
+       "logic": "FixedSizes",
+       "origin": "StartWithPattern"
+      }
+     },
+     {
+      "floorIndex": 1,
+      "height": 3.0,
+      "id": "CHK-CW-2",
+      "coordinates": [
+       {
+        "x": 950.0,
+        "y": 710.0
+       },
+       {
+        "x": 954.0,
+        "y": 710.0
+       }
+      ],
+      "primaryPattern": {
+       "sizes": [
+        1.0,
+        1.0
+       ],
+       "logic": "FixedSizes",
+       "origin": "StartWithPattern"
+      },
+      "secondaryPattern": {
+       "sizes": [
+        3.0
+       ],
+       "logic": "FixedSizes",
+       "origin": "StartWithPattern"
+      },
+      "cells": [
+       {
+        "columnIndex": 1,
+        "rowIndex": 0,
+        "panelClassIndex": 1,
+        "crossingFrameType": "None"
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "c1": "elements[0].elementId.guid",
+    "c2": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_railings_curtain_walls.json",
+   "params": {
+    "curtainWallsData": [
+     {
+      "favoriteName": "Tapir check: no such favorite",
+      "floorIndex": 0,
+      "coordinates": [
+       {
+        "x": 950.0,
+        "y": 720.0
+       },
+       {
+        "x": 954.0,
+        "y": 720.0
+       }
+      ]
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "create_railings_curtain_walls.json",
+   "params": {
+    "curtainWallsData": [
+     {
+      "floorIndex": 0,
+      "coordinates": [
+       {
+        "x": 950.0,
+        "y": 730.0
+       },
+       {
+        "x": 950.0,
+        "y": 730.0
+       }
+      ]
+     },
+     {
+      "floorIndex": 0,
+      "height": 2.0,
+      "coordinates": [
+       {
+        "x": 950.0,
+        "y": 740.0
+       },
+       {
+        "x": 954.0,
+        "y": 740.0
+       }
+      ],
+      "primaryPattern": {
+       "sizes": [
+        1.0
+       ],
+       "logic": "FixedSizes"
+      },
+      "secondaryPattern": {
+       "sizes": [
+        1.0
+       ],
+       "logic": "FixedSizes"
+      },
+      "cells": [
+       {
+        "columnIndex": 3,
+        "rowIndex": 0,
+        "panelClassIndex": 1
+       }
+      ]
+     },
+     {
+      "floorIndex": 0,
+      "height": 2.0,
+      "coordinates": [
+       {
+        "x": 950.0,
+        "y": 750.0
+       },
+       {
+        "x": 954.0,
+        "y": 750.0
+       }
+      ],
+      "primaryPattern": {
+       "sizes": [
+        1.0,
+        2.0
+       ],
+       "logic": "BestDivision",
+       "flexibleIndices": [
+        2
+       ]
+      }
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateRailingsFromPolyline": [
+  {
+   "fichier": "create_railings_from_polyline.json",
+   "params": {
+    "railingsData": [
+     {
+      "polylineCoordinates": [
+       {
+        "x": 500.0,
+        "y": 500.0,
+        "z": 0.5
+       },
+       {
+        "x": 504.0,
+        "y": 500.0,
+        "z": 0.5
+       },
+       {
+        "x": 504.0,
+        "y": 503.0,
+        "z": 0.5
+       }
+      ],
+      "floorIndex": 0,
+      "height": 1.1
+     },
+     {
+      "polylineCoordinates": [
+       {
+        "x": 500.0,
+        "y": 510.0,
+        "z": 0.5
+       },
+       {
+        "x": 504.0,
+        "y": 510.0,
+        "z": 0.5
+       },
+       {
+        "x": 504.0,
+        "y": 513.0,
+        "z": 0.5
+       }
+      ],
+      "floorIndex": 1,
+      "height": 1.1
+     },
+     {
+      "polylineCoordinates": [
+       {
+        "x": 500.0,
+        "y": 520.0,
+        "z": 0.0
+       },
+       {
+        "x": 504.0,
+        "y": 520.0,
+        "z": 0.0
+       },
+       {
+        "x": 506.0,
+        "y": 522.0,
+        "z": 0.0
+       }
+      ],
+      "polylineArcs": [
+       {
+        "begIndex": 1,
+        "endIndex": 2,
+        "arcAngle": 1.5707963267948966
+       }
+      ],
+      "floorIndex": 0
+     }
+    ]
+   },
+   "save": {
+    "r0": "elements[0].elementId.guid",
+    "r1": "elements[1].elementId.guid",
+    "r2": "elements[2].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_railings_from_polyline.json",
+   "params": {
+    "railingsData": [
+     {
+      "polylineCoordinates": [
+       {
+        "x": 500.0,
+        "y": 530.0,
+        "z": 0.0
+       },
+       {
+        "x": 504.0,
+        "y": 530.0,
+        "z": 0.0
+       },
+       {
+        "x": 504.0,
+        "y": 533.0,
+        "z": 0.0
+       }
+      ],
+      "polylineArcs": [
+       {
+        "begIndex": 0,
+        "endIndex": 2,
+        "arcAngle": 1.0
+       }
+      ]
+     },
+     {
+      "polylineCoordinates": [
+       {
+        "x": 500.0,
+        "y": 540.0,
+        "z": 0.0
+       },
+       {
+        "x": 500.0,
+        "y": 540.0,
+        "z": 1.0
+       }
+      ]
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateRoofs": [
+  {
+   "fichier": "create_roofs_id_layer_pivot_edges.json",
+   "params": {
+    "roofsData": [
+     {
+      "level": 3.0,
+      "floorIndex": 0,
+      "polygonCoordinates": [
+       {
+        "x": 760,
+        "y": 720
+       },
+       {
+        "x": 766,
+        "y": 720
+       },
+       {
+        "x": 766,
+        "y": 724
+       },
+       {
+        "x": 760,
+        "y": 724
+       }
+      ],
+      "pivotLine": {
+       "begCoordinate": {
+        "x": 760,
+        "y": 720
+       },
+       "endCoordinate": {
+        "x": 766,
+        "y": 720
+       }
+      },
+      "angle": 0.2617994,
+      "pivotEdges": [
+       {},
+       {},
+       {},
+       {}
+      ]
+     },
+     {
+      "level": 3.0,
+      "floorIndex": 0,
+      "levels": [
+       {
+        "levelHeight": 10.0,
+        "levelAngle": 0.5235988
+       }
+      ],
+      "polygonCoordinates": [
+       {
+        "x": 772,
+        "y": 720
+       },
+       {
+        "x": 780,
+        "y": 720
+       },
+       {
+        "x": 780,
+        "y": 726
+       },
+       {
+        "x": 772,
+        "y": 726
+       }
+      ],
+      "pivotEdges": [
+       {
+        "levels": [
+         {
+          "angleType": "Gable"
+         }
+        ]
+       },
+       {}
+      ]
+     },
+     {
+      "level": 3.0,
+      "floorIndex": 0,
+      "layerIndex": 999999,
+      "levels": [
+       {
+        "levelHeight": 10.0,
+        "levelAngle": 0.5235988
+       }
+      ],
+      "polygonCoordinates": [
+       {
+        "x": 784,
+        "y": 720
+       },
+       {
+        "x": 792,
+        "y": 720
+       },
+       {
+        "x": 792,
+        "y": 726
+       },
+       {
+        "x": 784,
+        "y": 726
+       }
+      ]
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "create_skylights_in_roofs.json",
+   "params": {
+    "roofsData": [
+     {
+      "level": 3.0,
+      "polygonCoordinates": [
+       {
+        "x": 1000,
+        "y": 1000
+       },
+       {
+        "x": 1008,
+        "y": 1000
+       },
+       {
+        "x": 1008,
+        "y": 1008
+       },
+       {
+        "x": 1000,
+        "y": 1008
+       }
+      ],
+      "pivotLine": {
+       "begCoordinate": {
+        "x": 1000,
+        "y": 1000
+       },
+       "endCoordinate": {
+        "x": 1008,
+        "y": 1000
+       }
+      },
+      "angle": 0.5
+     }
+    ]
+   },
+   "save": {
+    "r1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "create_skylights_in_roofs.json",
+   "params": {
+    "roofsData": [
+     {
+      "level": 3.0,
+      "polygonCoordinates": [
+       {
+        "x": 1012,
+        "y": 1000
+       },
+       {
+        "x": 1022,
+        "y": 1000
+       },
+       {
+        "x": 1022,
+        "y": 1010
+       },
+       {
+        "x": 1012,
+        "y": 1010
+       }
+      ],
+      "levels": [
+       {
+        "levelHeight": 0.0,
+        "levelAngle": 0.6
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "r2": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateShells": [
+  {
+   "fichier": "create_shells.json",
+   "params": {
+    "shellsData": [
+     {
+      "shellClass": "Extruded",
+      "floorIndex": 0,
+      "thickness": 0.2,
+      "structureType": "Basic",
+      "basePlane": {
+       "origin": {
+        "x": 900.0,
+        "y": 900.0,
+        "z": 0.0
+       }
+      },
+      "profile": {
+       "coordinates": [
+        {
+         "x": -3.0,
+         "y": 0.0
+        },
+        {
+         "x": 3.0,
+         "y": 0.0
+        }
+       ],
+       "arcs": [
+        {
+         "begIndex": 0,
+         "endIndex": 1,
+         "arcAngle": -1.5707963267948966
+        }
+       ]
+      },
+      "extrusionVector": {
+       "x": 0.0,
+       "y": 8.0,
+       "z": 0.0
+      },
+      "holes": [
+       {
+        "coordinates": [
+         {
+          "x": -1.0,
+          "y": 3.0
+         },
+         {
+          "x": 1.0,
+          "y": 3.0
+         },
+         {
+          "x": 1.0,
+          "y": 5.0
+         },
+         {
+          "x": -1.0,
+          "y": 5.0
+         }
+        ],
+        "depth": 10.0
+       }
+      ],
+      "begShapeEdgeTrim": {
+       "trimType": "Vertical"
+      },
+      "endShapeEdgeTrim": {
+       "trimType": "CustomAngle",
+       "angle": 1.2
+      }
+     },
+     {
+      "shellClass": "Revolved",
+      "floorIndex": 0,
+      "thickness": 0.15,
+      "basePlane": {
+       "origin": {
+        "x": 915.0,
+        "y": 904.0,
+        "z": 0.0
+       }
+      },
+      "profile": {
+       "coordinates": [
+        {
+         "x": 4.0,
+         "y": 0.0
+        },
+        {
+         "x": 0.0,
+         "y": 4.0
+        }
+       ],
+       "arcs": [
+        {
+         "begIndex": 0,
+         "endIndex": 1,
+         "arcAngle": 1.5707963267948966
+        }
+       ]
+      },
+      "segmentsByCircle": 24
+     },
+     {
+      "shellClass": "Ruled",
+      "floorIndex": 0,
+      "thickness": 0.1,
+      "basePlane": {
+       "origin": {
+        "x": 925.0,
+        "y": 900.0,
+        "z": 0.0
+       }
+      },
+      "profile": {
+       "coordinates": [
+        {
+         "x": 0.0,
+         "y": 0.0
+        },
+        {
+         "x": 6.0,
+         "y": 0.0
+        }
+       ]
+      },
+      "profilePlane": {
+       "xAxis": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+       },
+       "yAxis": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+       },
+       "zAxis": {
+        "x": 0.0,
+        "y": -1.0,
+        "z": 0.0
+       }
+      },
+      "secondProfile": {
+       "coordinates": [
+        {
+         "x": 0.0,
+         "y": 3.0
+        },
+        {
+         "x": 6.0,
+         "y": 3.0
+        }
+       ],
+       "arcs": [
+        {
+         "begIndex": 0,
+         "endIndex": 1,
+         "arcAngle": -1.0471975511965976
+        }
+       ]
+      },
+      "secondProfilePlane": {
+       "origin": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 0.0
+       },
+       "xAxis": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+       },
+       "yAxis": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+       },
+       "zAxis": {
+        "x": 0.0,
+        "y": -1.0,
+        "z": 0.0
+       }
+      },
+      "morphingRule": "Smooth"
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "create_shells.json",
+   "params": {
+    "shellsData": [
+     {
+      "shellClass": "Extruded",
+      "profile": {
+       "coordinates": [
+        {
+         "x": 0.0,
+         "y": 0.0
+        },
+        {
+         "x": 4.0,
+         "y": 0.0
+        }
+       ]
+      }
+     },
+     {
+      "shellClass": "Ruled",
+      "profile": {
+       "coordinates": [
+        {
+         "x": 0.0,
+         "y": 0.0
+        },
+        {
+         "x": 4.0,
+         "y": 0.0
+        }
+       ]
+      },
+      "profilePlane": {}
+     },
+     {
+      "shellClass": "Extruded",
+      "basePlane": {
+       "xAxis": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+       }
+      },
+      "profile": {
+       "coordinates": [
+        {
+         "x": 0.0,
+         "y": 0.0
+        },
+        {
+         "x": 4.0,
+         "y": 0.0
+        }
+       ]
+      },
+      "extrusionVector": {
+       "x": 0.0,
+       "y": 4.0,
+       "z": 0.0
+      }
+     },
+     {
+      "shellClass": "Extruded",
+      "profile": {
+       "coordinates": [
+        {
+         "x": 0.0,
+         "y": 0.0
+        },
+        {
+         "x": 4.0,
+         "y": 0.0
+        }
+       ],
+       "arcs": [
+        {
+         "begIndex": 0,
+         "endIndex": 5,
+         "arcAngle": 1.0
+        }
+       ]
+      },
+      "extrusionVector": {
+       "x": 0.0,
+       "y": 4.0,
+       "z": 0.0
+      }
+     },
+     {
+      "shellClass": "Extruded",
+      "profile": {
+       "coordinates": [
+        {
+         "x": 0.0,
+         "y": 0.0
+        },
+        {
+         "x": 4.0,
+         "y": 0.0
+        }
+       ]
+      },
+      "extrusionVector": {
+       "x": 0.0,
+       "y": 4.0,
+       "z": 0.0
+      },
+      "holes": [
+       {
+        "coordinates": [
+         {
+          "x": 1.0,
+          "y": 1.0
+         },
+         {
+          "x": 2.0,
+          "y": 1.0
+         },
+         {
+          "x": 2.0,
+          "y": 2.0
+         },
+         {
+          "x": 1.0,
+          "y": 2.0
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "modify_shells_contour_holes.json",
+   "params": {
+    "shellsData": [
+     {
+      "shellClass": "Extruded",
+      "floorIndex": 0,
+      "thickness": 0.2,
+      "structureType": "Basic",
+      "basePlane": {
+       "origin": {
+        "x": 1000.0,
+        "y": 1000.0,
+        "z": 0.0
+       }
+      },
+      "profile": {
+       "coordinates": [
+        {
+         "x": -3.0,
+         "y": 0.0
+        },
+        {
+         "x": 3.0,
+         "y": 0.0
+        }
+       ],
+       "arcs": [
+        {
+         "begIndex": 0,
+         "endIndex": 1,
+         "arcAngle": -1.5707963267948966
+        }
+       ]
+      },
+      "extrusionVector": {
+       "x": 0.0,
+       "y": 8.0,
+       "z": 0.0
+      },
+      "holes": [
+       {
+        "coordinates": [
+         {
+          "x": -1.0,
+          "y": 2.0
+         },
+         {
+          "x": 1.0,
+          "y": 2.0
+         },
+         {
+          "x": 1.0,
+          "y": 3.0
+         },
+         {
+          "x": -1.0,
+          "y": 3.0
+         }
+        ],
+        "depth": 10.0
+       },
+       {
+        "coordinates": [
+         {
+          "x": -1.0,
+          "y": 5.0
+         },
+         {
+          "x": 1.0,
+          "y": 5.0
+         },
+         {
+          "x": 1.0,
+          "y": 6.0
+         },
+         {
+          "x": -1.0,
+          "y": 6.0
+         }
+        ],
+        "depth": 10.0
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "s1": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateDetailMarkers": [
+  {
+   "fichier": "detail_and_worksheet_markers.json",
+   "params": {
+    "detailMarkersData": [
+     {
+      "clipPolygon": [
+       {
+        "x": 900.0,
+        "y": 900.0
+       },
+       {
+        "x": 904.0,
+        "y": 900.0
+       },
+       {
+        "x": 904.0,
+        "y": 903.0
+       },
+       {
+        "x": 900.0,
+        "y": 903.0
+       }
+      ],
+      "markerCoordinate": {
+       "x": 899.0,
+       "y": 899.0
+      },
+      "angle": 0.0,
+      "name": "TapirCheck Detail Marker",
+      "id": "TDM-1",
+      "floorIndex": 0
+     }
+    ]
+   },
+   "save": {
+    "dm1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "detail_and_worksheet_markers.json",
+   "params": {
+    "detailMarkersData": [
+     {
+      "clipPolygon": [
+       {
+        "x": 920.0,
+        "y": 900.0
+       },
+       {
+        "x": 924.0,
+        "y": 900.0
+       }
+      ],
+      "name": "TapirCheck bad"
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "detail_marker_pens_and_angle.json",
+   "params": {
+    "detailMarkersData": [
+     {
+      "clipPolygon": [
+       {
+        "x": 940.0,
+        "y": 900.0
+       },
+       {
+        "x": 944.0,
+        "y": 900.0
+       },
+       {
+        "x": 944.0,
+        "y": 903.0
+       },
+       {
+        "x": 940.0,
+        "y": 903.0
+       }
+      ],
+      "markerCoordinate": {
+       "x": 939.0,
+       "y": 899.0
+      },
+      "angle": 0.0,
+      "name": "TapirCheck Detail Pens",
+      "id": "TDP-1",
+      "floorIndex": 0
+     }
+    ]
+   },
+   "save": {
+    "dm": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateWorksheetMarkers": [
+  {
+   "fichier": "detail_and_worksheet_markers.json",
+   "params": {
+    "worksheetMarkersData": [
+     {
+      "clipPolygon": [
+       {
+        "x": 910.0,
+        "y": 900.0
+       },
+       {
+        "x": 914.0,
+        "y": 900.0
+       },
+       {
+        "x": 912.0,
+        "y": 903.0
+       }
+      ],
+      "markerCoordinate": {
+       "x": 909.0,
+       "y": 899.0
+      },
+      "angle": 0.0,
+      "name": "TapirCheck Worksheet Marker",
+      "id": "TWM-1",
+      "floorIndex": 0
+     }
+    ]
+   },
+   "save": {
+    "wm1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "detail_and_worksheet_markers.json",
+   "params": {
+    "worksheetMarkersData": [
+     {
+      "clipPolygon": [
+       {
+        "x": 930.0,
+        "y": 900.0
+       },
+       {
+        "x": 934.0,
+        "y": 900.0
+       }
+      ],
+      "name": "TapirCheck bad"
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "detail_marker_pens_and_angle.json",
+   "params": {
+    "worksheetMarkersData": [
+     {
+      "clipPolygon": [
+       {
+        "x": 950.0,
+        "y": 900.0
+       },
+       {
+        "x": 954.0,
+        "y": 900.0
+       },
+       {
+        "x": 954.0,
+        "y": 903.0
+       }
+      ],
+      "markerCoordinate": {
+       "x": 949.0,
+       "y": 899.0
+      },
+      "angle": 0.0,
+      "name": "TapirCheck Worksheet Pens",
+      "id": "TWP-1",
+      "floorIndex": 0
+     }
+    ]
+   },
+   "save": {
+    "wm": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateAssociativeDimensions": [
+  {
+   "fichier": "dimension_witness_point_text_position.json",
+   "params": {
+    "dimensionsData": [
+     {
+      "referencePoint": {
+       "x": 860.0,
+       "y": 859.0
+      },
+      "direction": {
+       "x": 1.0,
+       "y": 0.0
+      },
+      "floorIndex": 0,
+      "witnessPoints": [
+       {
+        "coordinate": {
+         "x": 860.0,
+         "y": 860.0
+        }
+       },
+       {
+        "coordinate": {
+         "x": 864.0,
+         "y": 860.0
+        }
+       },
+       {
+        "coordinate": {
+         "x": 867.0,
+         "y": 860.0
+        }
+       }
+      ],
+      "textHeight": 2.5
+     }
+    ]
+   },
+   "save": {
+    "d": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "dimension_witness_point_texts.json",
+   "params": {
+    "dimensionsData": [
+     {
+      "referencePoint": {
+       "x": 840.0,
+       "y": 839.0
+      },
+      "direction": {
+       "x": 1.0,
+       "y": 0.0
+      },
+      "floorIndex": 0,
+      "witnessPoints": [
+       {
+        "coordinate": {
+         "x": 840.0,
+         "y": 840.0
+        }
+       },
+       {
+        "coordinate": {
+         "x": 843.0,
+         "y": 840.0
+        }
+       },
+       {
+        "coordinate": {
+         "x": 847.0,
+         "y": 840.0
+        }
+       },
+       {
+        "coordinate": {
+         "x": 849.0,
+         "y": 840.0
+        }
+       }
+      ],
+      "textHeight": 2.5
+     }
+    ]
+   },
+   "save": {
+    "d": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "dimensions_details_panel.json",
+   "params": {
+    "dimensionsData": [
+     {
+      "openingHeightsInChain": true,
+      "openingHeightsNominal": true,
+      "layeredElementDimensions": {
+       "total": true,
+       "core": true,
+       "referenceLine": false
+      },
+      "referencePoint": {
+       "x": 860.0,
+       "y": 859.0
+      },
+      "direction": {
+       "x": 1.0,
+       "y": 0.0
+      },
+      "floorIndex": 0,
+      "witnessPoints": [
+       {
+        "coordinate": {
+         "x": 860.0,
+         "y": 860.0
+        }
+       },
+       {
+        "coordinate": {
+         "x": 863.0,
+         "y": 860.0
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "d": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateLevelDimensions": [
+  {
+   "fichier": "dimensions_modify.json",
+   "params": {
+    "levelDimensionsData": [
+     {
+      "position": {
+       "x": 810.0,
+       "y": 800.0
+      },
+      "level": 0.5,
+      "floorIndex": 0,
+      "pen": 2,
+      "textHeight": 2.5,
+      "textPen": 2,
+      "markerSize": 3.0
+     }
+    ]
+   },
+   "save": {
+    "l": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "level_dimensions_static_and_owner.json",
+   "params": {
+    "levelDimensionsData": [
+     {
+      "position": {
+       "x": 860.0,
+       "y": 800.0
+      },
+      "level": 0.5,
+      "floorIndex": 0
+     }
+    ]
+   },
+   "save": {
+    "d": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "level_dimensions_text_content.json",
+   "params": {
+    "levelDimensionsData": [
+     {
+      "position": {
+       "x": 840.0,
+       "y": 800.0
+      },
+      "level": 0.5,
+      "floorIndex": 0,
+      "customText": "FBOK"
+     }
+    ]
+   },
+   "save": {
+    "l": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateTexts": [
+  {
+   "fichier": "drawing_primitives_text_content.json",
+   "params": {
+    "textsData": [
+     {
+      "coordinate": {
+       "x": 980.0,
+       "y": 980.0,
+       "z": 0.0
+      },
+      "floorIndex": 0,
+      "text": "Tapir2803",
+      "height": 2.5,
+      "justification": "Left"
+     }
+    ]
+   },
+   "save": {
+    "t1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "get_elements_in_draw_order_resolvable.json",
+   "params": {
+    "textsData": [
+     {
+      "coordinate": {
+       "x": 700.0,
+       "y": 706.0,
+       "z": 0.0
+      },
+      "text": "TEST",
+      "height": 2.5,
+      "justification": "Left"
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "measure_texts_change_text_content.json",
+   "params": {
+    "textsData": [
+     {
+      "coordinate": {
+       "x": 960.0,
+       "y": 960.0,
+       "z": 0.0
+      },
+      "floorIndex": 0,
+      "style": {
+       "fontName": "Arial",
+       "height": 2.5,
+       "bold": false,
+       "italic": false,
+       "underline": false
+      },
+      "runs": [
+       {
+        "text": "Hello ",
+        "bold": false
+       },
+       {
+        "text": "world",
+        "bold": true
+       }
+      ]
+     },
+     {
+      "coordinate": {
+       "x": 960.0,
+       "y": 955.0,
+       "z": 0.0
+      },
+      "floorIndex": 0,
+      "style": {
+       "fontName": "Arial",
+       "height": 2.5,
+       "bold": false,
+       "italic": false,
+       "underline": false
+      },
+      "text": "First\nSecond"
+     }
+    ]
+   },
+   "save": {
+    "t1": "elements[0].elementId.guid",
+    "t2": "elements[1].elementId.guid"
+   }
+  }
+ ],
+ "CreateZones": [
+  {
+   "fichier": "drawing_primitives_text_content.json",
+   "params": {
+    "zonesData": [
+     {
+      "name": "TapirStamp2803",
+      "numberStr": "S2803",
+      "floorIndex": 0,
+      "geometry": {
+       "polygonCoordinates": [
+        {
+         "x": 990.0,
+         "y": 980.0
+        },
+        {
+         "x": 995.0,
+         "y": 980.0
+        },
+        {
+         "x": 995.0,
+         "y": 984.0
+        },
+        {
+         "x": 990.0,
+         "y": 984.0
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "save": {
+    "z1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "element_quantities.json",
+   "params": {
+    "zonesData": [
+     {
+      "name": "Tapir check zone",
+      "numberStr": "T1",
+      "floorIndex": 0,
+      "height": 2.5,
+      "bottomOffset": 0.0,
+      "floorThickness": 0.0,
+      "geometry": {
+       "polygonCoordinates": [
+        {
+         "x": 740,
+         "y": 700
+        },
+        {
+         "x": 744,
+         "y": 700
+        },
+        {
+         "x": 744,
+         "y": 704
+        },
+        {
+         "x": 740,
+         "y": 704
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "save": {
+    "z1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "get_all_elements_skips_subelement_objects.json",
+   "params": {
+    "zonesData": [
+     {
+      "name": "TapirCheck zone",
+      "numberStr": "99",
+      "floorIndex": 1,
+      "geometry": {
+       "polygonCoordinates": [
+        {
+         "x": 0.0,
+         "y": 0.0
+        },
+        {
+         "x": 4.0,
+         "y": 0.0
+        },
+        {
+         "x": 4.0,
+         "y": 3.0
+        },
+        {
+         "x": 0.0,
+         "y": 3.0
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateElectricalPanels": [
+  {
+   "fichier": "electrical_panels_devices_circuits.json",
+   "params": {
+    "electricalPanelsData": [
+     {
+      "position": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 1.0
+      },
+      "panelName": "Tapir check P1",
+      "circuitNamePrefix": "TC1-"
+     },
+     {
+      "position": {
+       "x": 3.0,
+       "y": 0.0,
+       "z": 1.0
+      },
+      "panelName": "Tapir check P2",
+      "circuitNamePrefix": "TC2-"
+     }
+    ]
+   },
+   "save": {
+    "p1": "elements[0].elementId.guid",
+    "p2": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "electrical_panels_devices_circuits.json",
+   "params": {
+    "electricalPanelsData": [
+     {
+      "position": {
+       "x": 6.0,
+       "y": 0.0,
+       "z": 1.0
+      },
+      "libraryPartId": {
+       "guid": "00000000-0000-0000-0000-00000000BEEF"
+      }
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateElectricalDevices": [
+  {
+   "fichier": "electrical_panels_devices_circuits.json",
+   "params": {
+    "electricalDevicesData": [
+     {
+      "position": {
+       "x": 7.0,
+       "y": 3.0,
+       "z": 0.3
+      },
+      "loadClassificationName": "Tapir check undefined load"
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateObjects": [
+  {
+   "fichier": "gdl_parameter_script_sets_back.json",
+   "params": {
+    "objectsData": [
+     {
+      "libraryPartName": "Tapir Check Script Sets Back 2396",
+      "coordinates": {
+       "x": 970.0,
+       "y": 970.0,
+       "z": 0.0
+      },
+      "dimensions": {
+       "x": 1.0,
+       "y": 0.5,
+       "z": 0.5
+      },
+      "useFixSize": false,
+      "angle": 0.0,
+      "reflected": false
+     }
+    ]
+   },
+   "save": {
+    "object": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "gdl_parameters_get_set.json",
+   "params": {
+    "objectsData": [
+     {
+      "libraryPartName": "Tapir Check GDL Parameters 1928",
+      "coordinates": {
+       "x": 960.0,
+       "y": 960.0,
+       "z": 0.0
+      },
+      "dimensions": {
+       "x": 1.2,
+       "y": 0.6,
+       "z": 0.5
+      },
+      "useFixSize": false,
+      "angle": 0.0,
+      "reflected": false
+     }
+    ]
+   },
+   "save": {
+    "object": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "library_parts_missing_part_name.json",
+   "params": {
+    "objectsData": [
+     {
+      "libraryPartName": "TapirCheckLibMissing Box",
+      "coordinates": {
+       "x": 700,
+       "y": 700,
+       "z": 0
+      },
+      "angle": 0.0
+     }
+    ]
+   },
+   "save": {
+    "o1": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateMEPRoutingElements": [
+  {
+   "fichier": "mep_connect_routes.json",
+   "params": {
+    "routingElementsData": [
+     {
+      "domain": "Ventilation",
+      "crossSectionShape": "Rectangular",
+      "crossSectionWidth": 0.3,
+      "crossSectionHeight": 0.2,
+      "nodeCoordinates": [
+       {
+        "x": 0.0,
+        "y": -40.0,
+        "z": 3.0
+       },
+       {
+        "x": 4.0,
+        "y": -40.0,
+        "z": 3.0
+       }
+      ]
+     },
+     {
+      "domain": "Ventilation",
+      "crossSectionShape": "Rectangular",
+      "crossSectionWidth": 0.3,
+      "crossSectionHeight": 0.2,
+      "nodeCoordinates": [
+       {
+        "x": 2.0,
+        "y": -40.0,
+        "z": 3.0
+       },
+       {
+        "x": 2.0,
+        "y": -37.0,
+        "z": 3.0
+       }
+      ]
+     },
+     {
+      "domain": "Ventilation",
+      "crossSectionShape": "Rectangular",
+      "crossSectionWidth": 0.3,
+      "crossSectionHeight": 0.2,
+      "nodeCoordinates": [
+       {
+        "x": 10.0,
+        "y": -40.0,
+        "z": 3.0
+       },
+       {
+        "x": 12.0,
+        "y": -40.0,
+        "z": 3.0
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "main": "elements[0].elementId.guid",
+    "branch": "elements[1].elementId.guid",
+    "distant": "elements[2].elementId.guid"
+   }
+  },
+  {
+   "fichier": "mep_route_element_id.json",
+   "params": {
+    "routingElementsData": [
+     {
+      "domain": "Ventilation",
+      "crossSectionShape": "Rectangular",
+      "crossSectionWidth": 0.4,
+      "crossSectionHeight": 0.2,
+      "nodeCoordinates": [
+       {
+        "x": 0.0,
+        "y": -14.0,
+        "z": 3.0
+       },
+       {
+        "x": 4.0,
+        "y": -14.0,
+        "z": 3.0
+       },
+       {
+        "x": 4.0,
+        "y": -11.0,
+        "z": 3.0
+       }
+      ]
+     },
+     {
+      "domain": "Piping",
+      "nodeCoordinates": [
+       {
+        "x": 0.0,
+        "y": -8.0,
+        "z": 3.0
+       },
+       {
+        "x": 4.0,
+        "y": -8.0,
+        "z": 3.0
+       },
+       {
+        "x": 4.0,
+        "y": -5.0,
+        "z": 3.0
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "duct": "elements[0].elementId.guid",
+    "pipe": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "mep_route_insulation.json",
+   "params": {
+    "routingElementsData": [
+     {
+      "domain": "Piping",
+      "nodeCoordinates": [
+       {
+        "x": 0.0,
+        "y": -8.0,
+        "z": 3.0
+       },
+       {
+        "x": 4.0,
+        "y": -8.0,
+        "z": 3.0
+       },
+       {
+        "x": 4.0,
+        "y": -5.0,
+        "z": 3.0
+       }
+      ]
+     }
+    ]
+   },
+   "save": {
+    "pipe": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateMEPElements": [
+  {
+   "fichier": "mep_elements_and_ports.json",
+   "params": {
+    "elementsData": [
+     {
+      "type": "Terminal",
+      "domain": "Ventilation",
+      "position": {
+       "x": 10.0,
+       "y": -20.0,
+       "z": 2.0
+      },
+      "orientationDirection": {
+       "x": 1.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "orientationRotation": {
+       "x": 0.0,
+       "y": 1.0,
+       "z": 0.0
+      }
+     },
+     {
+      "type": "Terminal",
+      "domain": "Piping",
+      "position": {
+       "x": 14.0,
+       "y": -20.0,
+       "z": 2.0
+      },
+      "orientationDirection": {
+       "x": 1.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "orientationRotation": {
+       "x": 0.0,
+       "y": 1.0,
+       "z": 0.0
+      }
+     }
+    ]
+   },
+   "save": {
+    "vterm": "elements[0].elementId.guid",
+    "pterm": "elements[1].elementId.guid"
+   }
+  },
+  {
+   "fichier": "mep_terminal_and_valve_size.json",
+   "params": {
+    "elementsData": [
+     {
+      "type": "Terminal",
+      "domain": "Ventilation",
+      "position": {
+       "x": 10.0,
+       "y": -30.0,
+       "z": 2.5
+      }
+     },
+     {
+      "type": "Terminal",
+      "domain": "Piping",
+      "position": {
+       "x": 14.0,
+       "y": -30.0,
+       "z": 1.0
+      }
+     }
+    ]
+   },
+   "save": {
+    "vterm": "elements[0].elementId.guid",
+    "pterm": "elements[1].elementId.guid"
+   }
+  }
+ ],
+ "CreateMEPFlexibleSegments": [
+  {
+   "fichier": "mep_flexible_segments.json",
+   "params": {
+    "flexibleSegmentsData": [
+     {
+      "domain": "Ventilation",
+      "controlPoints": [
+       {
+        "x": 20.0,
+        "y": -20.0,
+        "z": 3.0
+       },
+       {
+        "x": 21.0,
+        "y": -19.5,
+        "z": 3.0
+       },
+       {
+        "x": 22.0,
+        "y": -20.0,
+        "z": 3.0
+       }
+      ],
+      "startOrientation": {
+       "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+       },
+       "rotation": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 0.0
+       }
+      },
+      "endOrientation": {
+       "direction": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0
+       },
+       "rotation": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 0.0
+       }
+      }
+     }
+    ]
+   },
+   "save": {
+    "flex": "elements[0].elementId.guid"
+   }
+  }
+ ],
+ "CreateLamps": [
+  {
+   "fichier": "modify_objects_story_visibility.json",
+   "params": {
+    "lampsData": [
+     {
+      "libraryPartName": "Tapir Check Visibility Lamp 2821",
+      "coordinates": {
+       "x": 965.0,
+       "y": 960.0,
+       "z": 0.0
+      },
+      "isAutoOnStoryVisibility": false,
+      "visibility": {
+       "showOnHome": true,
+       "showAllAbove": false,
+       "showAllBelow": false,
+       "showRelAbove": 0,
+       "showRelBelow": 0
+      }
+     }
+    ]
+   },
+   "save": {
+    "lamp": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "objects_and_lamps_create_modify.json",
+   "params": {
+    "lampsData": [
+     {
+      "libraryPartName": "Tapir Check Lamp 1928",
+      "coordinates": {
+       "x": 950.0,
+       "y": 940.0,
+       "z": 0.0
+      },
+      "angle": 0.0,
+      "pen": 5,
+      "reflected": false,
+      "lightIsOn": true
+     }
+    ]
+   },
+   "save": {
+    "lamp": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "objects_and_lamps_create_modify.json",
+   "params": {
+    "lampsData": [
+     {
+      "libraryPartName": "Tapir Check No Such Part 1928",
+      "coordinates": {
+       "x": 955.0,
+       "y": 940.0,
+       "z": 0.0
+      }
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateOpenings": [
+  {
+   "fichier": "openings_create_get_set_details.json",
+   "params": {
+    "openingsData": [
+     {
+      "ownerElementId": {
+       "guid": "00000000-0000-0000-0000-00000000BEEF"
+      },
+      "basePoint": {
+       "x": 4.0,
+       "y": -20.0,
+       "z": 1.0
+      },
+      "width": 0.8,
+      "height": 0.6
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateSections": [
+  {
+   "fichier": "sections_and_interior_elevations.json",
+   "params": {
+    "sectionsData": [
+     {
+      "startCoordinate": {
+       "x": 800.0,
+       "y": 800.0
+      },
+      "endCoordinate": {
+       "x": 806.0,
+       "y": 800.0
+      },
+      "depth": 3.0,
+      "name": "TapirCheck Section A",
+      "id": "TC-A",
+      "floorIndex": 0
+     }
+    ]
+   },
+   "save": {
+    "s1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "sections_and_interior_elevations.json",
+   "params": {
+    "sectionsData": [
+     {
+      "startCoordinate": {
+       "x": 810.0,
+       "y": 800.0
+      },
+      "endCoordinate": {
+       "x": 810.0,
+       "y": 800.0
+      },
+      "name": "TapirCheck Section bad"
+     }
+    ]
+   },
+   "save": {}
+  },
+  {
+   "fichier": "tool_default_properties_in_section_window.json",
+   "params": {
+    "sectionsData": [
+     {
+      "startCoordinate": {
+       "x": 900.0,
+       "y": 900.0
+      },
+      "endCoordinate": {
+       "x": 906.0,
+       "y": 900.0
+      },
+      "name": "TapirCheck Label defaults",
+      "floorIndex": 0
+     }
+    ]
+   },
+   "save": {}
+  }
+ ],
+ "CreateInteriorElevations": [
+  {
+   "fichier": "sections_and_interior_elevations.json",
+   "params": {
+    "interiorElevationsData": [
+     {
+      "nodeCoordinates": [
+       {
+        "x": 850.0,
+        "y": 850.0
+       },
+       {
+        "x": 856.0,
+        "y": 850.0
+       },
+       {
+        "x": 856.0,
+        "y": 854.0
+       }
+      ],
+      "depth": 2.0,
+      "name": "TapirCheck IE",
+      "id": "TC-IE",
+      "floorIndex": 0
+     }
+    ]
+   },
+   "save": {
+    "ie1": "elements[0].elementId.guid"
+   }
+  },
+  {
+   "fichier": "sections_and_interior_elevations.json",
+   "params": {
+    "interiorElevationsData": [
+     {
+      "nodeCoordinates": [
+       {
+        "x": 870.0,
+        "y": 850.0
+       },
+       {
+        "x": 870.0,
+        "y": 850.0
+       },
+       {
+        "x": 876.0,
+        "y": 850.0
+       }
+      ],
+      "name": "TapirCheck IE bad"
+     }
+    ]
+   },
+   "save": {}
+  }
+ ]
+}

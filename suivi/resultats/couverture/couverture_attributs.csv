@@ -1,0 +1,193 @@
+﻿groupe;struct;champ;type;lu;ecrit;description
+layer;API_LayerType;conClassId;Int32;oui;oui;"The connection class of the layer; elements on layers having the same class will be intersected."
+linetype;API_LinetypeType;defineScale;double;oui;oui;"The original scale the line type is defined with; this value is used only with @c APILine_ScaleWithPlan (otherwise it should be 1.0)."
+linetype;API_LinetypeType;period;double;oui;oui;Length of a period (except for solid lines).
+linetype;API_LinetypeType;height;double;oui;oui;Height of the line type (0.0 for solid and dashed lines).
+linetype;API_LinetypeType;type;API_LtypTypeID;oui;oui;Main selector for type parsing. The possible values are shown in the @c API_LtypTypeID enumeration.
+linetype;API_LinetypeType;nItems;Int32;oui;oui;Number of items in the line type (for dashed/symbol type).
+filltype;API_FilltypeType;subType;API_FillSubtype;oui;oui;Describes the type of the fill. The possible values are enumerated in @c API_FillSubtype .
+filltype;API_FilltypeType;isPercentFill;bool;oui;oui;"Indicates a ""percent"" fill, e.g. 100%, 75%. This is an output-only parameter; detected from the bitmap pattern."
+filltype;API_FilltypeType;bitPat;API_Pattern;oui;non;"Pattern of the fill. It is an eight-character constant; the first character corresponds to the the first line of the pattern, the second character to the second, etc. Example: the bitPat @c 0x8080808F888888F8 means the following pattern:           0x80 *-------"
+filltype;API_FilltypeType;hXSpac;double;oui;oui;The fill's spacing factor in the X direction.
+filltype;API_FilltypeType;hYSpac;double;oui;oui;The fill's spacing factor in the Y direction.
+filltype;API_FilltypeType;hAngle;double;oui;oui;The angle of the fill.
+filltype;API_FilltypeType;linNumb;Int32;oui;oui;The number of fill line items.
+filltype;API_FilltypeType;hotNumb;Int32;oui;oui;The number of hotspot items (symbol fill only).
+filltype;API_FilltypeType;arcNumb;Int32;oui;oui;The number of arc items (symbol fill only).
+filltype;API_FilltypeType;filNumb;Int32;oui;oui;The number of simple fill items (symbol fill only).
+filltype;API_FilltypeType;c1.x;double;oui;oui;The symbol fill offset. Corresponds to the X1, Y1 values in the Fill Types dialog. > Horizontal coordinate.
+filltype;API_FilltypeType;c1.y;double;oui;oui;The symbol fill offset. Corresponds to the X1, Y1 values in the Fill Types dialog. > Vertical coordinate.
+filltype;API_FilltypeType;c2.x;double;oui;oui;The symbol fill offset. Corresponds to the X2, Y2 values in the Fill Types dialog. > Horizontal coordinate.
+filltype;API_FilltypeType;c2.y;double;oui;oui;The symbol fill offset. Corresponds to the X2, Y2 values in the Fill Types dialog. > Vertical coordinate.
+filltype;API_FilltypeType;textureName;GS::uchar_t[API_UniLongNameLen];oui;non;The name of the texture file.
+filltype;API_FilltypeType;textureStatus;short;oui;oui;Texture status: @c APITxtr_MirrorY | @c APITxtr_MirrorX .
+filltype;API_FilltypeType;textureXSize;double;oui;oui;The horizontal (x) size of the texture.
+filltype;API_FilltypeType;textureYSize;double;oui;oui;The vertical (y) size of the texture.
+filltype;API_FilltypeType;textureRotAng;double;oui;oui;The rotation angle of the texture in radians.
+filltype;API_FilltypeType;percent;double;oui;oui;Percent of the translucent fill.
+compWall;API_CompWallType;totalThick;double;oui;oui;Specifies the thickness of the whole wall.
+compWall;API_CompWallType;nComps;short;oui;oui;Contains the number of components (simple fills) for the composite. The number of separator lines is @c nComps+1 because of two contour lines.
+material;API_MaterialType;mtype;API_MaterTypeID;oui;oui;The type of the material. Usable values are enumerated in @c API_MaterTypeID.
+material;API_MaterialType;ambientPc;short;oui;oui;The reflection of ambient light. @c [0..100]
+material;API_MaterialType;diffusePc;short;oui;oui;The reflection of diffuse light. @c [0..100]
+material;API_MaterialType;specularPc;short;oui;oui;The reflection of specular light. @c [0..100]
+material;API_MaterialType;transpPc;short;oui;oui;Transparency factor. @c [0..100]
+material;API_MaterialType;shine;short;oui;oui;The shininess factor multiplied by 100. @c [0..10000]
+material;API_MaterialType;transpAtt;short;oui;oui;The transparency attenuation multiplied by 100. @c [0..400]
+material;API_MaterialType;emissionAtt;short;oui;oui;The emission attenuation factor multiplied by 100. @c [0..65535]
+material;API_MaterialType;surfaceRGB.f_red;double;oui;non;The color of the surface. > red component
+material;API_MaterialType;surfaceRGB.f_green;double;oui;non;The color of the surface. > green component
+material;API_MaterialType;surfaceRGB.f_blue;double;oui;non;The color of the surface. > blue component
+material;API_MaterialType;specularRGB.f_red;double;oui;non;The specular color. > red component
+material;API_MaterialType;specularRGB.f_green;double;oui;non;The specular color. > green component
+material;API_MaterialType;specularRGB.f_blue;double;oui;non;The specular color. > blue component
+material;API_MaterialType;emissionRGB.f_red;double;oui;non;The emission color. > red component
+material;API_MaterialType;emissionRGB.f_green;double;oui;non;The emission color. > green component
+material;API_MaterialType;emissionRGB.f_blue;double;oui;non;The emission color. > blue component
+material;API_MaterialType;fillCol;short;non;non;Color number of defined 3D hatch (@c <=0 means: use BODY color)
+material;API_MaterialType;texture.status;short;oui;oui;The texture of the material. > Texture status
+material;API_MaterialType;texture.missingPict;bool;oui;non;The texture of the material. > Picture is missing (output only)
+material;API_MaterialType;texture.xSize;double;oui;oui;The texture of the material. > X size of the picture in model space.
+material;API_MaterialType;texture.ySize;double;oui;oui;The texture of the material. > Y size of the picture in model space.
+material;API_MaterialType;texture.rotAng;double;oui;oui;The texture of the material. > Rotation angle in radians.
+material;API_MaterialType;texture.texName;GS::uchar_t[API_UniLongNameLen];oui;non;The texture of the material. > The name of the texture file as UTF-8 encoded C string.
+material;API_MaterialType;texture.fileLoc;IO::Location *;oui;oui;The texture of the material. > Texture file location in the file system.
+material;API_MaterialType;texture.withoutExtension;bool;oui;non;The texture of the material. > [in] Indicates that the extension was not appended to the texture name.
+layerComb;API_LayerCombType;lNumb;Int32;oui;oui;The number of layers in this combination.
+layerComb;API_LayerCombType;inEffect;bool;non;non;The layers are currently set as in this layer combination.
+zoneCat;API_ZoneCatType;catCode;GS::uchar_t[API_UniLongNameLen];oui;non;Contains the code for the zone category attribute.
+zoneCat;API_ZoneCatType;stampName;GS::uchar_t[API_UniLongNameLen];oui;non;Contains the name of the zone stamp library part for the zone category attribute.
+zoneCat;API_ZoneCatType;stampMainGuid;API_Guid;oui;oui;The main part of the unique identifier of the zone stamp library part.
+zoneCat;API_ZoneCatType;stampRevGuid;API_Guid;oui;oui;The revision part of the unique identifier of the zone stamp library part.
+zoneCat;API_ZoneCatType;rgb.f_red;double;oui;non;The RGB components of the zone color. > red component
+zoneCat;API_ZoneCatType;rgb.f_green;double;oui;non;The RGB components of the zone color. > green component
+zoneCat;API_ZoneCatType;rgb.f_blue;double;oui;non;The RGB components of the zone color. > blue component
+profile;API_ProfileAttrType;wallType;bool;oui;oui;Profile available for walls.
+profile;API_ProfileAttrType;beamType;bool;oui;oui;Profile available for beams.
+profile;API_ProfileAttrType;coluType;bool;oui;oui;Profile available for columns.
+profile;API_ProfileAttrType;handrailType;bool;oui;oui;Profile available for handrails.
+profile;API_ProfileAttrType;otherGDLObjectType;bool;oui;oui;Profile available for other GDL based objects.
+penTable;API_PenTableType;inEffectForModel;bool;oui;oui;This is the active pen table for the model space.
+penTable;API_PenTableType;inEffectForLayout;bool;oui;oui;This is the active pen table for the layout.
+mepSystem;API_MEPSystemType;domain;API_MEPDomainID;oui;oui;MEP System target domain.
+mepSystem;API_MEPSystemType;contourPen;short;oui;oui;The index of the contour pen @c [1..255].
+mepSystem;API_MEPSystemType;fillPen;short;oui;oui;The index of the fill (foreground) pen @c [1..255].
+mepSystem;API_MEPSystemType;fillBgPen;short;oui;oui;Index of the background pen @c [0..255]. The special @c 0 value means transparent background.
+mepSystem;API_MEPSystemType;centerLinePen;short;oui;oui;The index of the center line pen @c [1..255].
+mepSystem;API_MEPSystemType;fillInd;API_AttributeIndex;oui;oui;The index of the fill pattern attribute (@c 1..n, where @c n is the number of simple fill attributes).
+mepSystem;API_MEPSystemType;centerLTypeInd;API_AttributeIndex;oui;oui;The index of the center line type attribute (@c 1..n, where @c n is the number of simple line attributes).
+mepSystem;API_MEPSystemType;materialInd;API_AttributeIndex;oui;oui;The index of the body material attribute (@c 1..n, where @c n is the number of simple material attributes).
+mepSystem;API_MEPSystemType;insulationMatInd;API_AttributeIndex;oui;oui;The index of the insulation material attribute (@c 1..n, where @c n is the number of simple material attributes).
+operationProfile;API_OperationProfileType;nDailyProf;short;non;non;Specifies the total number of Daily Profiles.
+operationProfile;API_OperationProfileType;nDailyProfUsage;short;non;non;Specifies the total number of Daily Profile Usages.
+operationProfile;API_OperationProfileType;occupancyType;API_OccupancyTypeID;non;non;Specifies the occupancy type.
+operationProfile;API_OperationProfileType;hotWaterLoad;double;non;non;Service hot water load per capita.
+operationProfile;API_OperationProfileType;humanHeatGain;double;non;non;Human heat gain per capita.
+operationProfile;API_OperationProfileType;humidity;double;non;non;Humidity load.
+buildingMaterial;API_BuildingMaterialType;id;GS::UniString *;oui;oui;The id of the building material.
+buildingMaterial;API_BuildingMaterialType;manufacturer;GS::UniString *;oui;oui;The manufacturer of the building material.
+buildingMaterial;API_BuildingMaterialType;description;GS::UniString *;oui;oui;The description of the building material.
+buildingMaterial;API_BuildingMaterialType;connPriority;Int32;oui;oui;The connection priority of the building material. Used when multiple elements intersect, the higher priority element will be shown at the intersection.
+buildingMaterial;API_BuildingMaterialType;cutFill;API_AttributeIndex;oui;oui;Index of the building material's cut fill.
+buildingMaterial;API_BuildingMaterialType;cutFillPen;short;oui;oui;Index of the building material's cut fill foreground pen.
+buildingMaterial;API_BuildingMaterialType;cutFillBackgroundPen;short;oui;oui;Index of the building material's cut fill background pen.
+buildingMaterial;API_BuildingMaterialType;cutMaterial;API_AttributeIndex;oui;oui;Index of the building material's cut material.
+buildingMaterial;API_BuildingMaterialType;cutFillOrientation;API_FillOrientationID;oui;oui;Orientation of the building material's cut fill.
+buildingMaterial;API_BuildingMaterialType;thermalConductivity;double;oui;oui;Thermal Conductivity of the building material.
+buildingMaterial;API_BuildingMaterialType;density;double;oui;oui;Density of the building material.
+buildingMaterial;API_BuildingMaterialType;heatCapacity;double;oui;oui;Heat capacity of the building material.
+buildingMaterial;API_BuildingMaterialType;embodiedEnergy;double;oui;oui;Embodied energy in the building material.
+buildingMaterial;API_BuildingMaterialType;embodiedCarbon;double;oui;oui;Embodied carbon in the building material.
+buildingMaterial;API_BuildingMaterialType;showUncutLines;bool;oui;oui;Show Contours in Model Views.
+buildingMaterial;API_BuildingMaterialType;doNotParticipateInCollDet;bool;oui;oui;Specifies if the building material participates in collision detection.
+donnees:ltype_dashItems;API_AttributeDefExt;ltype_dashItems;API_DashItems * *;oui;oui;Contains the data describing dashed lines.
+donnees:ltype_dashItems;API_DashItems;ltype_dashItems[].dash;double;oui;oui;The length of the dash of a dashed line.
+donnees:ltype_dashItems;API_DashItems;ltype_dashItems[].gap;double;oui;oui;The length of the gap of a dashed line.
+donnees:ltype_lineItems;API_AttributeDefExt;ltype_lineItems;API_LineItems * *;oui;oui;Contains the data describing symbol lines.
+donnees:ltype_lineItems;API_LineItems;ltype_lineItems[].itemType;API_LtypItemID;oui;oui;The symbol line item type.
+donnees:ltype_lineItems;API_LineItems;ltype_lineItems[].itemCenterOffs;double;oui;oui;The vertical distance from the origin of the symbol line. Used in separator, centerdot, and centerline item types.
+donnees:ltype_lineItems;API_LineItems;ltype_lineItems[].itemLength;double;oui;oui;The length of the item, measured along the length of the item. Used in centerline, rightangle, and parallel item types.
+donnees:ltype_lineItems;API_LineItems;ltype_lineItems[].itemBegPos.x;double;oui;oui;The beginning position of an item. Used in dot, rightangle, parallel, line, circle, and arc item types. > Horizontal coordinate.
+donnees:ltype_lineItems;API_LineItems;ltype_lineItems[].itemBegPos.y;double;oui;oui;The beginning position of an item. Used in dot, rightangle, parallel, line, circle, and arc item types. > Vertical coordinate.
+donnees:ltype_lineItems;API_LineItems;ltype_lineItems[].itemEndPos.x;double;oui;oui;The end position of an item. Used in line item type. > Horizontal coordinate.
+donnees:ltype_lineItems;API_LineItems;ltype_lineItems[].itemEndPos.y;double;oui;oui;The end position of an item. Used in line item type. > Vertical coordinate.
+donnees:ltype_lineItems;API_LineItems;ltype_lineItems[].itemRadius;double;oui;oui;The radius of an item. Used in circle and arc item types.
+donnees:ltype_lineItems;API_LineItems;ltype_lineItems[].itemBegAngle;double;oui;oui;The beginning angle of an item, measured from the vertical (!) axis. Used in arc item type.
+donnees:ltype_lineItems;API_LineItems;ltype_lineItems[].itemEndAngle;double;oui;oui;The end angle of an item, measured from the vertical (!) axis. Used in arc item type.
+donnees:fill_lineItems;API_AttributeDefExt;fill_lineItems;API_FillLine * *;oui;oui;Contains vectorial fill details.
+donnees:fill_lineItems;API_FillLine;fill_lineItems[].lFreq;double;oui;oui;The frequency of a fill line item, i.e. the distance between two 'instances' of this item.
+donnees:fill_lineItems;API_FillLine;fill_lineItems[].lDir;double;oui;oui;The angle of a fill line item, measured CCW from the horizontal axis.
+donnees:fill_lineItems;API_FillLine;fill_lineItems[].lOffsetLine;double;oui;oui;The parallel offset of a fill line item, measured from the (rotated) horizontal axis.
+donnees:fill_lineItems;API_FillLine;fill_lineItems[].lOffset.x;double;oui;oui;The offset of a fill line item, given by its coordinates. > Horizontal coordinate.
+donnees:fill_lineItems;API_FillLine;fill_lineItems[].lOffset.y;double;oui;oui;The offset of a fill line item, given by its coordinates. > Vertical coordinate.
+donnees:fill_lineItems;API_FillLine;fill_lineItems[].lPartNumb;short;oui;oui;The number of elements used for this fill line item in the @c fill_LineLength array. It should always be even.
+donnees:fill_lineItems;API_FillLine;fill_lineItems[].lPartOffs;Int32;oui;oui;The offset (start) if this fill line item in the @c fill_LineLength array. It should always be even.
+donnees:fill_lineLength;API_AttributeDefExt;fill_lineLength;double * *;oui;oui;Contains the lengths of individual parts for vectorial fills. It contains the description of each fill line item in dash-gap length pairs.
+donnees:sfill_Items;API_AttributeDefExt;sfill_Items;API_SymbolHatchDef;oui;oui;Contains symbol fill details.
+donnees:sfill_Items;API_SymbolHatchDef;sfill_Items[].sfill_HotSpots;API_Coord * *;oui;oui;The coordinates of the hotspots in the symbol fill. The number of hotspots is given in the @c hotNumb field of the @ref API_FilltypeType structure.
+donnees:sfill_Items;API_SymbolHatchDef;sfill_Items[].sfill_Lines;API_SFill_Line * *;oui;oui;The description of the line items in the symbol fill. The number of line items is given in the @c linNumb field of the @ref API_FilltypeType structure.
+donnees:sfill_Items;API_SymbolHatchDef;sfill_Items[].sfill_Arcs;API_SFill_Arc * *;oui;oui;The description of the arc items in the symbol fill. The number of arc items is given in the @c arcNumb field of the @ref API_FilltypeType structure.
+donnees:sfill_Items;API_SymbolHatchDef;sfill_Items[].sfill_SolidFills;API_Polygon * *;oui;oui;The description of all (!) the solid fill items in the symbol fill. The number of solid fill items is given in the @c filNumb field of the @ref API_FilltypeType structure. The polygons and all the related information is stored sequentially. The following three fields complete the description of the fill polygons.
+donnees:sfill_Items;API_SymbolHatchDef;sfill_Items[].sfill_FillCoords;API_Coord * *;oui;oui;All the vertices of all the solid fill items in the symbol fill.
+donnees:sfill_Items;API_SymbolHatchDef;sfill_Items[].sfill_SubPolys;Int32 * *;oui;oui;All the subpolygons of all the solid fill items in the symbol fill.
+donnees:sfill_Items;API_SymbolHatchDef;sfill_Items[].sfill_PolyArcs;API_PolyArc * *;oui;oui;All the polygon arc segments of all the solid fill items in the symbol fill.
+donnees:cwall_compItems;API_AttributeDefExt;cwall_compItems;API_CWallComponent * *;oui;oui;Describes the simple fills contained in composite structures.
+donnees:cwall_compItems;API_CWallComponent;cwall_compItems[].buildingMaterial;API_AttributeIndex;oui;oui;The index of the building material attribute.
+donnees:cwall_compItems;API_CWallComponent;cwall_compItems[].framePen;short;oui;oui;The index of the frame's pen attribute.
+donnees:cwall_compItems;API_CWallComponent;cwall_compItems[].flagBits;short;oui;oui;The meaning of the flags of the composite wall. |Value|Description| |--- |--- | |APICWallComp_Core|the composite skin is part of the core.| |APICWallComp_Finish|The composite skin is part of the finish.|
+donnees:cwall_compItems;API_CWallComponent;cwall_compItems[].fillThick;double;oui;oui;The absolute thickness of the component in meters.
+donnees:cwall_compLItems;API_AttributeDefExt;cwall_compLItems;API_CWallLineComponent * *;oui;oui;Describes the lines separate the simple fills contained in composite structures.
+donnees:cwall_compLItems;API_CWallLineComponent;cwall_compLItems[].ltypeInd;API_AttributeIndex;oui;oui;The index of the skin face's line type attribute (@c 1..n, where @c n is the number of not symbol line type attributes).
+donnees:cwall_compLItems;API_CWallLineComponent;cwall_compLItems[].linePen;short;oui;oui;The index of the skin's face line pen @c [0..255]. @c 0 means the skin face line is hidden.
+donnees:GS::HashTable<API_AttributeIndex;API_AttributeDefExt;GS::HashTable<API_AttributeIndex;;oui;non;Describes the visibility and openness of every layer in a layer set.
+donnees:layer_statItems;API_AttributeDefExt;layer_statItems;;oui;oui;Describes the visibility and openness of every layer in a layer set.
+donnees:zone_addParItems;API_AttributeDefExt;zone_addParItems;API_AddParType * *;oui;oui;Contains the library part parameters of a zone category.
+donnees:zone_addParItems;API_AddParType;zone_addParItems[].typeID;API_AddParID;oui;oui;The type of the additional parameter (`ParT_Integer`, `ParT_Length`, etc.)
+donnees:zone_addParItems;API_AddParType;zone_addParItems[].index;short;oui;oui;The index of the additional parameter inside the additional parameter list.
+donnees:zone_addParItems;API_AddParType;zone_addParItems[].typeMod;short;oui;oui;"Type modifier; the variable is a simple instance or an array with the type typeID."
+donnees:zone_addParItems;API_AddParType;zone_addParItems[].name;char[API_NameLen];oui;oui;The name of the parameter — should be ASCII only.
+donnees:zone_addParItems;API_AddParType;zone_addParItems[].uDescname;GS::uchar_t[API_UAddParDescLen];oui;non;The description of the parameter as a Unicode string.
+donnees:zone_addParItems;API_AddParType;zone_addParItems[].valueDescription;GS::uchar_t[API_UAddParNumDescLen];oui;non;The description of the value for simple numerical parameter types as a Unicode string.
+donnees:zone_addParItems;API_AddParType;zone_addParItems[].dim1;Int32;oui;non;"The first dimension of the array; in case of array modifier"
+donnees:zone_addParItems;API_AddParType;zone_addParItems[].dim2;Int32;oui;oui;"The second dimension of the array; in case of array modifier"
+donnees:zone_addParItems;API_AddParType;zone_addParItems[].flags;short;oui;oui;"Modifier flags. |Value|Description| |--- |--- | |API_ParFlg_Child|This parameter is a child of the preceding title.| |API_ParFlg_BoldName|Show the name of the parameter in bold.| |API_ParFlg_Open|Show the child parameters of this parameter.| |API_ParFlg_Disabled|Disable this parameter; mainly used for separator lines| |API_ParFlg_Hidden|Hidden parameter; does not appear in the Settings dialogs.| |API_ParFlg_SHidden|Hidden parameter from scripts.|"
+donnees:zone_addParItems;API_AddParType;zone_addParItems[].arrayDescriptions;GSHandle;oui;non;Unicode description string values of an array parameter in UTF-16 encoding. Values are stored immediately after each other to conserve space.
+donnees:zone_addParItems;API_AddParType;zone_addParItems[].real;double;non;non;Numeric parameter value.
+donnees:zone_addParItems;API_AddParType;zone_addParItems[].uStr;GS::uchar_t[API_UAddParStrLen];non;non;String parameter (`ParT_CString`) value (Unicode, UTF-16 encoded).
+donnees:zone_addParItems;API_AddParType;zone_addParItems[].array;GSHandle;non;non;Array parameter values.
+donnees:profile_vectorImageItems;API_AttributeDefExt;profile_vectorImageItems;ProfileVectorImage *;oui;oui;Elements of a custom profile for walls, beams, and columns. The handle contains a serialized @c HGX::VectorImage.
+donnees:GS::HashTable<PVI::ProfileParameterId;API_AttributeDefExt;GS::HashTable<PVI::ProfileParameterId;;oui;non;Parameter names of the new profiles.
+donnees:profile_vectorImageParameterNames;API_AttributeDefExt;profile_vectorImageParameterNames;;oui;oui;Parameter names of the new profiles.
+donnees:penTable_Items;API_AttributeDefExt;penTable_Items;GS::Array<API_Pen> *;oui;oui;Contains the 255 pens of a named pen table.
+donnees:penTable_Items;API_Pen;penTable_Items[].index;short;oui;oui;index of the pen. 1..255
+donnees:penTable_Items;API_Pen;penTable_Items[].modiTime;UInt64;non;non;modification time of the pen.
+donnees:penTable_Items;API_Pen;penTable_Items[].rgb.f_red;double;oui;oui;Color of the pen. > red component
+donnees:penTable_Items;API_Pen;penTable_Items[].rgb.f_green;double;oui;oui;Color of the pen. > green component
+donnees:penTable_Items;API_Pen;penTable_Items[].rgb.f_blue;double;oui;oui;Color of the pen. > blue component
+donnees:penTable_Items;API_Pen;penTable_Items[].width;double;oui;oui;Thickness of the pen defined in paper millimeters.
+donnees:penTable_Items;API_Pen;penTable_Items[].description;char[128];oui;non;"Textual description of the pen; doesn't have to be unique, and can be empty."
+donnees:op_dailyProfiles;API_AttributeDefExt;op_dailyProfiles;API_DailyProfile * *;non;non;The daily profiles for an operation profile (Energy Evaluation)
+donnees:op_dailyProfiles;API_DailyProfile;op_dailyProfiles[].name;GS::uchar_t[API_UniLongNameLen];non;non;The name of the daily profile.
+donnees:op_dailyProfiles;API_DailyProfile;op_dailyProfiles[].minTemp;double[24];non;non;Hourly desired minimum temperature in a day.
+donnees:op_dailyProfiles;API_DailyProfile;op_dailyProfiles[].minTempDefs;bool[24];non;non;Minimum temperature defines.
+donnees:op_dailyProfiles;API_DailyProfile;op_dailyProfiles[].maxTemp;double[24];non;non;Hourly desired maximum temperature in a day.
+donnees:op_dailyProfiles;API_DailyProfile;op_dailyProfiles[].maxTempDefs;bool[24];non;non;Maximum temperature defines.
+donnees:op_dailyProfiles;API_DailyProfile;op_dailyProfiles[].occupancyCount;double[24];non;non;Hourly occupancy count in a day.
+donnees:op_dailyProfiles;API_DailyProfile;op_dailyProfiles[].lightGain;double[24];non;non;Hourly light gain in a day.
+donnees:op_dailyProfiles;API_DailyProfile;op_dailyProfiles[].equipmentGain;double[24];non;non;Hourly equipment gain in a day.
+donnees:op_dailyProfileUsages;API_AttributeDefExt;op_dailyProfileUsages;API_DailyProfileUsage * *;non;non;The daily profile usages for an operation profile (Energy Evaluation)
+donnees:op_dailyProfileUsages;API_DailyProfileUsage;op_dailyProfileUsages[].startMonth;short;non;non;Start month of the usage (profiled period).
+donnees:op_dailyProfileUsages;API_DailyProfileUsage;op_dailyProfileUsages[].startDay;short;non;non;Start day of the usage (profiled period).
+donnees:op_dailyProfileUsages;API_DailyProfileUsage;op_dailyProfileUsages[].endMonth;short;non;non;End month of the usage (profiled period).
+donnees:op_dailyProfileUsages;API_DailyProfileUsage;op_dailyProfileUsages[].endDay;short;non;non;End day of the usage (profiled period).
+donnees:op_dailyProfileUsages;API_DailyProfileUsage;op_dailyProfileUsages[].recurrence;short;non;non;Weekly recurrence of the usage. The @c [1,2,4,8,10,20,40] values correspond to Mon, Tue, Wed, Thu, Fri, Sat, Sun. All of these values can be combined so the max. value is 127.
+donnees:op_dailyProfileUsages;API_DailyProfileUsage;op_dailyProfileUsages[].dailyProfileIndex;short;non;non;Index of the Daily Profile.
+donnees:op_hourlyProfiles;API_AttributeDefExt;op_hourlyProfiles;API_HourlyProfile * *;non;non;The hourly profile usages for an operation profile (Energy Evaluation)
+donnees:op_hourlyProfiles;API_HourlyProfile;op_hourlyProfiles[].name;GS::uchar_t[API_UniLongNameLen];non;non;The name of the hourly profile.
+donnees:op_hourlyProfiles;API_HourlyProfile;op_hourlyProfiles[].minTemp;double;non;non;Hourly desired minimum temperature.
+donnees:op_hourlyProfiles;API_HourlyProfile;op_hourlyProfiles[].minTempDef;bool;non;non;Minimum temperature define.
+donnees:op_hourlyProfiles;API_HourlyProfile;op_hourlyProfiles[].maxTemp;double;non;non;Hourly desired maximum temperature.
+donnees:op_hourlyProfiles;API_HourlyProfile;op_hourlyProfiles[].maxTempDef;bool;non;non;Maximum temperature define.
+donnees:op_hourlyProfiles;API_HourlyProfile;op_hourlyProfiles[].occupancyCount;double;non;non;Hourly occupancy count.
+donnees:op_hourlyProfiles;API_HourlyProfile;op_hourlyProfiles[].lightGain;double;non;non;Hourly light gain.
+donnees:op_hourlyProfiles;API_HourlyProfile;op_hourlyProfiles[].equipmentGain;double;non;non;Hourly equipment gain.

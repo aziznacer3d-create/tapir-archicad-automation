@@ -1,0 +1,13 @@
+{
+"(Overridden) pen attribute index. > The pen color index if not overridden; the original pen index.": "Index de plume (remplacée) > Index de couleur de plume sans remplacement ; la plume d'origine.",
+"(Overridden) pen attribute index. > The pen color index if overridden.": "Index de plume (remplacée) > Index de couleur de plume en cas de remplacement.",
+"Beginning angle of the arc.": "Angle de début de l'arc.",
+"End angle of the arc.": "Angle de fin de l'arc.",
+"Is the ellipse reflected onto the smaller axis?": "L'ellipse est-elle retournée sur son petit axe ?",
+"Is this arc a zone boundary?": "Cet arc est-il une limite de zone ?",
+"Line type attribute index.": "Index de l'attribut type de ligne.",
+"Radius.": "Rayon.",
+"The clip polygon of the detail/worksheet. > Number of arched segments in the polygon/polyline.": "Polygone de découpe du détail / de la feuille de travail > Nombre de segments en arc du polygone.",
+"The clip polygon of the detail/worksheet. > Number of closed subpolygons including the main polygon. For polylines, this is always 1.": "Polygone de découpe du détail / de la feuille de travail > Nombre de sous-polygones fermés, polygone principal compris (toujours 1 pour une polyligne).",
+"The clip polygon of the detail/worksheet. > Number of elements in the coordinate array. The begin points of contours are duplicated.": "Polygone de découpe du détail / de la feuille de travail > Nombre de points du tableau de coordonnées (les points de départ des contours sont répétés)."
+}
